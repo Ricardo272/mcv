@@ -4,17 +4,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = [];
 
     // Vérification du nom
-    if (empty($_POST["nom"]) || !preg_match("/^[a-zA-ZÀ-ÿ\-]+$/", $_POST["nom"])) {
+    if (empty($_POST["nom"])) {
+        $errors['nom'] = "Champs obligatoire.";
+    } else if (!preg_match("/^[a-zA-ZÀ-ÿ\-]+$/", $_POST["nom"])) {
         $errors['nom'] = "Le nom est invalide.";
     }
 
     // Vérification du prénom
-    if (empty($_POST["prenom"]) || !preg_match("/^[a-zA-ZÀ-ÿ\-]+$/", $_POST["prenom"])) {
-        $errors['prenom'] = "Le prénom est invalide.";
+    if (empty($_POST["prenom"])) {
+        $errors['prenom'] = "Champs obligatoire.";
+    } else if (!preg_match("/^[a-zA-ZÀ-ÿ\-]+$/", $_POST["nom"])) {
+        $errors['prenom'] = "Le nom est invalide.";
     }
 
     // Vérification de l'email
-    if (empty($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+    if (empty($_POST["email"])) {
+        $errors['email'] = "Champs obligatoire.";
+    } else if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = "L'adresse email est invalide.";
     }
 
@@ -59,5 +65,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Vérifications et traitements du formulaire ici
 
 // Inclusion de la vue
-include_once('view-signup.php');
+include_once('../views/view-signup.php');
 ?>
