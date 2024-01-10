@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // mail($email, 'Confirmation d\'inscription', $message);
 
         // Afficher la synthèse des informations et le message de confirmation
-        include('view-summary.php');
+        include('../views/view-summary.php');
         exit; // Arrêter l'exécution du script
     }
 }
