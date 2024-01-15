@@ -1,0 +1,30 @@
+* {
+    font-family: 'Salsa', cursive;
+}
+
+body {
+    h2 {
+        width: fit-content;
+        margin: 0 auto;
+        border: solid black;
+        border-radius: 2rem;
+        margin-bottom: .5rem;
+        padding: 1rem;
+
+    }
+
+    .formulaireInscription {
+        margin-top: .5rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: fit-content;
+        border: solid black;
+        border-radius: 2rem;
+        padding: 1.5rem;
+
+        label {
+            margin: .5rem .5rem .5rem 0;
+        }
+    }
+}
