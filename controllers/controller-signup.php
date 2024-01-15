@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // si il n'y a pas d'erreurs 
 
-    var_dump($errors);
+
     // Affichage des erreurs
     // Si aucune erreur détectée
     if (empty($errors)) {
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $dbPassword = "Ricardo27";
             // Creation d'un objet $db selon la class PDO
             // Connexion a la bdd
-            $db = new PDO("mysql:host=localhost;dbname=$dbName", $dbUser, $dbPassword);
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
             var_dump($db);
 
             // Stockage de ma requete dans une variable 
