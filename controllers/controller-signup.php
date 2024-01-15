@@ -1,5 +1,7 @@
 <?php
 
+require_once "../config.php";
+
 $regexName = "/^[a-zA-ZÀ-ÿ\-]+$/";
 $regexPseudo = "/^[a-zA-ZÀ-ÿ\_\-\d]+$/";
 // Vérification des données postées depuis le formulaire
