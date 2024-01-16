@@ -10,10 +10,30 @@ body {
         border-radius: 2rem;
         margin-bottom: .5rem;
         padding: 1rem;
+        background-color: rgb(116, 94, 94);
+
 
     }
 
+    .felicitationConnexion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulaireConnexion {
+        background-color: rgb(116, 94, 94);
+        margin-top: .5rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: fit-content;
+        border: solid black;
+        border-radius: 2rem;
+        padding: 1.5rem;
+    }
+
     .formulaireInscription {
+        background-color: rgb(116, 94, 94);
         margin-top: .5rem;
         display: flex;
         flex-direction: column;
@@ -23,8 +43,16 @@ body {
         border-radius: 2rem;
         padding: 1.5rem;
 
+        .error {
+            color: rgb(125, 5, 5);
+        }
+
         label {
             margin: .5rem .5rem .5rem 0;
+        }
+
+        #enregister {
+            cursor: pointer;
         }
     }
 }

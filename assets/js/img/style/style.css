@@ -10,8 +10,14 @@ body h2 {
   border-radius: 2rem;
   margin-bottom: 0.5rem;
   padding: 1rem;
+  background-color: rgb(116, 94, 94);
 }
-body .formulaireInscription {
+body .felicitationConnexion {
+  display: flex;
+  flex-direction: column;
+}
+body .formulaireConnexion {
+  background-color: rgb(116, 94, 94);
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -22,6 +28,24 @@ body .formulaireInscription {
   border-radius: 2rem;
   padding: 1.5rem;
 }
+body .formulaireInscription {
+  background-color: rgb(116, 94, 94);
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: solid black;
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+body .formulaireInscription .error {
+  color: rgb(125, 5, 5);
+}
 body .formulaireInscription label {
   margin: 0.5rem 0.5rem 0.5rem 0;
+}
+body .formulaireInscription #enregister {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

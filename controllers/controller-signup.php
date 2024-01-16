@@ -1,6 +1,10 @@
 <?php
-
+// Config
 require_once "../config.php";
+// Models
+require_once "../models/Utilisateur.php";
+
+$showform = true;
 
 $regexName = "/^[a-zA-ZÀ-ÿ\-]+$/";
 $regexPseudo = "/^[a-zA-ZÀ-ÿ\_\-\d]+$/";
@@ -64,47 +68,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Affichage des erreurs
     // Si aucune erreur détectée
+
     if (empty($errors)) {
-        try {
-            $dbName = "jeu de donnees";
-            $dbUser = "Rickson";
-            $dbPassword = "Ricardo27";
-            // Creation d'un objet $db selon la class PDO
-            // Connexion a la bdd
-            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
-            var_dump($db);
 
-            // Stockage de ma requete dans une variable 
-            $sql = "INSERT INTO `utilisateur`( `Pseudo`, `Nom`, `Prenom`, `Date_de_naissance`, `Email`, `Mot_de_passe_utilisateur`,`Utilisateur_valide`, `ID_entreprise`) VALUES (:Pseudo, :Nom, :Prenom, :Date_de_naissance, :Email, :Mot_de_passe_utilisateur, :Utilisateur_valide, :ID_Entreprise )";
+        $pseudo = $_POST["pseudo"];
+        $nom = $_POST["nom"];
+        $prenom = $_POST["prenom"];
+        $dob = $_POST["dob"];
+        $email = $_POST["email"];
+        $mdpUtilisateur = $_POST["password"];
+        $validateUser = 1;
+        $idEntreprise = $_POST["company"];
 
-            // Je prepare ma requete pour eviter les injection SQL 
+        Utilisateur::create(
+            $pseudo,
+            $nom,
+            $prenom,
+            $dob,
+            $email,
+            $mdpUtilisateur,
+            $validateUser,
+            $idEntreprise
+        );
 
-            $query = $db->prepare($sql);
-            $pseudo = htmlspecialchars($_POST["pseudo"]);
-            $nom = htmlspecialchars($_POST["nom"]);
-            $prenom = htmlspecialchars($_POST["prenom"]);
-            $dob = $_POST["dob"];
-            $email = $_POST["email"];
-            $mdpUtilisateur = password_hash($_POST["password"], PASSWORD_DEFAULT);
-            $idEntreprise = $_POST["company"];
+        $showform = false;
 
-
-            $query->bindValue(":Pseudo", $pseudo, PDO::PARAM_STR);
-            $query->bindValue(":Nom", $nom, PDO::PARAM_STR);
-            $query->bindValue(":Prenom", $prenom, PDO::PARAM_STR);
-            $query->bindValue(":Date_de_naissance", $dob, PDO::PARAM_STR);
-            $query->bindValue(":Email", $email, PDO::PARAM_STR);
-            $query->bindValue(":Mot_de_passe_utilisateur", $mdpUtilisateur, PDO::PARAM_STR);
-            $query->bindValue(":Utilisateur_valide", 1, PDO::PARAM_STR);
-            $query->bindValue(":ID_Entreprise", $idEntreprise, PDO::PARAM_STR);
-
-            $query = $query->execute();
-
-        } catch (PDOException $e) {
-            echo "Erreur : " . $e->getMessage();
-            die();
-
-        }
     }
 }
 ?>
