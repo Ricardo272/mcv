@@ -33,6 +33,9 @@
                 echo $errors['password'];
             } ?>
         </span>
+        <br>
+        <input name="connexion" id="connexion" type="submit" value="Connexion">
+
         <a href="../controllers/controller-signup.php">Inscription</a>
 
     </form>

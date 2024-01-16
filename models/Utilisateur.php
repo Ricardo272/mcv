@@ -26,9 +26,6 @@ class Utilisateur
         string $idEntreprise,
     ) {
         try {
-            $dbName = "jeu de donnees";
-            $dbUser = "Rickson";
-            $dbPassword = "Ricardo27";
             // Creation d'un objet $db selon la class PDO
             // Connexion a la bdd
             $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
