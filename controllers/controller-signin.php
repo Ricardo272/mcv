@@ -1,10 +1,8 @@
 <?php
-
 // Config
 require_once "../config.php";
 // Models
 require_once "../models/Utilisateur.php";
-
 ?>
 
 <?php
@@ -16,14 +14,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pseudo = $_POST['pseudo'];
     $mdpUtilisateur = $_POST['password'];
 
-    // Utilisation de requêtes préparées pour éviter les injections SQL
-    $sqlMdpUtilisateur = "SELECT Mot_de_passe_utilisateur FROM utilisateur WHERE Pseudo = ?";
-    $query = $db->prepare($sqlMdpUtilisateur);
+    try {
+        // Création d'un objet $db selon la classe PDO
+        $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+        // Définir le mode d'erreur sur exception
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Vérification si la préparation de la requête a réussi
-    if (!$query) {
-        $errors[] = "Erreur de préparation de la requête : " . $db->error;
-    } else {
+        // Utilisation de requêtes préparées pour éviter les injections SQL
+        $sqlMdpUtilisateur = "SELECT Mot_de_passe_utilisateur FROM utilisateur WHERE Pseudo = ?";
+        $query = $db->prepare($sqlMdpUtilisateur);
+
         // Liaison des paramètres et exécution de la requête
         $query->bindParam(1, $pseudo, PDO::PARAM_STR);
         $query->execute();
@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($mdpUtilisateur, $mot_de_passe_bdd)) {
                 // Mot de passe correct, l'utilisateur est authentifié
                 echo "Connexion réussie!";
+                // Vous pouvez rediriger l'utilisateur vers une page sécurisée ici
             } else {
                 // Mot de passe incorrect
                 $errors[] = "Mot de passe incorrect.";
@@ -51,11 +52,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Fermeture de la requête préparée
         $query->closeCursor();
+
+    } catch (PDOException $e) {
+        // Gestion des erreurs de connexion
+        $errors[] = "Erreur de connexion à la base de données : " . $e->getMessage();
+    } finally {
+        // Fermeture de la connexion à la base de données
+        $db = null;
     }
 }
-
 ?>
-
 <?php
+// Inclusion de la vue
 include_once('../views/view-signin.php');
 ?>
