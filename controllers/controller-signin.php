@@ -40,12 +40,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Vérification du mot de passe à l'aide de password_verify
                 if (password_verify($mdpUtilisateur, $mot_de_passe_bdd)) {
                     // Mot de passe correct, l'utilisateur est authentifié
-                    echo "Connexion réussie!";
-                    // Vous pouvez rediriger l'utilisateur vers une page sécurisée ici
+                    // Redirection vers la page home
+                    header("Location: ../controllers/controller-home.php");
+                    exit(); // Assurez-vous d'utiliser exit après une redirection pour éviter tout code supplémentaire non désiré.
+
                 } else {
                     // Mot de passe incorrect
                     if (empty($_POST["password"])) {
                         $errors['password'] = "Champs obligatoire.";
+
                     } else if ($_POST["password"]) {
                         $errors['password'] = "Mot de passe incorrect.";
                     }
@@ -55,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Aucun utilisateur trouvé avec ce pseudo
                 if (empty($_POST["pseudo"])) {
                     $errors['pseudo'] = "Champs obligatoire.";
+
                 } else if ($_POST["pseudo"]) {
                     $errors['pseudo'] = "Le nom est invalide.";
                 }
@@ -66,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } catch (PDOException $e) {
             // Gestion des erreurs de connexion
             $errors[] = "Erreur de connexion à la base de données : " . $e->getMessage();
+
         } finally {
             // Fermeture de la connexion à la base de données
             $db = null;
@@ -76,4 +81,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 include_once('../views/view-signin.php');
-?>
