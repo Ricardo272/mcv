@@ -1,7 +1,11 @@
 <?php
 
+// Démarrer la session
+session_start();
+
 // Config
 require_once "../config.php";
+
 // Models
 require_once "../models/Utilisateur.php";
 
@@ -22,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // Utilisation de requêtes préparées pour éviter les injections SQL
-            $sqlMdpUtilisateur = "SELECT Mot_de_passe_utilisateur FROM utilisateur WHERE Pseudo = ?";
+            $sqlMdpUtilisateur = "SELECT * FROM utilisateur WHERE Pseudo = ?";
             $query = $db->prepare($sqlMdpUtilisateur);
 
             // Liaison des paramètres et exécution de la requête
@@ -39,10 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Vérification du mot de passe à l'aide de password_verify
                 if (password_verify($mdpUtilisateur, $mot_de_passe_bdd)) {
-                    // Mot de passe correct, l'utilisateur est authentifié
-                    // Redirection vers la page home
+
+                    $_SESSION["user"] = $resultat;
+                    unset($_SESSION["user"]["Mot_de_passe_utilisateur"]);
+
+                    // Rediriger vers la page d'accueil
                     header("Location: ../controllers/controller-home.php");
-                    exit(); // Assurez-vous d'utiliser exit après une redirection pour éviter tout code supplémentaire non désiré.
+                    exit();
 
                 } else {
                     // Mot de passe incorrect

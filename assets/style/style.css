@@ -48,4 +48,16 @@ body .formulaireInscription label {
 }
 body .formulaireInscription #enregister {
   cursor: pointer;
+}
+body .sideBar {
+  background-color: blue;
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .sideBar img {
+  width: 10rem;
 }/*# sourceMappingURL=style.css.map */

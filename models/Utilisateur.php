@@ -24,7 +24,7 @@ class Utilisateur
         string $mdpUtilisateur,
         int $validateUser,
         string $idEntreprise,
-        string $photoDeProfil = null
+
     ) {
         try {
             // Creation d'un objet $db selon la class PDO
@@ -48,7 +48,7 @@ class Utilisateur
             $query->bindValue(":Mot_de_passe_utilisateur", password_hash($mdpUtilisateur, PASSWORD_DEFAULT), PDO::PARAM_STR);
             $query->bindValue(":Utilisateur_valide", $validateUser, PDO::PARAM_STR);
             $query->bindValue(":ID_Entreprise", $idEntreprise, PDO::PARAM_STR);
-            $query->bindValue(":Photo_de_profil", $photoDeProfil ?: '../assets/image/image-par-defaut/img-profil-defaut.png', PDO::PARAM_STR);
+            $query->bindValue(":Photo_de_profil", 'img-profil-defaut.png', PDO::PARAM_STR);
             // Si $photoDeProfil est null, utilisez l'image par défaut, sinon utilisez le chemin spécifié
 
             $query = $query->execute();
