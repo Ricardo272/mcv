@@ -66,8 +66,10 @@ class Utilisateur
      * 
      * @return bool
      */
-    public static function checkMailExists(string $email): bool
-    {
+    public static function checkMailExists
+    (
+        string $email
+    ): bool {
         // le try and catch permet de gérer les erreurs, nous allons l'utiliser pour gérer les erreurs liées à la base de données
         try {
             // Création d'un objet $db selon la classe PDO
@@ -99,5 +101,7 @@ class Utilisateur
             die();
         }
     }
+
+
 }
 

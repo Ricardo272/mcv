@@ -8,24 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
     <style>
-        /* Styles pour le formulaire pop-up */
-        .popup-form {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
 
-        .success-message {
-            color: green;
-            margin-bottom: 10px;
-        }
     </style>
     <link rel="stylesheet" href="../assets/style/style.css">
     <title>Home</title>
@@ -54,33 +37,11 @@
                 alt="Photo de profil par defaut">
         </p>
 
-        <!-- Bouton "Ajouter un trajet" -->
-        <button onclick="afficherFormulaire()">Ajouter un trajet</button>
+        <a href="../controllers/controller-trajet.php"><button>Ajouter un trajet</button></a>
 
-        <!-- Formulaire pop-up -->
-        <div id="popupForm" class="popup-form">
-            <form action="traiter_trajet.php" method="post" enctype="multipart/form-data">
-                <label for="dateTrajet">Date du trajet:</label>
-                <input type="datetime-local" id="dateTrajet" name="dateTrajet" required>
-
-                <label for="distanceParcourue">Distance parcourue (en km):</label>
-                <input type="number" step="0.01" id="distanceParcourue" name="distanceParcourue" required>
-
-                <label for="dureeTrajet">Durée du trajet:</label>
-                <input type="time" id="dureeTrajet" name="dureeTrajet" required>
-
-                <label for="imageTrajet">Image du trajet (optionnel):</label>
-                <input type="file" id="imageTrajet" name="imageTrajet" accept="image/*">
-
-                <button type="submit">Ajouter</button>
-            </form>
-            <button onclick="fermerFormulaire()">Fermer</button>
-        </div>
 
     </div>
 
-
-    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
