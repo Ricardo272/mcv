@@ -7,9 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
-    <style>
-
-    </style>
     <link rel="stylesheet" href="../assets/style/style.css">
     <title>Home</title>
 </head>
@@ -38,6 +35,7 @@
         </p>
 
         <a href="../controllers/controller-trajet.php"><button>Ajouter un trajet</button></a>
+        <a href="../controllers/controller-historique-des-trajets"><button>Historique des trajets</button></a>
 
 
     </div>
