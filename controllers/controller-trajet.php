@@ -1,5 +1,6 @@
 <?php
 session_start();
+var_dump($_SESSION);
 
 // Config
 require_once "../config.php";
@@ -15,16 +16,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $distanceParcourue = $_POST["distanceParcourue"];
     $dureeTrajet = $_POST["dureeTrajet"];
     $idVehicule = $_POST["idVehicule"];
-    $idUtilisateur = $_POST["idUtilisateur"];
+    $idUtilisateur = $_SESSION["user"]["ID_utilisateur"];
     // Vérifier si une image a été téléchargée
     $imageTrajet = isset($_FILES["trajet_de_l_utilisateur"]) ? $_FILES["trajet_de_l_utilisateur"]["name"] : "image.jpg";
     // var_dump(
-    //     $dateTrajet,
-    //     $distanceParcourue,
-    //     $dureeTrajet,
-    //     $imageTrajet,
-    //     $idVehicule,
-    //     $idUtilisateur
+    // $dateTrajet,
+    // $distanceParcourue,
+    // $dureeTrajet,
+    // $imageTrajet,
+    // $idVehicule,
+    // $idUtilisateur
     // );
 
     Trajet::ajouterTrajet(

@@ -22,7 +22,7 @@
             <input type="time" id="dureeTrajet" name="dureeTrajet" required>
 
             <label for="idVehicule">Vehicule</label>
-            <select id="company" name="company" required>
+            <select id="idVehicule" name="idVehicule" required>
                 <option value="" disabled selected>Veuillez sélectionner une entreprise</option>
                 <option value="1" <?php if (!empty($idVehicule) && $idVehicule == "Velo") {
                     echo "Velo";
@@ -49,6 +49,8 @@
 
             <label for="imageTrajet">Image du trajet (optionnel):</label>
             <input type="file" id="imageTrajet" name="imageTrajet" accept="image/*">
+
+
 
             <button type="submit">Ajouter</button>
         </form>
