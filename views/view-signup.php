@@ -119,9 +119,7 @@
     <?php } ?>
 
 
-    <footer>
 
-    </footer>
 
 
 
