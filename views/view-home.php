@@ -35,7 +35,7 @@
         </p>
 
         <a href="../controllers/controller-trajet.php"><button>Ajouter un trajet</button></a>
-        <a href="../controllers/controller-historique-des-trajets"><button>Historique des trajets</button></a>
+        <a href="../controllers/controller-historique-des-trajets.php"><button>Historique des trajets</button></a>
 
 
     </div>

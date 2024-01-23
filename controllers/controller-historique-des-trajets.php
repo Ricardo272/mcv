@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 // Config
 require_once "../config.php";
 

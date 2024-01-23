@@ -1,17 +1,18 @@
 <?php
 
 class Trajet
-{ /** 
-  * Methode permettant d'ajouter un trajet a la BDD 
-  * @param string $dateTrajet Date du trajet de l'utilisateur  
-  * @param string $distanceParcourue Distance parcourue par l'utilisateur 
-  * @param string $dureeTrajet Durée du trajet de l'utilisateur 
-  * @param string $imageTrajet Image du trajet de l'utilisateur ( optionnnel )
-  * @param int $idVehicule Identifiant du vehicule selectionné
-  * @param int $idUtilisateur identifiant de l'utilisateur   
-  * 
-  * @return void 
-  */
+{
+    /** 
+     * Methode permettant d'ajouter un trajet a la BDD 
+     * @param string $dateTrajet Date du trajet de l'utilisateur  
+     * @param string $distanceParcourue Distance parcourue par l'utilisateur 
+     * @param string $dureeTrajet Durée du trajet de l'utilisateur 
+     * @param string $imageTrajet Image du trajet de l'utilisateur ( optionnnel )
+     * @param int $idVehicule Identifiant du vehicule selectionné
+     * @param int $idUtilisateur identifiant de l'utilisateur   
+     * 
+     * @return void 
+     */
 
     public static function ajouterTrajet
     (
@@ -46,5 +47,29 @@ class Trajet
             die();
         }
 
+    }
+    public static function historiqueTrajet($idUtilisateur)
+    {
+        try {
+            // Création d'un objet $db selon la classe PDO
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+            $sql = "SELECT * FROM `trajets_de_l_utilisateur` WHERE `ID_utilisateur` = :ID_utilisateur";
+
+            $query = $db->prepare($sql);
+
+            $query->bindValue(":ID_utilisateur", $idUtilisateur, PDO::PARAM_INT);
+
+            // on execute la requête
+            $query->execute();
+
+            $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            return $result;
+
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            die();
+        }
     }
 }
