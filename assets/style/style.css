@@ -2,7 +2,7 @@
   font-family: "Salsa", cursive;
 }
 * .error {
-  color: rgb(106, 0, 0);
+  color: rgb(125, 5, 5);
   font-size: 1.2rem;
   text-align: center;
 }
@@ -12,16 +12,6 @@
 
 body {
   /* Styles pour le formulaire pop-up */
-}
-body h2 {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  border: solid black;
-  border-radius: 2rem;
-  margin-bottom: 0.5rem;
-  padding: 1rem;
-  background-color: rgb(116, 94, 94);
 }
 body .felicitationConnexion {
   display: flex;
@@ -65,6 +55,7 @@ body .success-message {
   background-color: rgba(104, 136, 29, 0.4901960784);
   color: white;
   font-size: 2.5rem;
+  border: solid black;
 }
 .signin .formulaireConnexion {
   position: relative;
@@ -106,6 +97,7 @@ body .success-message {
   background-image: url("../image/background/background-leaves.jpg");
 }
 .signup h2 {
+  border: solid black;
   position: relative;
   top: 2rem;
   width: -moz-fit-content;
@@ -137,9 +129,7 @@ body .success-message {
   border: none;
   font-size: 1.5rem;
   text-align: center;
-}
-.signup .formulaireInscription .error {
-  color: rgb(125, 5, 5);
+  color: rgb(69, 67, 67);
 }
 .signup .formulaireInscription label {
   display: flex;
@@ -172,4 +162,51 @@ body .success-message {
 }
 .signup .formulaireInscription #enregister {
   cursor: pointer;
+}
+
+.home {
+  background-image: url("../image/background/background-leaves.jpg");
+}
+.home h2 {
+  border: solid black;
+  position: relative;
+  top: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(104, 136, 29, 0.6431372549);
+  color: white;
+  font-size: 2.5rem;
+}
+.home h3 {
+  border: solid black;
+  position: relative;
+  top: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(104, 136, 29, 0.4901960784);
+  color: white;
+  font-size: 2.5rem;
+}
+.home p {
+  text-align: center;
+  font-size: 2rem;
+}
+.home .msgBienvenue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid black;
+  border-radius: 1rem;
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+  top: 5rem;
 }/*# sourceMappingURL=style.css.map */

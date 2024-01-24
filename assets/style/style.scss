@@ -3,7 +3,8 @@
     font-family: 'Salsa', cursive;
 
     .error {
-        color: rgb(106, 0, 0);
+
+        color: rgb(125, 5, 5);
         font-size: 1.2rem;
         text-align: center;
 
@@ -18,17 +19,6 @@
 
 
 body {
-    h2 {
-        width: fit-content;
-        margin: 0 auto;
-        border: solid black;
-        border-radius: 2rem;
-        margin-bottom: .5rem;
-        padding: 1rem;
-        background-color: rgb(116, 94, 94);
-
-
-    }
 
     .felicitationConnexion {
         display: flex;
@@ -81,6 +71,8 @@ body {
         background-color: #68881d7d;
         color: white;
         font-size: 2.5rem;
+        border: solid black;
+
     }
 
     .formulaireConnexion {
@@ -136,6 +128,7 @@ body {
     background-image: url("../image/background/background-leaves.jpg");
 
     h2 {
+        border: solid black;
         position: relative;
         top: 2rem;
         width: fit-content;
@@ -167,11 +160,9 @@ body {
             border: none;
             font-size: 1.5rem;
             text-align: center;
+            color: rgb(69, 67, 67);
 
-        }
 
-        .error {
-            color: rgb(125, 5, 5);
         }
 
 
@@ -214,4 +205,55 @@ body {
             cursor: pointer;
         }
     }
+}
+
+.home {
+    background-image: url("../image/background/background-leaves.jpg");
+
+    h2 {
+        border: solid black;
+        position: relative;
+        top: 2rem;
+        width: fit-content;
+        margin: 0 auto;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: #68881da4;
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        border: solid black;
+        position: relative;
+        top: 2rem;
+        width: fit-content;
+        margin: 0 auto;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: #68881d7d;
+        color: white;
+        font-size: 2.5rem;
+
+    }
+
+    p {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .msgBienvenue {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid black;
+        border-radius: 1rem;
+        width: 50%;
+        position: relative;
+        margin: 0 auto;
+        top: 5rem;
+    }
+
 }

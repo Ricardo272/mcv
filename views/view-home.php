@@ -11,34 +11,37 @@
     <title>Home</title>
 </head>
 
-<body>
+<body class="home">
 
-    <div class="page">
-        <!-- Affichage du message de succès -->
-        <?php
 
-        if (isset($_SESSION['message'])) {
-            echo '<div class="success-message">' . $_SESSION['message'] . '</div>';
-            unset($_SESSION['message']);
-        }
-        ?>
+    <!-- Affichage du message de succès -->
+    <?php
 
-        <h2>PAGE HOME </h2>
-        <p>Aujourd'hui, nous sommes le
-            <?= $dateDuJour; ?>
-        </p>
+    if (isset($_SESSION['message'])) {
+        echo '<div class="success-message">' . $_SESSION['message'] . '</div>';
+        unset($_SESSION['message']);
+    }
+    ?>
 
+    <h2> HOME </h2>
+    <h3>Aujourd'hui, nous sommes le
+        <?= $dateDuJour; ?>
+    </h3>
+    <div class="msgBienvenue">
         <p>Bienvenue,
             <?= $_SESSION["user"]["Pseudo"]; ?>
-            <img src="../assets/image/imageParDefaut/<?= $_SESSION["user"]["Photo_de_profil"]; ?> "
-                alt="Photo de profil par defaut">
         </p>
-
+        <img src="../assets/image/imageParDefaut/<?= $_SESSION["user"]["Photo_de_profil"]; ?> "
+            alt="Photo de profil par defaut">
         <a href="../controllers/controller-trajet.php"><button>Ajouter un trajet</button></a>
         <a href="../controllers/controller-historique-des-trajets.php"><button>Historique des trajets</button></a>
-
-
     </div>
+
+
+
+
+
+
 
 </body>
 
