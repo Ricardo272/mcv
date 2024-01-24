@@ -1,6 +1,14 @@
 * {
   font-family: "Salsa", cursive;
 }
+* .error {
+  color: rgb(106, 0, 0);
+  font-size: 1.2rem;
+  text-align: center;
+}
+* hr {
+  visibility: hidden;
+}
 
 body {
   /* Styles pour le formulaire pop-up */
@@ -18,39 +26,6 @@ body h2 {
 body .felicitationConnexion {
   display: flex;
   flex-direction: column;
-}
-body .formulaireConnexion {
-  background-color: rgb(116, 94, 94);
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: solid black;
-  border-radius: 2rem;
-  padding: 1.5rem;
-}
-body .formulaireInscription {
-  background-color: rgb(116, 94, 94);
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: solid black;
-  border-radius: 2rem;
-  padding: 1.5rem;
-}
-body .formulaireInscription .error {
-  color: rgb(125, 5, 5);
-}
-body .formulaireInscription label {
-  margin: 0.5rem 0.5rem 0.5rem 0;
-}
-body .formulaireInscription #enregister {
-  cursor: pointer;
 }
 body img {
   width: 10rem;
@@ -73,4 +48,128 @@ body .popup-form .formTrajet {
 body .success-message {
   color: green;
   margin-bottom: 10px;
+}
+
+.signin {
+  background-image: url("../image/background/background-bush-heart.jpg");
+}
+.signin h2 {
+  position: relative;
+  top: 15rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(104, 136, 29, 0.4901960784);
+  color: white;
+  font-size: 2.5rem;
+}
+.signin .formulaireConnexion {
+  position: relative;
+  top: 15rem;
+  color: white;
+  background-color: rgba(104, 136, 29, 0.4901960784);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 20rem;
+  border: solid black;
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+.signin .formulaireConnexion label {
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+.signin .formulaireConnexion input {
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: none;
+  background-color: white;
+  color: rgb(69, 67, 67);
+}
+.signin .formulaireConnexion .linkVersSignup {
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+}
+.signin .formulaireConnexion .linkVersSignup:hover {
+  color: rgb(106, 0, 0);
+}
+
+.signup {
+  background-image: url("../image/background/background-leaves.jpg");
+}
+.signup h2 {
+  position: relative;
+  top: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(104, 136, 29, 0.4901960784);
+  color: white;
+  font-size: 2.5rem;
+}
+.signup .formulaireInscription {
+  position: relative;
+  top: 2rem;
+  color: white;
+  background-color: rgba(104, 136, 29, 0.4901960784);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 30rem;
+  border: solid black;
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+.signup .formulaireInscription select {
+  padding: 0 0.5rem 0 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.signup .formulaireInscription .error {
+  color: rgb(125, 5, 5);
+}
+.signup .formulaireInscription label {
+  display: flex;
+  font-size: 2rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.signup .formulaireInscription label a {
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+}
+.signup .formulaireInscription label a:hover {
+  color: rgb(106, 0, 0);
+}
+.signup .formulaireInscription label .cache {
+  width: 1.5rem;
+  cursor: pointer;
+}
+.signup .formulaireInscription input {
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: none;
+  background-color: white;
+  color: rgb(69, 67, 67);
+}
+.signup .formulaireInscription #enregister {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

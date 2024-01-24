@@ -1,6 +1,21 @@
+// all
 * {
     font-family: 'Salsa', cursive;
+
+    .error {
+        color: rgb(106, 0, 0);
+        font-size: 1.2rem;
+        text-align: center;
+
+    }
+
+    hr {
+        visibility: hidden;
+    }
 }
+
+//
+
 
 body {
     h2 {
@@ -20,41 +35,7 @@ body {
         flex-direction: column;
     }
 
-    .formulaireConnexion {
-        background-color: rgb(116, 94, 94);
-        margin-top: .5rem;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        width: fit-content;
-        border: solid black;
-        border-radius: 2rem;
-        padding: 1.5rem;
-    }
 
-    .formulaireInscription {
-        background-color: rgb(116, 94, 94);
-        margin-top: .5rem;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        width: fit-content;
-        border: solid black;
-        border-radius: 2rem;
-        padding: 1.5rem;
-
-        .error {
-            color: rgb(125, 5, 5);
-        }
-
-        label {
-            margin: .5rem .5rem .5rem 0;
-        }
-
-        #enregister {
-            cursor: pointer;
-        }
-    }
 
     img {
         width: 10rem;
@@ -84,4 +65,153 @@ body {
     }
 
 
+}
+
+.signin {
+    background-image: url("../image/background/background-bush-heart.jpg");
+
+    h2 {
+        position: relative;
+        top: 15rem;
+        width: fit-content;
+        margin: 0 auto;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: #68881d7d;
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    .formulaireConnexion {
+        position: relative;
+        top: 15rem;
+        color: white;
+        background-color: #68881d7d;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 20rem;
+        border: solid black;
+        border-radius: 2rem;
+        padding: 1.5rem;
+
+        label {
+            font-size: 2rem;
+            margin: 0 auto;
+            margin-bottom: .5rem;
+
+        }
+
+        input {
+            font-size: 1.5rem;
+            text-align: center;
+            border-radius: 1rem;
+            border: none;
+            background-color: white;
+            color: rgb(69, 67, 67);
+
+        }
+
+
+
+        .linkVersSignup {
+            // text-decoration: none;
+            text-align: center;
+            font-size: 1.2rem;
+            color: white;
+            margin: .5rem .5rem 0rem .5rem;
+
+        }
+
+        .linkVersSignup:hover {
+            color: rgb(106, 0, 0);
+        }
+    }
+
+
+}
+
+.signup {
+    background-image: url("../image/background/background-leaves.jpg");
+
+    h2 {
+        position: relative;
+        top: 2rem;
+        width: fit-content;
+        margin: 0 auto;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: #68881d7d;
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    .formulaireInscription {
+        position: relative;
+        top: 2rem;
+        color: white;
+        background-color: #68881d7d;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 30rem;
+        border: solid black;
+        border-radius: 2rem;
+        padding: 1.5rem;
+
+        select {
+            padding: 0 .5rem 0 .5rem;
+            border-radius: 1rem;
+            border: none;
+            font-size: 1.5rem;
+            text-align: center;
+
+        }
+
+        .error {
+            color: rgb(125, 5, 5);
+        }
+
+
+        label {
+            display: flex;
+            font-size: 2rem;
+            margin: 0 auto;
+            margin-bottom: .5rem;
+            width: fit-content;
+
+            a {
+                text-align: center;
+                font-size: 1.2rem;
+                color: white;
+                margin: .5rem .5rem 0rem .5rem;
+            }
+
+            a:hover {
+                color: rgb(106, 0, 0);
+            }
+
+            .cache {
+                width: 1.5rem;
+                cursor: pointer;
+            }
+
+        }
+
+        input {
+            font-size: 1.5rem;
+            text-align: center;
+            border-radius: 1rem;
+            border: none;
+            background-color: white;
+            color: rgb(69, 67, 67);
+
+        }
+
+        #enregister {
+            cursor: pointer;
+        }
+    }
 }
