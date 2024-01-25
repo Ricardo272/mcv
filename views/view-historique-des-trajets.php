@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div></div>
+    <a href='../controllers/controller-home.php'><button>Home</button></a>
     <div class="historiqueComplet">
 
 
