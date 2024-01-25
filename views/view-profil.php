@@ -21,7 +21,17 @@
     </h2>
 
     <div class="informationPerso">
-        <h3>Vos informations </h3>
+        <h3>Vos informations</h3>
+
+        <img src="../assets/image/image-upload/<?php echo $_SESSION["user"]["ID_utilisateur"] . "_profile_photo.jpg"; ?>"
+            alt="Photo de profil par defaut">
+
+        <!-- Formulaire pour modifier la photo de profil -->
+        <form action="controller-modif-photo.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="new_profile_photo" accept="image/*">
+            <button type="submit">Modifier la photo de profil</button>
+        </form>
+
         <p>
             Nom :
             <?= $_SESSION["user"]["Nom"]; ?>
@@ -44,7 +54,15 @@
             Email :
             <?= $_SESSION["user"]["Email"]; ?>
         </p>
+        <br>
+        <hr>
+        <p>
+            Email :
+            <?= $_SESSION["user"]["Email"]; ?>
+        </p>
     </div>
+
+
 
 
 </body>
