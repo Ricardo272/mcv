@@ -24,6 +24,7 @@
     ?>
 
     <h2> HOME </h2>
+
     <h3>Aujourd'hui, nous sommes le
         <?= $dateDuJour; ?>
     </h3>
