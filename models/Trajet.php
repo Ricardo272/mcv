@@ -9,7 +9,8 @@ class Trajet
      * @param string $dureeTrajet Durée du trajet de l'utilisateur 
      * @param string $imageTrajet Image du trajet de l'utilisateur ( optionnnel )
      * @param int $idVehicule Identifiant du vehicule selectionné
-     * @param int $idUtilisateur identifiant de l'utilisateur   
+     * @param int $idUtilisateur Identifiant de l'utilisateur   
+     * @param int $idTrajet Identifiant du trajet de l'utilisateur
      * 
      * @return void 
      */
@@ -71,5 +72,19 @@ class Trajet
             echo 'Erreur : ' . $e->getMessage();
             die();
         }
+    }
+    public static function supprimerTrajet($idTrajet)
+    {
+
+        $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+        // Requête SQL pour supprimer le trajet
+        $sql = "DELETE FROM trajets_de_l_utilisateur WHERE ID_trajet = :idTrajet";
+
+        $query = $db->prepare($sql);
+        $query->bindValue(':idTrajet', $idTrajet, PDO::PARAM_INT);
+
+        // Exécutez la requête et retournez le résultat
+        return $query->execute();
     }
 }

@@ -29,12 +29,19 @@
                     <?php
 
 
-                    echo "<p class=`date`>" . "Date : " . $trajet['Date_du_trajet'] . "</p>" . "<br>";
-                    echo "<p class=`duree`>" . "Durée : " . $trajet['Duree_du_trajet'] . "</p>" . "<br>";
-                    echo "<p class=`distance`>" . "Distance : " . $trajet['Distance_parcourue'] . "</p>" . "<br>";
-                    echo "" ?>
-                    <img class=`imgTrajetDefaut` src="../assets/image/imageParDefaut/<?= $trajet["Image_trajet"]; ?> "
-                        alt="Image de trajet par defaut"><br>
+                    echo "<p class='date'>" . "Date : " . $trajet['Date_du_trajet'] . "</p>" . "<br>";
+                    echo "<p class='duree'>" . "Durée : " . $trajet['Duree_du_trajet'] . "</p>" . "<br>";
+                    echo "<p class='distance'>" . "Distance : " . $trajet['Distance_parcourue'] . "</p>" . "<br>";
+                    echo "<img class='imgTrajetDefaut' src='../assets/image/imageParDefaut/{$trajet["Image_trajet"]}' alt='Image de trajet par defaut'><br>";
+
+                    // Ajoutez un formulaire avec un bouton de suppression et l'ID du trajet comme champ caché
+                    echo '<form method="post" action="controller-supprimer-trajet.php">';
+                    echo '<input type="hidden" name="idTrajet" value="' . $trajet['ID_trajet'] . '">';
+                    echo '<button type="submit" onClick="confirm(`Toutes suppression est definitive,Veuillez confirmer`)"
+                    name="btnSupprimerTrajet" value="delete">Supprimer</button>';
+                    echo '</form>';
+                    ?>
+
                 </div>
 
                 <?php
@@ -46,12 +53,6 @@
             echo "Aucun trajet dans l'historique.";
         }
         ?>
-
-
-
-
-
-
 
     </div>
 
