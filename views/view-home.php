@@ -32,7 +32,7 @@
         <p>Bienvenue,
             <?= $_SESSION["user"]["Pseudo"]; ?>
         </p>
-        <img src="../assets/image/imageParDefaut/<?= $_SESSION["user"]["Photo_de_profil"]; ?> "
+        <img src="../assets/image/image-upload/<?php echo $_SESSION["user"]["ID_utilisateur"] . "_profile_photo.jpg"; ?>"
             alt="Photo de profil par defaut">
         <a href="../controllers/controller-profil.php"><button>Profil</button></a>
         <a href="../controllers/controller-trajet.php"><button>Ajouter un trajet</button></a>
