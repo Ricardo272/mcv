@@ -33,6 +33,7 @@
         </p>
         <img src="../assets/image/imageParDefaut/<?= $_SESSION["user"]["Photo_de_profil"]; ?> "
             alt="Photo de profil par defaut">
+        <a href="../controllers/controller-profil.php"><button>Profil</button></a>
         <a href="../controllers/controller-trajet.php"><button>Ajouter un trajet</button></a>
         <a href="../controllers/controller-historique-des-trajets.php"><button>Historique des trajets</button></a>
         <a href="../controllers/controller-signout.php"><button>Déconnexion</button></a>
