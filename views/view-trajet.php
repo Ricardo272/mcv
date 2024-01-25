@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <a href='../controllers/controller-home.php'><button>Home</button></a>
+
     <div id="popupForm" class="popup-form">
         <form class="formTrajet" action="../controllers/controller-trajet.php" method="post"
             enctype="multipart/form-data">
