@@ -11,10 +11,41 @@
     <title>Profil</title>
 </head>
 
-<body>
+<body class="profil">
     <h2>Profil</h2>
     <a href="../controllers/controller-signout.php"><button>Déconnexion</button></a>
     <a href='../controllers/controller-home.php'><button>Home</button></a>
+
+    <h2>
+        <?= $dateDuJour; ?>
+    </h2>
+
+    <div class="informationPerso">
+        <h3>Vos informations </h3>
+        <p>
+            Nom :
+            <?= $_SESSION["user"]["Nom"]; ?>
+        </p>
+        <br>
+        <hr>
+        <p>
+            Prenom :
+            <?= $_SESSION["user"]["Prenom"]; ?>
+        </p>
+        <br>
+        <hr>
+        <p>
+            Date de naissance :
+            <?= $_SESSION["user"]["Date_de_naissance"]; ?>
+        </p>
+        <br>
+        <hr>
+        <p>
+            Email :
+            <?= $_SESSION["user"]["Email"]; ?>
+        </p>
+    </div>
+
 
 </body>
 

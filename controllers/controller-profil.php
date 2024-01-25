@@ -11,6 +11,8 @@ require_once "../models/Utilisateur.php";
 
 // Vérifier si le token de session est présent dans la session
 if (isset($_SESSION['user'])) {
+    $dateDuJour = date('d F Y');
+
 
 
 
