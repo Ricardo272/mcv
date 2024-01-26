@@ -26,10 +26,10 @@ body {
     }
 
 
-
     img {
-        width: 10rem;
+        width: 12rem;
     }
+
 
     /* Styles pour le formulaire pop-up */
     .popup-form {
@@ -208,52 +208,157 @@ body {
 }
 
 .home {
-    background-image: url("../image/background/background-leaves.jpg");
+    overflow: hidden;
 
-    h2 {
-        border: solid black;
-        position: relative;
-        top: 2rem;
+    .imgBackground {
         width: fit-content;
-        margin: 0 auto;
-        border-radius: 2rem;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        background-color: #68881da4;
-        color: white;
-        font-size: 2.5rem;
+
+        img {
+            width: 100%;
+            position: absolute;
+            filter: blur(4px);
+
+
+        }
     }
 
-    h3 {
-        border: solid black;
+    .navbar {
         position: relative;
-        top: 2rem;
-        width: fit-content;
-        margin: 0 auto;
-        border-radius: 2rem;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        background-color: #68881d7d;
-        color: white;
-        font-size: 2.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: solid;
+        border-radius: 1rem;
+        height: 5rem;
+        align-items: center;
+        background-color: #0000009e;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            border: solid;
+            border-radius: 1rem;
+            padding: .5rem;
+            background: darkred;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
 
     }
 
-    p {
-        text-align: center;
-        font-size: 2rem;
-    }
-
-    .msgBienvenue {
+    .sidebar {
         display: flex;
         flex-direction: column;
         align-items: center;
+        float: left;
+        border: solid;
+        border-radius: 1rem;
+        position: fixed;
+        margin: .5rem;
+        height: 85%;
+        background-color: rgba(0, 0, 0, 0.6196078431);
+
+        h2 {
+            position: relative;
+            width: -moz-fit-content;
+            width: fit-content;
+            border-radius: 2rem;
+            padding: 1rem;
+            background: darkgoldenrod;
+            color: white;
+            font-size: 1.5rem;
+            margin: .5rem;
+            border: solid white;
+        }
+
+
+    }
+
+
+
+    .padHome {
+        display: flex;
+        flex-direction: column;
         border: solid black;
         border-radius: 1rem;
-        width: 50%;
+        width: 45rem;
+        height: 35rem;
         position: relative;
         margin: 0 auto;
         top: 5rem;
+        background-color: #0000009e;
+
+
+        h2 {
+            position: relative;
+            width: -moz-fit-content;
+            width: fit-content;
+            border-radius: 2rem;
+            padding: 1rem;
+            background: #228b22b0;
+            color: white;
+            font-size: 1.5rem;
+            margin: 1rem;
+            border: solid white;
+            align-self: center;
+        }
+
+        .menuHome {
+            width: auto;
+            margin: 2rem;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 2rem;
+                border: solid;
+                border-radius: 1rem;
+                padding: .5rem;
+                background: darkred;
+                width: fit-content;
+                margin: 1rem;
+            }
+
+            a:hover {
+                color: black;
+            }
+
+            a:active {
+                color: yellow;
+            }
+
+        }
+
+
     }
+
+    .blockPDP {
+        border: solid;
+        padding: 2rem;
+        width: 12rem;
+        position: absolute;
+        right: 0rem;
+        margin: .5rem;
+        top: 6rem;
+        border-radius: 1rem;
+        background-color: #0000009e;
+
+        img {
+            width: 12rem;
+            border: solid white;
+
+        }
+    }
+
 
 }
