@@ -87,7 +87,7 @@
 
     </div>
     <div class="blockPDP">
-        <img src="../assets/image/image-upload/<?php echo $_SESSION["user"]["ID_utilisateur"] . "_profile_photo.jpg"; ?>"
+        <img src="../assets/image/image-upload/<?php echo $_SESSION["user"]["Photo_de_profil"] == "img-profil-defaut.png" ? "img-profil-defaut.png" : $_SESSION["user"]["ID_utilisateur"] . "_profile_photo.jpg"; ?>"
             alt="Photo de profil par defaut">
     </div>
 
