@@ -290,4 +290,115 @@ body .success-message {
 .home .blockPDP img {
   width: 12rem;
   border: solid white;
+}
+
+.profil {
+  overflow: hidden;
+}
+.profil .imgBackground {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.profil .imgBackground img {
+  width: 100%;
+  position: absolute;
+  filter: blur(4px);
+}
+.profil .navbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: solid;
+  border-radius: 1rem;
+  height: 5rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.profil .navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  border: solid;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background: darkred;
+}
+.profil .navbar a:hover {
+  color: black;
+}
+.profil .navbar a:active {
+  color: yellow;
+}
+.profil .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  border: solid;
+  border-radius: 1rem;
+  position: fixed;
+  margin: 0.5rem;
+  height: 85%;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.profil .sidebar h2 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+  padding: 1rem;
+  background: darkgoldenrod;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  border: solid white;
+}
+.profil .informationPerso {
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+  border-radius: 1rem;
+  width: 45rem;
+  height: 35rem;
+  position: relative;
+  margin: 0 auto;
+  top: 5rem;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.profil .informationPerso h2 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+  padding: 1rem;
+  background: rgba(34, 139, 34, 0.6901960784);
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem;
+  border: solid white;
+  align-self: center;
+}
+.profil .informationPerso .allLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: inherit;
+}
+.profil .blockPDP {
+  border: solid;
+  padding: 2rem;
+  width: 12rem;
+  position: absolute;
+  right: 0rem;
+  margin: 0.5rem;
+  top: 6rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.profil .blockPDP img {
+  width: 12rem;
+  border: solid white;
 }/*# sourceMappingURL=style.css.map */

@@ -362,3 +362,145 @@ body {
 
 
 }
+
+.profil {
+    overflow: hidden;
+
+    .imgBackground {
+        width: fit-content;
+
+        img {
+            width: 100%;
+            position: absolute;
+            filter: blur(4px);
+
+
+        }
+    }
+
+    .navbar {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: solid;
+        border-radius: 1rem;
+        height: 5rem;
+        align-items: center;
+        background-color: #0000009e;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            border: solid;
+            border-radius: 1rem;
+            padding: .5rem;
+            background: darkred;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        float: left;
+        border: solid;
+        border-radius: 1rem;
+        position: fixed;
+        margin: .5rem;
+        height: 85%;
+        background-color: rgba(0, 0, 0, 0.6196078431);
+
+        h2 {
+            position: relative;
+            width: -moz-fit-content;
+            width: fit-content;
+            border-radius: 2rem;
+            padding: 1rem;
+            background: darkgoldenrod;
+            color: white;
+            font-size: 1.5rem;
+            margin: .5rem;
+            border: solid white;
+        }
+
+
+    }
+
+    .informationPerso {
+        display: flex;
+        flex-direction: column;
+        border: solid black;
+        border-radius: 1rem;
+        width: 45rem;
+        height: 35rem;
+        position: relative;
+        margin: 0 auto;
+        top: 5rem;
+        background-color: #0000009e;
+
+
+        h2 {
+            position: relative;
+            width: -moz-fit-content;
+            width: fit-content;
+            border-radius: 2rem;
+            padding: 1rem;
+            background: #228b22b0;
+            color: white;
+            font-size: 1.5rem;
+            margin: 1rem;
+            border: solid white;
+            align-self: center;
+        }
+
+        .allLabel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: inherit;
+
+            .labelNom {}
+
+            .labelPrenom {}
+
+            .labelDob {}
+
+            .labelEmail {}
+
+            .labelDescription {}
+        }
+    }
+
+
+
+    .blockPDP {
+        border: solid;
+        padding: 2rem;
+        width: 12rem;
+        position: absolute;
+        right: 0rem;
+        margin: .5rem;
+        top: 6rem;
+        border-radius: 1rem;
+        background-color: #0000009e;
+
+        img {
+            width: 12rem;
+            border: solid white;
+
+        }
+    }
+}
