@@ -477,27 +477,86 @@ body {
                 color: white;
 
                 .modifNom {
-                    border: solid black;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    border: solid;
                     border-radius: 1rem;
-                    margin: .5rem;
+                    padding: .5rem;
+                    background: #228b22b0;
+                    cursor: pointer;
+                }
+
+                .modifNom:hover {
+                    color: black;
+                }
+
+                .modifNom:active {
+                    color: yellow;
                 }
 
                 .modifPrenom {
                     border: solid black;
                     border-radius: 1rem;
                     margin: .5rem;
+
+                }
+
+                .modifPrenom {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    border: solid;
+                    border-radius: 1rem;
+                    padding: .5rem;
+                    background: #228b22b0;
+                    cursor: pointer;
+                }
+
+                .modifPrenom:hover {
+                    color: black;
+                }
+
+                .modifPrenom:active {
+                    color: yellow;
                 }
 
                 .modifDob {
-                    border: solid black;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    border: solid;
                     border-radius: 1rem;
-                    margin: .5rem;
+                    padding: .5rem;
+                    background: #228b22b0;
+                    cursor: pointer;
+                }
+
+                .modifDob:hover {
+                    color: black;
+                }
+
+                .modifDob:active {
+                    color: yellow;
                 }
 
                 .modifEmail {
-                    border: solid black;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    border: solid;
                     border-radius: 1rem;
-                    margin: .5rem;
+                    padding: .5rem;
+                    background: #228b22b0;
+                    cursor: pointer;
+                }
+
+                .modifEmail:hover {
+                    color: black;
+                }
+
+                .modifEmail:active {
+                    color: yellow;
                 }
 
 

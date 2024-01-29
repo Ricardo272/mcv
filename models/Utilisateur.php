@@ -75,8 +75,8 @@ class Utilisateur
             // Création d'un objet $db selon la classe PDO
             $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
 
-            // stockage de ma requete dans une variable
             $sql = "SELECT * FROM `utilisateur` WHERE `mail_participant` = :mail";
+            // stockage de ma requete dans une variable
 
             // je prepare ma requête pour éviter les injections SQL
             $query = $db->prepare($sql);
@@ -103,5 +103,27 @@ class Utilisateur
     }
 
 
+    public static function ModifierNom(
+        string $nom,
+        int $id_utilisateur
+    ) {
+        try {
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+            $sql = "UPDATE `utilisateur` SET `Nom`= :Nom WHERE `ID_utilisateur` = :ID_utilisateur";
+            $query = $db->prepare($sql);
+
+            $query->bindValue(':Nom', htmlspecialchars($nom), PDO::PARAM_STR);
+            $query->bindValue(':ID_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+
+            $query->execute();
+
+            // Fermez la connexion à la base de données après l'exécution de la requête
+            $db = null;
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            die();
+        }
+    }
 }
 

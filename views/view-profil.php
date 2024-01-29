@@ -51,12 +51,17 @@
                     <td class="labelNom">
                         <label for="nom">
                             Nom :
-                            <?= $_SESSION["user"]["Nom"]; ?>
+
                         </label>
                     </td>
 
                     <td>
-                        <button type="submit" class="modifNom">Modifier</button>
+                        <span id="spannom">
+                            <?= $_SESSION["user"]["Nom"]; ?>
+                        </span>
+                        <input type="text" id="nom" name="nom" style="display: none;">
+                        <button type="submit" class="modifNom" onclick="toggleInput('nom')">Modifier</button>
+                        <button type="submit" style="display: none;">Enregistrer</button>
                     </td>
                 </tr>
 
@@ -123,7 +128,7 @@
         </form>
     </div>
 
-
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>

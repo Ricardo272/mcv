@@ -385,24 +385,73 @@ body .success-message {
   color: white;
 }
 .profil .informationPerso .allLabel .infos .modifNom {
-  border: solid black;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  border: solid;
   border-radius: 1rem;
-  margin: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(34, 139, 34, 0.6901960784);
+  cursor: pointer;
+}
+.profil .informationPerso .allLabel .infos .modifNom:hover {
+  color: black;
+}
+.profil .informationPerso .allLabel .infos .modifNom:active {
+  color: yellow;
 }
 .profil .informationPerso .allLabel .infos .modifPrenom {
   border: solid black;
   border-radius: 1rem;
   margin: 0.5rem;
 }
-.profil .informationPerso .allLabel .infos .modifDob {
-  border: solid black;
+.profil .informationPerso .allLabel .infos .modifPrenom {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  border: solid;
   border-radius: 1rem;
-  margin: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(34, 139, 34, 0.6901960784);
+  cursor: pointer;
+}
+.profil .informationPerso .allLabel .infos .modifPrenom:hover {
+  color: black;
+}
+.profil .informationPerso .allLabel .infos .modifPrenom:active {
+  color: yellow;
+}
+.profil .informationPerso .allLabel .infos .modifDob {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  border: solid;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background: rgba(34, 139, 34, 0.6901960784);
+  cursor: pointer;
+}
+.profil .informationPerso .allLabel .infos .modifDob:hover {
+  color: black;
+}
+.profil .informationPerso .allLabel .infos .modifDob:active {
+  color: yellow;
 }
 .profil .informationPerso .allLabel .infos .modifEmail {
-  border: solid black;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  border: solid;
   border-radius: 1rem;
-  margin: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(34, 139, 34, 0.6901960784);
+  cursor: pointer;
+}
+.profil .informationPerso .allLabel .infos .modifEmail:hover {
+  color: black;
+}
+.profil .informationPerso .allLabel .infos .modifEmail:active {
+  color: yellow;
 }
 .profil .informationPerso .allLabel .infos .labelNom {
   font-size: 1.5rem;
