@@ -46,46 +46,66 @@
     <div class="informationPerso">
         <h2>Vos informations</h2>
         <div class="allLabel">
-            <div class="labelNom">
-                <label for="nom">
-                    Nom :
-                    <?= $_SESSION["user"]["Nom"]; ?>
-                </label>
-                <button type="submit" class="modifNom">Modifier</button>
-            </div>
+            <table class="infos">
+                <tr>
+                    <td class="labelNom">
+                        <label for="nom">
+                            Nom :
+                            <?= $_SESSION["user"]["Nom"]; ?>
+                        </label>
+                    </td>
 
-            <div class="labelPrenom">
-                <label for="prenom">
-                    Prenom :
-                    <?= $_SESSION["user"]["Prenom"]; ?>
-                </label>
-                <button type="submit" class="modifPrenom">Modifier</button>
-            </div>
+                    <td>
+                        <button type="submit" class="modifNom">Modifier</button>
+                    </td>
+                </tr>
 
-            <div class="labelDob">
-                <label for="dob">
-                    Date de naissance :
-                    <?= $_SESSION["user"]["Date_de_naissance"]; ?>
-                </label>
-                <button type="submit" class="modifDob">Modifier</button>
-            </div>
+                <tr>
+                    <td class="labelPrenom">
+                        <label for="prenom">
+                            Prénom :
+                            <?= $_SESSION["user"]["Prenom"]; ?>
+                        </label>
+                    </td>
+                    <td>
+                        <button type="submit" class="modifPrenom">Modifier</button>
+                    </td>
+                </tr>
 
-            <div class="labelEmail">
-                <label for="email">
-                    Email :
-                    <?= $_SESSION["user"]["Email"]; ?>
-                </label>
-                <button type="submit" class="modifEmail">Modifier</button>
-            </div>
+                <tr>
+                    <td class="labelDob">
+                        <label for="dob">
+                            Date de naissance :
+                            <?= $_SESSION["user"]["Date_de_naissance"]; ?>
+                        </label>
+                    </td>
+                    <td>
+                        <button type="submit" class="modifDob">Modifier</button>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="labelEmail">
+                        <label for="email">
+                            Email :
+                            <?= $_SESSION["user"]["Email"]; ?>
+                        </label>
+                    </td>
+                    <td>
+                        <button type="submit" class="modifEmail">Modifier</button>
+                    </td>
+                </tr>
+
+            </table>
 
             <div class="labelDescription">
                 <label for="description">
-                    Déscription :
+                    Description :
                 </label>
                 <?= $_SESSION["user"]["Description"]; ?>
+                <input type="text" id="description" name="descrition" value="Décrivez vous en quelques mots.. ">
                 <button type="submit" class="modifDescription">Modifier</button>
-
-                <!-- <input type="text" id="description" name="descrition" value="Veuillez replir une déscription"> -->
             </div>
         </div>
 
@@ -97,7 +117,8 @@
 
         <!-- Formulaire pour modifier la photo de profil -->
         <form action="controller-modif-photo.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="new_profile_photo" accept="image/*">
+            <label for="modifPhoto"></label>
+            <input type="file" id="modifPhoto" name="new_profile_photo" accept="image/*">
             <button type="submit">Modifier la photo de profil</button>
         </form>
     </div>

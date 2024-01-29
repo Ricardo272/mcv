@@ -43,7 +43,7 @@
     }
     ?>
     <div class="sidebar">
-        <h2> HOME </h2>
+        <h2><i class="bi bi-house-fill"></i> HOME </h2>
 
         <h2>
             <?= $dateDuJour; ?>

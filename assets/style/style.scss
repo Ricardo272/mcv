@@ -364,7 +364,7 @@ body {
 }
 
 .profil {
-    overflow: hidden;
+    overflow-x: hidden;
 
     .imgBackground {
         width: fit-content;
@@ -466,21 +466,106 @@ body {
         }
 
         .allLabel {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            height: inherit;
 
-            .labelNom {}
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            // justify-content: space-around;
+            // height: inherit;
+            .infos {
+                margin: 0 auto;
+                color: white;
 
-            .labelPrenom {}
+                .modifNom {
+                    border: solid black;
+                    border-radius: 1rem;
+                    margin: .5rem;
+                }
 
-            .labelDob {}
+                .modifPrenom {
+                    border: solid black;
+                    border-radius: 1rem;
+                    margin: .5rem;
+                }
 
-            .labelEmail {}
+                .modifDob {
+                    border: solid black;
+                    border-radius: 1rem;
+                    margin: .5rem;
+                }
 
-            .labelDescription {}
+                .modifEmail {
+                    border: solid black;
+                    border-radius: 1rem;
+                    margin: .5rem;
+                }
+
+
+                .labelNom {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    text-transform: capitalize;
+                }
+
+                .labelPrenom {
+                    text-transform: capitalize;
+                    display: flex;
+                    font-size: 1.5rem;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin: .5rem;
+
+                }
+
+                .labelDob {
+                    text-transform: capitalize;
+
+                    display: flex;
+                    font-size: 1.5rem;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin: .5rem;
+
+
+                }
+
+                .labelEmail {
+                    display: flex;
+                    font-size: 1.5rem;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin: .5rem;
+
+
+
+                }
+            }
+
+            .labelDescription {
+                font-size: 1.5rem;
+                margin: .5rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                color: white;
+
+                .modifDescription {
+                    border: solid black;
+                    border-radius: 1rem;
+                    margin: .5rem;
+                }
+
+                #description {
+                    width: 75%;
+                    height: 10rem;
+                    border: solid;
+                    border-radius: 1rem;
+                    margin: .5rem;
+                }
+
+
+            }
+
         }
     }
 
@@ -497,9 +582,27 @@ body {
         border-radius: 1rem;
         background-color: #0000009e;
 
+        form {
+            overflow: hidden;
+
+            #modifPhoto {
+                color: red;
+                border: solid black;
+                border-radius: 1rem;
+                margin: .5rem;
+            }
+
+            button {
+                border: solid black;
+                border-radius: 1rem;
+                margin: .5rem;
+            }
+        }
+
         img {
             width: 12rem;
-            border: solid white;
+            border: solid black;
+            border-radius: 10rem;
 
         }
     }
