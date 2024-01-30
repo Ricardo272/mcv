@@ -23,6 +23,24 @@ if (!isset($_SESSION['user'])) {
     header("Location: controller-signin.php");
     exit();
 }
+
+
+// Vérifier si le formulaire est soumis
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
+    // Récupérer les données du formulaire
+    $nouveauPrenom = $_POST["nouveauPrenom"];
+    $id_utilisateur = $_POST["id_utilisateur"];
+
+    // Appeler la méthode pour modifier le nom de l'utilisateur
+    Utilisateur::ModifierPrenom($nouveauPrenom, $id_utilisateur);
+
+    $_SESSION["user"]["Prenom"] = $nouveauPrenom;
+
+}
+if (!isset($_SESSION['user'])) {
+    header("Location: controller-signin.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -83,11 +101,10 @@ if (!isset($_SESSION['user'])) {
                     </td>
 
                     <td>
-                        <button class="modifNom" onclick="afficherFormulaire()">Modifier</button>
+                        <button class="modifNom" id="modifNom" onclick="afficherFormulaireNom()">Modifier</button>
 
-                        <form id="formulaireModification" style="display:none;" method="POST"
-                            action="<?php $_SERVER; ?>">
-                            <label for="nouveauNom">Nouveau Nom:</label>
+                        <form id="formulaireNom" style="display:none;" method="POST" action="<?php $_SERVER; ?>">
+                            <label for="nouveauNom">Nouveau nom :</label>
                             <input type="text" name="nouveauNom" required>
                             <input type="hidden" name="id_utilisateur"
                                 value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
@@ -104,7 +121,16 @@ if (!isset($_SESSION['user'])) {
                         </label>
                     </td>
                     <td>
-                        <button type="submit" class="modifPrenom">Modifier</button>
+                        <button class="modifPrenom" id="modifPrenom"
+                            onclick="afficherFormulairePrenom()">Modifier</button>
+
+                        <form id="formulairePrenom" style="display:none;" method="POST" action="<?php $_SERVER; ?>">
+                            <label for="nouveauPrenom">Nouveau Prénom :</label>
+                            <input type="text" name="nouveauPrenom" required>
+                            <input type="hidden" name="id_utilisateur"
+                                value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+                            <button type="submit" name="enregistrer">Enregistrer</button>
+                        </form>
                     </td>
                 </tr>
 

@@ -124,6 +124,29 @@ class Utilisateur
             die();
         }
     }
+    public static function ModifierPrenom(
+        string $prenom,
+        int $id_utilisateur
+    ) {
+        try {
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+            $sql = "UPDATE `utilisateur` SET `Prenom`= :Prenom WHERE `ID_utilisateur` = :ID_utilisateur";
+
+            $query = $db->prepare($sql);
+
+            $query->bindValue(':Prenom', htmlspecialchars($prenom), PDO::PARAM_STR);
+            $query->bindValue(':ID_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+
+            $query->execute();
+
+            // Fermez la connexion à la base de données après l'exécution de la requête
+            $db = null;
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            die();
+        }
+    }
 
     public static function ModifierPDP(
         int $id_utilisateur,
