@@ -1,3 +1,30 @@
+<?php
+
+// Config
+require_once "../config.php";
+
+// Models
+require_once "../models/Utilisateur.php";
+
+
+// Vérifier si le formulaire est soumis
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
+    // Récupérer les données du formulaire
+    $nouveauNom = $_POST["nouveauNom"];
+    $id_utilisateur = $_POST["id_utilisateur"];
+
+    // Appeler la méthode pour modifier le nom de l'utilisateur
+    Utilisateur::ModifierNom($nouveauNom, $id_utilisateur);
+
+    $_SESSION["user"]["Nom"] = $nouveauNom;
+
+}
+if (!isset($_SESSION['user'])) {
+    header("Location: controller-signin.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -51,17 +78,21 @@
                     <td class="labelNom">
                         <label for="nom">
                             Nom :
-
+                            <?= $_SESSION["user"]["Nom"]; ?>
                         </label>
                     </td>
 
                     <td>
-                        <span id="spannom">
-                            <?= $_SESSION["user"]["Nom"]; ?>
-                        </span>
-                        <input type="text" id="nom" name="nom" style="display: none;">
-                        <button type="submit" class="modifNom" onclick="toggleInput('nom')">Modifier</button>
-                        <button type="submit" style="display: none;">Enregistrer</button>
+                        <button class="modifNom" onclick="afficherFormulaire()">Modifier</button>
+
+                        <form id="formulaireModification" style="display:none;" method="POST"
+                            action="<?php $_SERVER; ?>">
+                            <label for="nouveauNom">Nouveau Nom:</label>
+                            <input type="text" name="nouveauNom" required>
+                            <input type="hidden" name="id_utilisateur"
+                                value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+                            <button type="submit" name="enregistrer">Enregistrer</button>
+                        </form>
                     </td>
                 </tr>
 
@@ -121,10 +152,10 @@
             alt="Photo de profil par defaut">
 
         <!-- Formulaire pour modifier la photo de profil -->
-        <form action="controller-modif-photo.php" method="post" enctype="multipart/form-data">
+        <form action="controller-modif-photo.php" method="POST" enctype="multipart/form-data">
             <label for="modifPhoto"></label>
             <input type="file" id="modifPhoto" name="new_profile_photo" accept="image/*">
-            <button type="submit">Modifier la photo de profil</button>
+            <button type="submit" name="modifPDP">Modifier la photo de profil</button>
         </form>
     </div>
 

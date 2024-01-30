@@ -49,7 +49,6 @@ class Utilisateur
             $query->bindValue(":Utilisateur_valide", $validateUser, PDO::PARAM_STR);
             $query->bindValue(":ID_Entreprise", $idEntreprise, PDO::PARAM_STR);
             $query->bindValue(":Photo_de_profil", 'img-profil-defaut.png', PDO::PARAM_STR);
-            // Si $photoDeProfil est null, utilisez l'image par défaut, sinon utilisez le chemin spécifié
 
             $query = $query->execute();
 
@@ -125,5 +124,25 @@ class Utilisateur
             die();
         }
     }
-}
 
+    public static function ModifierPDP(
+        int $id_utilisateur,
+        string $photoName
+    ) {
+        try {
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+            $sql = "UPDATE Utilisateur SET Photo_de_profil = :photoName WHERE ID_utilisateur = :id_utilisateur";
+
+            $query = $db->prepare($sql);
+
+            $query->bindValue(':photoName', $photoName, PDO::PARAM_STR);
+            $query->bindValue(':id_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+
+            $query->execute();
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            die();
+        }
+    }
+}
