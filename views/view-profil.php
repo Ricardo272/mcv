@@ -7,39 +7,27 @@ require_once "../config.php";
 require_once "../models/Utilisateur.php";
 
 
-// Vérifier si le formulaire est soumis
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
-    // Récupérer les données du formulaire
-    $nouveauNom = $_POST["nouveauNom"];
-    $id_utilisateur = $_POST["id_utilisateur"];
-
-    // Appeler la méthode pour modifier le nom de l'utilisateur
-    Utilisateur::ModifierNom($nouveauNom, $id_utilisateur);
-
-    $_SESSION["user"]["Nom"] = $nouveauNom;
-
-}
+// Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['user'])) {
     header("Location: controller-signin.php");
     exit();
 }
 
-
 // Vérifier si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
-    // Récupérer les données du formulaire
-    $nouveauPrenom = $_POST["nouveauPrenom"];
-    $id_utilisateur = $_POST["id_utilisateur"];
-
-    // Appeler la méthode pour modifier le nom de l'utilisateur
-    Utilisateur::ModifierPrenom($nouveauPrenom, $id_utilisateur);
-
-    $_SESSION["user"]["Prenom"] = $nouveauPrenom;
-
-}
-if (!isset($_SESSION['user'])) {
-    header("Location: controller-signin.php");
-    exit();
+    if (isset($_POST["nouveauNom"])) {
+        // Modification du nom
+        $nouveauNom = $_POST["nouveauNom"];
+        $id_utilisateur = $_POST["id_utilisateur"];
+        Utilisateur::ModifierNom($nouveauNom, $id_utilisateur);
+        $_SESSION["user"]["Nom"] = $nouveauNom;
+    } elseif (isset($_POST["nouveauPrenom"])) {
+        // Modification du prénom
+        $nouveauPrenom = $_POST["nouveauPrenom"];
+        $id_utilisateur = $_POST["id_utilisateur"];
+        Utilisateur::ModifierPrenom($nouveauPrenom, $id_utilisateur);
+        $_SESSION["user"]["Prenom"] = $nouveauPrenom;
+    }
 }
 ?>
 

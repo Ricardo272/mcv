@@ -17,5 +17,5 @@ function cacherBtnPrenom() {
         document.getElementById("modifPrenom").style.display = "none"
     })
 }
-
+cacherBtnPrenom();
 cacherBtnNom();
