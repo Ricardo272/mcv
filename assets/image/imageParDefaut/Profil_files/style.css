@@ -381,51 +381,14 @@ body .success-message {
 }
 .profil .informationPerso .infoActuel {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid white;
-  border-radius: 1rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 1rem;
-  padding: 1rem;
-  background-color: rgba(254, 227, 195, 0.5215686275);
-}
-.profil .informationPerso .block {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
 }
 .profil .informationPerso .profileForm {
   display: flex;
   flex-direction: column;
+  color: beige;
   font-size: 1.2rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: solid white;
-  border-radius: 1rem;
-  background-color: rgba(254, 227, 195, 0.5215686275);
-  justify-content: space-evenly;
-  height: 15rem;
-  margin: 1rem;
 }
-.profil .informationPerso .profileForm .nouveau {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0.5rem;
-}
-.profil .informationPerso .profileForm .nouveau label {
-  overflow: overlay;
-  width: 10rem;
-  text-align: center;
-}
-.profil .informationPerso .profileForm .nouveau input {
-  border-radius: 1rem;
-  border: none;
-  width: 9rem;
-}
-.profil .informationPerso #modifInfo {
+.profil .informationPerso .profileForm #modifInfo {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
@@ -435,10 +398,10 @@ body .success-message {
   background-color: rgba(36, 111, 30, 0.5215686275);
   cursor: pointer;
 }
-.profil .informationPerso #modifInfo:hover {
+.profil .informationPerso .profileForm #modifInfo:hover {
   color: black;
 }
-.profil .informationPerso #modifInfo:active {
+.profil .informationPerso .profileForm #modifInfo:active {
   color: yellow;
 }
 .profil .informationPerso .labelDescription {

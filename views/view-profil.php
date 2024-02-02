@@ -91,59 +91,110 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </h2>
     </div>
 
+
+
     <div class="informationPerso">
+
         <h2>Vos informations</h2>
 
+        <div class="block">
 
-        <form class="profileForm" method="POST" action="../controllers/controller-profil.php">
+            <div class="infoActuel">
 
-            <label for="nom">
-                Nom :
-                <?= $_SESSION["user"]["Nom"]; ?>
-            </label>
-            <label for="nouveauNom">Nouveau nom :</label>
-            <input type="text" id="nouveauNom" name="nouveauNom" required>
-            <input type="hidden" name="id_utilisateur_nom" value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+                <label for="nom">
+                    Nom :
+                    <?= $_SESSION["user"]["Nom"]; ?>
+                </label>
 
-            <label for="prenom">
-                Prénom :
-                <?= $_SESSION["user"]["Prenom"]; ?>
-            </label>
-            <label for="nouveauPrenom">Nouveau Prénom :</label>
-            <input type="text" name="nouveauPrenom">
-            <input type="hidden" name="id_utilisateur_prenom"
-                value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+                <label for="prenom">
+                    Prénom :
+                    <?= $_SESSION["user"]["Prenom"]; ?>
+                </label>
 
-            <label for="dob">
-                Date de naissance :
-                <?= $_SESSION["user"]["Date_de_naissance"]; ?>
-            </label>
-            <label for="nouveauDob">Nouvelle Date de naissance :</label>
-            <input type="date" name="nouveauDob">
-            <input type="hidden" name="id_utilisateur_dob" value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+                <label for="dob">
+                    Date de naissance :
+                    <?= $_SESSION["user"]["Date_de_naissance"]; ?>
+                </label>
 
-            <label for="email">
-                Email :
-                <?= $_SESSION["user"]["Email"]; ?>
-            </label>
-            <label for="nouvelEmail">Nouvel Email :</label>
-            <input type="email" name="nouvelEmail">
-            <input type="hidden" name="id_utilisateur_email" value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+                <label for="email">
+                    Email :
+                    <?= $_SESSION["user"]["Email"]; ?>
+                </label>
 
-            <button type="submit" class="modifInfo" id="modifInfo">Enregistrer les informations</button>
-        </form>
+            </div>
 
 
-        <div class="labelDescription">
-            <label for="description">
-                Description :
-            </label>
-            <?= $_SESSION["user"]["Description"]; ?>
-            <input type="text" id="description" name="descrition" value="Décrivez vous en quelques mots.. ">
-            <button type="submit" class="modifDescription">Modifier</button>
+            <form class="profileForm" method="POST" action="../controllers/controller-profil.php">
+
+                <div class="nouveau">
+
+                    <label for="nouveau">Nouveau nom </label>
+
+                    <input type="text" id="nouveauNom" name="nouveauNom" required>
+
+                    <input type="hidden" name="id_utilisateur_nom"
+                        value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+
+                </div>
+
+
+                <div class="nouveau">
+
+                    <label for="nouveauPrenom">Nouveau Prénom </label>
+
+                    <input type="text" name="nouveauPrenom">
+
+                    <input type="hidden" name="id_utilisateur_prenom"
+                        value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+
+                </div>
+
+                <div class="nouveau">
+
+                    <label for="nouveauDob">Nouvelle date de naissance </label>
+
+                    <input type="date" name="nouveauDob">
+
+                    <input type="hidden" name="id_utilisateur_dob"
+                        value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+
+                </div>
+
+
+
+                <div class="nouveau">
+
+                    <label for="nouvelEmail">Nouvel Email </label>
+
+                    <input type="email" name="nouvelEmail">
+
+                    <input type="hidden" name="id_utilisateur_email"
+                        value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+
+                </div>
+
+                <input type="hidden" name="id_utilisateur_email"
+                    value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
+
+
+            </form>
+
         </div>
+
+        <button type="submit" class="modifInfo" id="modifInfo">Enregistrer les informations</button>
+
+
+
     </div>
 
+    <div class="labelDescription">
+        <label for="description">
+            Description :
+        </label>
+        <?= $_SESSION["user"]["Description"]; ?>
+        <input type="text" id="description" name="descrition" value="Décrivez vous en quelques mots.. ">
+        <button type="submit" class="modifDescription">Modifier</button>
+    </div>
 
 
     <div class="blockPDP">

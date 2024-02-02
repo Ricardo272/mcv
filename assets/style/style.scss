@@ -443,19 +443,11 @@ body {
         flex-direction: column;
         border: solid black;
         border-radius: 1rem;
-        width: 45rem;
-        height: 35rem;
+        width: 50%;
         position: relative;
         margin: 0 auto;
         top: 5rem;
         background-color: #0000009e;
-
-        .profileForm {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: beige;
-        }
 
         h2 {
             position: relative;
@@ -470,6 +462,78 @@ body {
             border: solid white;
             align-self: center;
         }
+
+        .infoActuel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: solid white;
+            border-radius: 1rem;
+            width: fit-content;
+            margin: 1rem;
+            padding: 1rem;
+            background-color: #fee3c385;
+        }
+
+        .block {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .profileForm {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.2rem;
+            width: -moz-fit-content;
+            width: fit-content;
+            border: solid white;
+            border-radius: 1rem;
+            background-color: rgba(254, 227, 195, 0.5215686275);
+            justify-content: space-evenly;
+            height: 15rem;
+            margin: 1rem;
+
+            .nouveau {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: .5rem;
+
+                label {
+                    overflow: overlay;
+                    width: 10rem;
+                    text-align: center;
+
+                }
+
+                input {
+                    border-radius: 1rem;
+                    border: none;
+                    width: 9rem;
+                }
+            }
+        }
+
+        #modifInfo {
+            width: fit-content;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            border: solid white;
+            border-radius: 1rem;
+            background-color: #246f1e85;
+            cursor: pointer;
+        }
+
+        #modifInfo:hover {
+            color: black;
+        }
+
+        #modifInfo:active {
+            color: yellow;
+        }
+
+
 
 
 
