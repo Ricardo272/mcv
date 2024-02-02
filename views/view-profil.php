@@ -6,7 +6,7 @@ require_once "../config.php";
 // Models
 require_once "../models/Utilisateur.php";
 
-var_dump($_POST);
+
 
 // Vérifier si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?= $_SESSION["user"]["Prenom"]; ?>
             </label>
             <label for="nouveauPrenom">Nouveau Prénom :</label>
-            <input type="text" name="nouveauPrenom">
+            <input type="text" name="nouveauPrenom" required>
             <input type="hidden" name="id_utilisateur_prenom"
                 value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
 
@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?= $_SESSION["user"]["Date_de_naissance"]; ?>
             </label>
             <label for="nouveauDob">Nouvelle Date de naissance :</label>
-            <input type="date" name="nouveauDob">
+            <input type="date" name="nouveauDob" required>
             <input type="hidden" name="id_utilisateur_dob" value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
 
             <label for="email">
@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?= $_SESSION["user"]["Email"]; ?>
             </label>
             <label for="nouvelEmail">Nouvel Email :</label>
-            <input type="email" name="nouvelEmail">
+            <input type="email" name="nouvelEmail" required>
             <input type="hidden" name="id_utilisateur_email" value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
 
             <button type="submit" class="modifInfo" id="modifInfo">Enregistrer les informations</button>
