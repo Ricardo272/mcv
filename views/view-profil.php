@@ -6,12 +6,12 @@ require_once "../config.php";
 // Models
 require_once "../models/Utilisateur.php";
 
-
+var_dump($_POST);
 
 // Vérifier si le formulaire est soumis
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifier et traiter le nouveau nom
-    if (isset($_POST["nouveauNom"])) {
+    if (!empty($_POST["nouveauNom"])) {
         $nouveauNom = $_POST["nouveauNom"];
         $id_utilisateur_nom = $_POST["id_utilisateur_nom"];
         Utilisateur::ModifierUtilisateurNom($nouveauNom, $id_utilisateur_nom);
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
     }
 
     // Vérifier et traiter le nouveau prénom
-    if (isset($_POST["nouveauPrenom"])) {
+    if (!empty($_POST["nouveauPrenom"])) {
         $nouveauPrenom = $_POST["nouveauPrenom"];
         $id_utilisateur_prenom = $_POST["id_utilisateur_prenom"];
         Utilisateur::ModifierUtilisateurPrenom($nouveauPrenom, $id_utilisateur_prenom);
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
     }
 
     // Vérifier et traiter la nouvelle date de naissance
-    if (isset($_POST["nouveauDob"])) {
+    if (!empty($_POST["nouveauDob"])) {
         $nouveauDob = $_POST["nouveauDob"];
         $id_utilisateur_dob = $_POST["id_utilisateur_dob"];
         Utilisateur::ModifierUtilisateurDob($nouveauDob, $id_utilisateur_dob);
@@ -35,14 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
     }
 
     // Vérifier et traiter le nouvel email
-    if (isset($_POST["nouvelEmail"])) {
+    if (!empty($_POST["nouvelEmail"])) {
         $nouvelEmail = $_POST["nouvelEmail"];
         $id_utilisateur_email = $_POST["id_utilisateur_email"];
         Utilisateur::ModifierUtilisateurEmail($nouvelEmail, $id_utilisateur_email);
         $_SESSION["user"]["Email"] = $nouvelEmail;
     }
 }
-var_dump($_SESSION["user"]);
+
 ?>
 
 <!DOCTYPE html>

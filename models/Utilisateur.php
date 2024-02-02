@@ -183,7 +183,7 @@ class Utilisateur
             $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
 
 
-            $sql = "UPDATE `utilisateur` SET `Email_utilisateur` = :nouvelEmail WHERE `ID_utilisateur` = :id_utilisateur";
+            $sql = "UPDATE `utilisateur` SET `Email` = :nouvelEmail WHERE `ID_utilisateur` = :id_utilisateur";
 
             $query = $db->prepare($sql);
 
