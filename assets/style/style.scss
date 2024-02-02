@@ -450,6 +450,12 @@ body {
         top: 5rem;
         background-color: #0000009e;
 
+        .profileForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: beige;
+        }
 
         h2 {
             position: relative;
@@ -465,169 +471,34 @@ body {
             align-self: center;
         }
 
-        .allLabel {
-
-            // display: flex;
-            // flex-direction: column;
-            // align-items: center;
-            // justify-content: space-around;
-            // height: inherit;
-            .infos {
-                margin: 0 auto;
-                color: white;
-
-                .modifNom {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 2rem;
-                    border: solid;
-                    border-radius: 1rem;
-                    padding: .5rem;
-                    background: #228b22b0;
-                    cursor: pointer;
-                }
-
-                .modifNom:hover {
-                    color: black;
-                }
-
-                .modifNom:active {
-                    color: yellow;
-                }
-
-                .modifPrenom {
-                    border: solid black;
-                    border-radius: 1rem;
-                    margin: .5rem;
-
-                }
-
-                .modifPrenom {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 2rem;
-                    border: solid;
-                    border-radius: 1rem;
-                    padding: .5rem;
-                    background: #228b22b0;
-                    cursor: pointer;
-                }
-
-                .modifPrenom:hover {
-                    color: black;
-                }
-
-                .modifPrenom:active {
-                    color: yellow;
-                }
-
-                .modifDob {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 2rem;
-                    border: solid;
-                    border-radius: 1rem;
-                    padding: .5rem;
-                    background: #228b22b0;
-                    cursor: pointer;
-                }
-
-                .modifDob:hover {
-                    color: black;
-                }
-
-                .modifDob:active {
-                    color: yellow;
-                }
-
-                .modifEmail {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 2rem;
-                    border: solid;
-                    border-radius: 1rem;
-                    padding: .5rem;
-                    background: #228b22b0;
-                    cursor: pointer;
-                }
-
-                .modifEmail:hover {
-                    color: black;
-                }
-
-                .modifEmail:active {
-                    color: yellow;
-                }
 
 
-                .labelNom {
-                    font-size: 1.5rem;
-                    text-align: center;
-                    text-transform: capitalize;
-                }
+        .labelDescription {
+            font-size: 1.5rem;
+            margin: .5rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: white;
 
-                .labelPrenom {
-                    text-transform: capitalize;
-                    display: flex;
-                    font-size: 1.5rem;
-                    align-items: center;
-                    justify-content: space-around;
-                    margin: .5rem;
-
-                }
-
-                .labelDob {
-                    text-transform: capitalize;
-
-                    display: flex;
-                    font-size: 1.5rem;
-                    align-items: center;
-                    justify-content: space-around;
-                    margin: .5rem;
-
-
-                }
-
-                .labelEmail {
-                    display: flex;
-                    font-size: 1.5rem;
-                    align-items: center;
-                    justify-content: space-around;
-                    margin: .5rem;
-
-
-
-                }
-            }
-
-            .labelDescription {
-                font-size: 1.5rem;
+            .modifDescription {
+                border: solid black;
+                border-radius: 1rem;
                 margin: .5rem;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                color: white;
-
-                .modifDescription {
-                    border: solid black;
-                    border-radius: 1rem;
-                    margin: .5rem;
-                }
-
-                #description {
-                    width: 75%;
-                    height: 10rem;
-                    border: solid;
-                    border-radius: 1rem;
-                    margin: .5rem;
-                }
-
-
             }
+
+            #description {
+                width: 75%;
+                height: 10rem;
+                border: solid;
+                border-radius: 1rem;
+                margin: .5rem;
+            }
+
 
         }
-    }
 
+    }
 
 
     .blockPDP {

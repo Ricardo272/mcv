@@ -7,28 +7,42 @@ require_once "../config.php";
 require_once "../models/Utilisateur.php";
 
 
-// Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION['user'])) {
-    header("Location: controller-signin.php");
-    exit();
-}
 
 // Vérifier si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
+    // Vérifier et traiter le nouveau nom
     if (isset($_POST["nouveauNom"])) {
-        // Modification du nom
         $nouveauNom = $_POST["nouveauNom"];
-        $id_utilisateur = $_POST["id_utilisateur"];
-        Utilisateur::ModifierNom($nouveauNom, $id_utilisateur);
+        $id_utilisateur_nom = $_POST["id_utilisateur_nom"];
+        Utilisateur::ModifierUtilisateurNom($nouveauNom, $id_utilisateur_nom);
         $_SESSION["user"]["Nom"] = $nouveauNom;
-    } elseif (isset($_POST["nouveauPrenom"])) {
-        // Modification du prénom
+    }
+
+    // Vérifier et traiter le nouveau prénom
+    if (isset($_POST["nouveauPrenom"])) {
         $nouveauPrenom = $_POST["nouveauPrenom"];
-        $id_utilisateur = $_POST["id_utilisateur"];
-        Utilisateur::ModifierPrenom($nouveauPrenom, $id_utilisateur);
+        $id_utilisateur_prenom = $_POST["id_utilisateur_prenom"];
+        Utilisateur::ModifierUtilisateurPrenom($nouveauPrenom, $id_utilisateur_prenom);
         $_SESSION["user"]["Prenom"] = $nouveauPrenom;
     }
+
+    // Vérifier et traiter la nouvelle date de naissance
+    if (isset($_POST["nouveauDob"])) {
+        $nouveauDob = $_POST["nouveauDob"];
+        $id_utilisateur_dob = $_POST["id_utilisateur_dob"];
+        Utilisateur::ModifierUtilisateurDob($nouveauDob, $id_utilisateur_dob);
+        $_SESSION["user"]["Date_de_naissance"] = $nouveauDob;
+    }
+
+    // Vérifier et traiter le nouvel email
+    if (isset($_POST["nouvelEmail"])) {
+        $nouvelEmail = $_POST["nouvelEmail"];
+        $id_utilisateur_email = $_POST["id_utilisateur_email"];
+        Utilisateur::ModifierUtilisateurEmail($nouvelEmail, $id_utilisateur_email);
+        $_SESSION["user"]["Email"] = $nouvelEmail;
+    }
 }
+var_dump($_SESSION["user"]);
 ?>
 
 <!DOCTYPE html>
@@ -78,88 +92,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
 
     <div class="informationPerso">
         <h2>Vos informations</h2>
-        <div class="allLabel">
-            <table class="infos">
-                <tr>
-                    <td class="labelNom">
-                        <label for="nom">
-                            Nom :
-                            <?= $_SESSION["user"]["Nom"]; ?>
-                        </label>
-                    </td>
 
-                    <td>
-                        <button class="modifNom" id="modifNom" onclick="afficherFormulaireNom()">Modifier</button>
 
-                        <form id="formulaireNom" style="display:none;" method="POST" action="<?php $_SERVER; ?>">
-                            <label for="nouveauNom">Nouveau nom :</label>
-                            <input type="text" name="nouveauNom" required>
-                            <input type="hidden" name="id_utilisateur"
-                                value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
-                            <button type="submit" name="enregistrer">Enregistrer</button>
-                        </form>
-                    </td>
-                </tr>
+        <form class="profileForm" method="POST" action="../controllers/controller-profil.php">
 
-                <tr>
-                    <td class="labelPrenom">
-                        <label for="prenom">
-                            Prénom :
-                            <?= $_SESSION["user"]["Prenom"]; ?>
-                        </label>
-                    </td>
-                    <td>
-                        <button class="modifPrenom" id="modifPrenom"
-                            onclick="afficherFormulairePrenom()">Modifier</button>
+            <label for="nom">
+                Nom :
+                <?= $_SESSION["user"]["Nom"]; ?>
+            </label>
+            <label for="nouveauNom">Nouveau nom :</label>
+            <input type="text" id="nouveauNom" name="nouveauNom" required>
+            <input type="hidden" name="id_utilisateur_nom" value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
 
-                        <form id="formulairePrenom" style="display:none;" method="POST" action="<?php $_SERVER; ?>">
-                            <label for="nouveauPrenom">Nouveau Prénom :</label>
-                            <input type="text" name="nouveauPrenom" required>
-                            <input type="hidden" name="id_utilisateur"
-                                value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
-                            <button type="submit" name="enregistrer">Enregistrer</button>
-                        </form>
-                    </td>
-                </tr>
+            <label for="prenom">
+                Prénom :
+                <?= $_SESSION["user"]["Prenom"]; ?>
+            </label>
+            <label for="nouveauPrenom">Nouveau Prénom :</label>
+            <input type="text" name="nouveauPrenom">
+            <input type="hidden" name="id_utilisateur_prenom"
+                value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
 
-                <tr>
-                    <td class="labelDob">
-                        <label for="dob">
-                            Date de naissance :
-                            <?= $_SESSION["user"]["Date_de_naissance"]; ?>
-                        </label>
-                    </td>
-                    <td>
-                        <button type="submit" class="modifDob">Modifier</button>
-                    </td>
+            <label for="dob">
+                Date de naissance :
+                <?= $_SESSION["user"]["Date_de_naissance"]; ?>
+            </label>
+            <label for="nouveauDob">Nouvelle Date de naissance :</label>
+            <input type="date" name="nouveauDob">
+            <input type="hidden" name="id_utilisateur_dob" value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
 
-                </tr>
+            <label for="email">
+                Email :
+                <?= $_SESSION["user"]["Email"]; ?>
+            </label>
+            <label for="nouvelEmail">Nouvel Email :</label>
+            <input type="email" name="nouvelEmail">
+            <input type="hidden" name="id_utilisateur_email" value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
 
-                <tr>
-                    <td class="labelEmail">
-                        <label for="email">
-                            Email :
-                            <?= $_SESSION["user"]["Email"]; ?>
-                        </label>
-                    </td>
-                    <td>
-                        <button type="submit" class="modifEmail">Modifier</button>
-                    </td>
-                </tr>
+            <button type="submit" class="modifInfo" id="modifInfo">Enregistrer les informations</button>
+        </form>
 
-            </table>
 
-            <div class="labelDescription">
-                <label for="description">
-                    Description :
-                </label>
-                <?= $_SESSION["user"]["Description"]; ?>
-                <input type="text" id="description" name="descrition" value="Décrivez vous en quelques mots.. ">
-                <button type="submit" class="modifDescription">Modifier</button>
-            </div>
+        <div class="labelDescription">
+            <label for="description">
+                Description :
+            </label>
+            <?= $_SESSION["user"]["Description"]; ?>
+            <input type="text" id="description" name="descrition" value="Décrivez vous en quelques mots.. ">
+            <button type="submit" class="modifDescription">Modifier</button>
         </div>
-
     </div>
+
+
 
     <div class="blockPDP">
         <img src="../assets/image/image-upload/<?php echo $_SESSION["user"]["Photo_de_profil"] == "img-profil-defaut.png" ? "img-profil-defaut.png" : $_SESSION["user"]["ID_utilisateur"] . "_profile_photo.jpg"; ?>"
@@ -172,6 +156,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["enregistrer"])) {
             <button type="submit" name="modifPDP">Modifier la photo de profil</button>
         </form>
     </div>
+
+
+
 
     <script src="../assets/js/script.js"></script>
 </body>

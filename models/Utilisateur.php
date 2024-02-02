@@ -102,52 +102,6 @@ class Utilisateur
     }
 
 
-    public static function ModifierNom(
-        string $nom,
-        int $id_utilisateur
-    ) {
-        try {
-            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
-
-            $sql = "UPDATE `utilisateur` SET `Nom`= :Nom WHERE `ID_utilisateur` = :ID_utilisateur";
-            $query = $db->prepare($sql);
-
-            $query->bindValue(':Nom', htmlspecialchars($nom), PDO::PARAM_STR);
-            $query->bindValue(':ID_utilisateur', $id_utilisateur, PDO::PARAM_INT);
-
-            $query->execute();
-
-            // Fermez la connexion à la base de données après l'exécution de la requête
-            $db = null;
-        } catch (PDOException $e) {
-            echo 'Erreur : ' . $e->getMessage();
-            die();
-        }
-    }
-    public static function ModifierPrenom(
-        string $prenom,
-        int $id_utilisateur
-    ) {
-        try {
-            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
-
-            $sql = "UPDATE `utilisateur` SET `Prenom`= :Prenom WHERE `ID_utilisateur` = :ID_utilisateur";
-
-            $query = $db->prepare($sql);
-
-            $query->bindValue(':Prenom', htmlspecialchars($prenom), PDO::PARAM_STR);
-            $query->bindValue(':ID_utilisateur', $id_utilisateur, PDO::PARAM_INT);
-
-            $query->execute();
-
-            // Fermez la connexion à la base de données après l'exécution de la requête
-            $db = null;
-        } catch (PDOException $e) {
-            echo 'Erreur : ' . $e->getMessage();
-            die();
-        }
-    }
-
     public static function ModifierPDP(
         int $id_utilisateur,
         string $photoName
@@ -168,4 +122,79 @@ class Utilisateur
             die();
         }
     }
+    public static function ModifierUtilisateurNom(string $nouveauNom, int $id_utilisateur)
+    {
+        try {
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+            $sql = "UPDATE `utilisateur` SET `Nom`= :Nom WHERE `ID_utilisateur` = :id_utilisateur";
+            $query = $db->prepare($sql);
+
+            $query->bindValue(':Nom', htmlspecialchars($nouveauNom), PDO::PARAM_STR);
+            $query->bindValue(':id_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+
+            $query->execute();
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            die();
+        }
+    }
+
+    public static function ModifierUtilisateurPrenom(string $nouveauPrenom, int $id_utilisateur)
+    {
+        try {
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+            $sql = "UPDATE `utilisateur` SET `Prenom`= :Prenom WHERE `ID_utilisateur` = :id_utilisateur";
+            $query = $db->prepare($sql);
+
+            $query->bindValue(':Prenom', htmlspecialchars($nouveauPrenom), PDO::PARAM_STR);
+            $query->bindValue(':id_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+
+            $query->execute();
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            die();
+        }
+    }
+
+    public static function ModifierUtilisateurDob(string $nouveauDob, int $id_utilisateur)
+    {
+        try {
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+
+            $sql = "UPDATE `utilisateur` SET `Date_de_naissance`= :dob WHERE `ID_utilisateur` = :id_utilisateur";
+            $query = $db->prepare($sql);
+
+            $query->bindValue(':dob', $nouveauDob, PDO::PARAM_STR);
+            $query->bindValue(':id_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+
+            $query->execute();
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            die();
+        }
+    }
+
+    public static function ModifierUtilisateurEmail(string $nouvelEmail, int $id_utilisateur)
+    {
+        try {
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+
+            $sql = "UPDATE `utilisateur` SET `Email_utilisateur` = :nouvelEmail WHERE `ID_utilisateur` = :id_utilisateur";
+
+            $query = $db->prepare($sql);
+
+            $query->bindValue(':nouvelEmail', $nouvelEmail, PDO::PARAM_STR);
+            $query->bindValue(':id_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+
+            $query->execute();
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            die();
+        }
+    }
+
 }

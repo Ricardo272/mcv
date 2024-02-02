@@ -367,6 +367,12 @@ body .success-message {
   top: 5rem;
   background-color: rgba(0, 0, 0, 0.6196078431);
 }
+.profil .informationPerso .profileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: beige;
+}
 .profil .informationPerso h2 {
   position: relative;
   width: -moz-fit-content;
@@ -380,108 +386,7 @@ body .success-message {
   border: solid white;
   align-self: center;
 }
-.profil .informationPerso .allLabel .infos {
-  margin: 0 auto;
-  color: white;
-}
-.profil .informationPerso .allLabel .infos .modifNom {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: rgba(34, 139, 34, 0.6901960784);
-  cursor: pointer;
-}
-.profil .informationPerso .allLabel .infos .modifNom:hover {
-  color: black;
-}
-.profil .informationPerso .allLabel .infos .modifNom:active {
-  color: yellow;
-}
-.profil .informationPerso .allLabel .infos .modifPrenom {
-  border: solid black;
-  border-radius: 1rem;
-  margin: 0.5rem;
-}
-.profil .informationPerso .allLabel .infos .modifPrenom {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: rgba(34, 139, 34, 0.6901960784);
-  cursor: pointer;
-}
-.profil .informationPerso .allLabel .infos .modifPrenom:hover {
-  color: black;
-}
-.profil .informationPerso .allLabel .infos .modifPrenom:active {
-  color: yellow;
-}
-.profil .informationPerso .allLabel .infos .modifDob {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: rgba(34, 139, 34, 0.6901960784);
-  cursor: pointer;
-}
-.profil .informationPerso .allLabel .infos .modifDob:hover {
-  color: black;
-}
-.profil .informationPerso .allLabel .infos .modifDob:active {
-  color: yellow;
-}
-.profil .informationPerso .allLabel .infos .modifEmail {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: rgba(34, 139, 34, 0.6901960784);
-  cursor: pointer;
-}
-.profil .informationPerso .allLabel .infos .modifEmail:hover {
-  color: black;
-}
-.profil .informationPerso .allLabel .infos .modifEmail:active {
-  color: yellow;
-}
-.profil .informationPerso .allLabel .infos .labelNom {
-  font-size: 1.5rem;
-  text-align: center;
-  text-transform: capitalize;
-}
-.profil .informationPerso .allLabel .infos .labelPrenom {
-  text-transform: capitalize;
-  display: flex;
-  font-size: 1.5rem;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0.5rem;
-}
-.profil .informationPerso .allLabel .infos .labelDob {
-  text-transform: capitalize;
-  display: flex;
-  font-size: 1.5rem;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0.5rem;
-}
-.profil .informationPerso .allLabel .infos .labelEmail {
-  display: flex;
-  font-size: 1.5rem;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0.5rem;
-}
-.profil .informationPerso .allLabel .labelDescription {
+.profil .informationPerso .labelDescription {
   font-size: 1.5rem;
   margin: 0.5rem;
   display: flex;
@@ -489,12 +394,12 @@ body .success-message {
   flex-direction: column;
   color: white;
 }
-.profil .informationPerso .allLabel .labelDescription .modifDescription {
+.profil .informationPerso .labelDescription .modifDescription {
   border: solid black;
   border-radius: 1rem;
   margin: 0.5rem;
 }
-.profil .informationPerso .allLabel .labelDescription #description {
+.profil .informationPerso .labelDescription #description {
   width: 75%;
   height: 10rem;
   border: solid;
