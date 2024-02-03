@@ -8,6 +8,15 @@ require_once "../config.php";
 require_once "../models/Utilisateur.php";
 require_once "../models/Trajet.php";
 
+if (isset($_SESSION['user'])) {
+    $dateDuJour = date('d F Y');
+}
+if (!isset($_SESSION['user'])) {
+
+    header("Location: controller-signin.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = [];
     // Récupérer les données du formulaire
@@ -18,14 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $idUtilisateur = $_SESSION["user"]["ID_utilisateur"];
     // Vérifier si une image a été téléchargée
     $imageTrajet = isset($_FILES["trajet_de_l_utilisateur"]) ? $_FILES["trajet_de_l_utilisateur"]["name"] : "image.jpg";
-    // var_dump(
-    // $dateTrajet,
-    // $distanceParcourue,
-    // $dureeTrajet,
-    // $imageTrajet,
-    // $idVehicule,
-    // $idUtilisateur
-    // );
+
 
     Trajet::ajouterTrajet(
         $dateTrajet,

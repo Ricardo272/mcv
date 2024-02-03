@@ -8,8 +8,38 @@
     <title>Formulaire trajet</title>
 </head>
 
-<body>
-    <a href='../controllers/controller-home.php'><button>Home</button></a>
+<body class="trajet">
+    <div class="imgBackground">
+        <img src="../assets/image/background/background-blast.jpg" alt="background">
+    </div>
+
+    <div class="navbar">
+
+        <a href='../controllers/controller-home.php'>
+            <i class="bi bi-house-fill"></i> Home
+        </a>
+
+        <a href="../controllers/controller-profil.php">
+            <i class="bi bi-person-circle"></i> Profil
+        </a>
+
+        <a href="../controllers/controller-historique-des-trajets.php">
+            <i class="bi bi-clock-history"></i> Historique des trajets
+        </a>
+
+        <a href="../controllers/controller-signout.php">
+            <i class="bi bi-door-closed-fill"></i> Déconnexion
+        </a>
+
+    </div>
+
+    <div class="sidebar">
+        <h2><i class="bi bi-house-fill"></i> Ajoutez un trajet</h2>
+
+        <h2>
+            <?= $dateDuJour; ?>
+        </h2>
+    </div>
 
     <div id="popupForm" class="popup-form">
         <form class="formTrajet" action="../controllers/controller-trajet.php" method="post"

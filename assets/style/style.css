@@ -165,7 +165,7 @@ body .success-message {
 }
 
 .home {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .home .imgBackground {
   width: -moz-fit-content;
@@ -289,7 +289,8 @@ body .success-message {
 }
 .home .blockPDP img {
   width: 12rem;
-  border: solid white;
+  border: solid black;
+  border-radius: 10rem;
 }
 
 .profil {

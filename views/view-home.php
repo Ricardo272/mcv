@@ -32,9 +32,6 @@
         </a>
     </div>
 
-
-
-    <!-- Affichage du message de succès -->
     <?php
 
     if (isset($_SESSION['message'])) {

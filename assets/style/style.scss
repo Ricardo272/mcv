@@ -208,7 +208,7 @@ body {
 }
 
 .home {
-    overflow: hidden;
+    overflow-x: hidden;
 
     .imgBackground {
         width: fit-content;
@@ -355,7 +355,8 @@ body {
 
         img {
             width: 12rem;
-            border: solid white;
+            border: solid black;
+            border-radius: 10rem;
 
         }
     }
