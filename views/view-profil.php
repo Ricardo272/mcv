@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $showform = false;
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -101,24 +102,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="infoActuel">
 
-                <label for="nom">
-                    Nom :
-                    <?= $_SESSION["user"]["Nom"]; ?>
+                <label class="nom" for="nom">
+
+                    <h3>Nom</h3>
+                    <p>
+                        <?= $_SESSION["user"]["Nom"]; ?>
+                    </p>
                 </label>
 
-                <label for="prenom">
-                    Prénom :
-                    <?= $_SESSION["user"]["Prenom"]; ?>
+                <label class="prenom" for="prenom">
+
+                    <h3>Prénom</h3>
+                    <p>
+                        <?= $_SESSION["user"]["Prenom"]; ?>
+                    </p>
                 </label>
 
-                <label for="dob">
-                    Date de naissance :
-                    <?= $_SESSION["user"]["Date_de_naissance"]; ?>
+                <label class="dob" for="dob">
+
+                    <h3>Date de <br>
+                        naissance</h3>
+                    <p>
+                        <?= $_SESSION["user"]["Date_de_naissance"]; ?>
+                    </p>
                 </label>
 
-                <label for="email">
-                    Email :
-                    <?= $_SESSION["user"]["Email"]; ?>
+                <label class="email" for="email">
+
+                    <h3>Email</h3>
+                    <p>
+                        <?= $_SESSION["user"]["Email"]; ?>
+                    </p>
                 </label>
 
             </div>
@@ -130,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <label for="nouveau">Nouveau nom </label>
 
-                    <input type="text" id="nouveauNom" name="nouveauNom" required>
+                    <input type="text" id="nouveauNom" name="nouveauNom">
 
                     <input type="hidden" name="id_utilisateur_nom"
                         value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
@@ -140,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <div class="nouveau">
 
-                    <label for="nouveauPrenom">Nouveau Prénom </label>
+                    <label for="nouveauPrenom">Nouveau prénom </label>
 
                     <input type="text" name="nouveauPrenom">
 
@@ -173,46 +187,67 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 </div>
 
-                <input type="hidden" name="id_utilisateur_email"
+
+
+                <input type="submit" class="modifInfo" id="modifInfo" value="Enregistrer les informations">
+            </form>
+
+        </div>
+
+
+
+        <div class="labelDescription">
+
+            <label class="description" for="description">
+
+                <h2>A propos de vous..</h2>
+
+                <p>
+                    <?= $_SESSION["user"]["Description"]; ?>
+                </p>
+
+            </label>
+
+            <form class="formBio" action="../controllers/controller-modifier-bio.php" method="POST">
+
+
+                <label for="nouvelleBio">Nouvelle Bio</label>
+
+
+                <input type="hidden" name="id_utilisateur_bio"
                     value="<?php echo $_SESSION["user"]['ID_utilisateur']; ?>">
 
+
+                <input type="text" id="nouvelleBio" class="nouvelleBio" name="nouvelleBio"
+                    placeholder="Décrivez vous en quelques mots.. ">
+
+                <input type="submit" value="Modifier" class="modifDescription">
 
             </form>
 
         </div>
 
-        <button type="submit" class="modifInfo" id="modifInfo">Enregistrer les informations</button>
-
-
 
     </div>
-
-    <div class="labelDescription">
-        <label for="description">
-            Description :
-        </label>
-        <?= $_SESSION["user"]["Description"]; ?>
-        <input type="text" id="description" name="descrition" value="Décrivez vous en quelques mots.. ">
-        <button type="submit" class="modifDescription">Modifier</button>
-    </div>
-
 
     <div class="blockPDP">
+
         <img src="../assets/image/image-upload/<?php echo $_SESSION["user"]["Photo_de_profil"] == "img-profil-defaut.png" ? "img-profil-defaut.png" : $_SESSION["user"]["ID_utilisateur"] . "_profile_photo.jpg"; ?>"
             alt="Photo de profil par defaut">
 
         <!-- Formulaire pour modifier la photo de profil -->
         <form action="controller-modif-photo.php" method="POST" enctype="multipart/form-data">
+
             <label for="modifPhoto"></label>
+
             <input type="file" id="modifPhoto" name="new_profile_photo" accept="image/*">
+
             <button type="submit" name="modifPDP">Modifier la photo de profil</button>
+
         </form>
     </div>
 
 
-
-
-    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>

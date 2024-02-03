@@ -197,4 +197,31 @@ class Utilisateur
         }
     }
 
+    public static function ModifierBio(
+        string $nouvelleBio,
+        int $id_utilisateur
+    ): bool {
+        try {
+            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+
+            $sql = "UPDATE `utilisateur` SET `Description`= :nouvelleBio WHERE `ID_utilisateur` = :id_utilisateur";
+            $query = $db->prepare($sql);
+
+            $query->bindValue(':nouvelleBio', $nouvelleBio, PDO::PARAM_STR);
+            $query->bindValue(':id_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+
+            $query->execute();
+
+            if (empty($result)) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            die();
+        }
+    }
 }

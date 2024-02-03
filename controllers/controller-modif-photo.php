@@ -17,7 +17,7 @@ $uploadDoss = "../assets/image/image-upload/";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_FILES["new_profile_photo"]["error"] == 0) {
-        var_dump($_FILES);
+
         // Si le dossier de destination existe
         if (!is_dir($uploadDoss)) {
             mkdir($uploadDoss, 0777, true);
@@ -39,3 +39,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
+
