@@ -13,7 +13,9 @@
 </head>
 
 <body class="signin">
-
+    <div class="imgBackground">
+        <img src="../assets/image/background/background-bush-heart.jpg" alt="background">
+    </div>
     <h2>Connexion</h2>
     <form class="formulaireConnexion" action="controller-signin.php" method="POST" novalidate>
 

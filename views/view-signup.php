@@ -12,7 +12,9 @@
 </head>
 
 <body class="signup">
-
+    <div class="imgBackground">
+        <img src="../assets/image/background/background-leaves.jpg" alt="background">
+    </div>
     <?php if ($showform == true) { ?>
         <h2>Inscription</h2>
         <form class="formulaireInscription" action="controller-signup.php" method="POST" novalidate>

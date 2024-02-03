@@ -10,9 +10,6 @@
   visibility: hidden;
 }
 
-body {
-  /* Styles pour le formulaire pop-up */
-}
 body .felicitationConnexion {
   display: flex;
   flex-direction: column;
@@ -20,32 +17,29 @@ body .felicitationConnexion {
 body img {
   width: 12rem;
 }
-body .popup-form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: cyan;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-body .popup-form .formTrajet {
-  display: flex;
-  flex-direction: column;
-}
 body .success-message {
   color: green;
   margin-bottom: 10px;
 }
 
 .signin {
-  background-image: url("../image/background/background-bush-heart.jpg");
+  overflow: hidden;
+  margin: 0 auto;
+}
+.signin .imgBackground {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.signin .imgBackground img {
+  width: 100%;
+  position: absolute;
+  filter: blur(4px);
+  top: 0;
+  left: 0;
 }
 .signin h2 {
   position: relative;
-  top: 15rem;
+  top: 10rem;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
@@ -59,7 +53,7 @@ body .success-message {
 }
 .signin .formulaireConnexion {
   position: relative;
-  top: 15rem;
+  top: 10rem;
   color: white;
   background-color: rgba(104, 136, 29, 0.4901960784);
   display: flex;
@@ -93,8 +87,16 @@ body .success-message {
   color: rgb(106, 0, 0);
 }
 
-.signup {
-  background-image: url("../image/background/background-leaves.jpg");
+.signup .imgBackground {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.signup .imgBackground img {
+  width: 100%;
+  position: absolute;
+  filter: blur(4px);
+  top: 0;
+  left: 0;
 }
 .signup h2 {
   border: solid black;
@@ -175,6 +177,8 @@ body .success-message {
   width: 100%;
   position: absolute;
   filter: blur(4px);
+  top: 0;
+  left: 0;
 }
 .home .navbar {
   position: relative;
@@ -304,6 +308,8 @@ body .success-message {
   width: 100%;
   position: absolute;
   filter: blur(4px);
+  top: 0;
+  left: 0;
 }
 .profil .navbar {
   position: relative;
@@ -496,6 +502,334 @@ body .success-message {
   margin: 0.5rem;
 }
 .profil .blockPDP img {
+  width: 12rem;
+  border: solid black;
+  border-radius: 10rem;
+}
+
+.trajet {
+  overflow-x: hidden;
+}
+.trajet .imgBackground {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.trajet .imgBackground img {
+  width: 100%;
+  position: absolute;
+  filter: blur(4px);
+}
+.trajet .navbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: solid;
+  border-radius: 1rem;
+  height: 5rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.trajet .navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  border: solid;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background: darkred;
+}
+.trajet .navbar a:hover {
+  color: black;
+}
+.trajet .navbar a:active {
+  color: yellow;
+}
+.trajet .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  border: solid;
+  border-radius: 1rem;
+  position: fixed;
+  margin: 0.5rem;
+  height: 85%;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.trajet .sidebar h2 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+  padding: 1rem;
+  background: darkgoldenrod;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  border: solid white;
+}
+.trajet .divFormTrajet {
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+  border-radius: 1rem;
+  width: 45rem;
+  height: 35rem;
+  position: relative;
+  margin: 0 auto;
+  top: 5rem;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.trajet .divFormTrajet .formTrajet {
+  display: flex;
+  flex-direction: column;
+}
+.trajet .divFormTrajet .formTrajet input {
+  border-radius: 1rem;
+  border: none;
+  width: 9rem;
+  padding: 0.4rem;
+}
+.trajet .divFormTrajet .formTrajet .date {
+  text-align: center;
+  border: solid black;
+  background-color: rgba(255, 228, 196, 0.5607843137);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.trajet .divFormTrajet .formTrajet .date:hover {
+  color: red;
+}
+.trajet .divFormTrajet .formTrajet .date:active {
+  color: yellow;
+}
+.trajet .divFormTrajet .formTrajet .distanceParcourue {
+  text-align: center;
+  border: solid black;
+  background-color: rgba(255, 228, 196, 0.5607843137);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.trajet .divFormTrajet .formTrajet .distanceParcourue:hover {
+  color: red;
+}
+.trajet .divFormTrajet .formTrajet .distanceParcourue:active {
+  color: yellow;
+}
+.trajet .divFormTrajet .formTrajet .duree {
+  text-align: center;
+  border: solid black;
+  background-color: rgba(255, 228, 196, 0.5607843137);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.trajet .divFormTrajet .formTrajet .duree:hover {
+  color: red;
+}
+.trajet .divFormTrajet .formTrajet .duree:active {
+  color: yellow;
+}
+.trajet .divFormTrajet .formTrajet .vehicule {
+  text-align: center;
+  border: solid black;
+  background-color: rgba(255, 228, 196, 0.5607843137);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.trajet .divFormTrajet .formTrajet .vehicule #idVehicule {
+  border-radius: 1rem;
+}
+.trajet .divFormTrajet .formTrajet .vehicule:hover {
+  color: red;
+}
+.trajet .divFormTrajet .formTrajet .vehicule:active {
+  color: yellow;
+}
+.trajet .divFormTrajet .formTrajet .imageLabelTrajet {
+  text-align: center;
+  border: solid black;
+  background-color: rgba(255, 228, 196, 0.5607843137);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.trajet .divFormTrajet .formTrajet .imageLabelTrajet #imageTrajet {
+  color: red;
+  border: solid black;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+.trajet .divFormTrajet .formTrajet .imageLabelTrajet #file-upload-button {
+  border-radius: 1rem;
+}
+.trajet .divFormTrajet .formTrajet .imageTrajet:hover {
+  color: red;
+}
+.trajet .divFormTrajet .formTrajet .imageTrajet:active {
+  color: yellow;
+}
+.trajet .divFormTrajet .formTrajet button {
+  text-align: center;
+  border: solid black;
+  background-color: rgba(255, 228, 196, 0.5607843137);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.trajet .divFormTrajet .formTrajet button:hover {
+  color: red;
+}
+.trajet .divFormTrajet .formTrajet button:active {
+  color: yellow;
+}
+.trajet .blockPDP {
+  border: solid;
+  padding: 2rem;
+  width: 12rem;
+  position: absolute;
+  right: 0rem;
+  margin: 0.5rem;
+  top: 6rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.trajet .blockPDP img {
+  width: 12rem;
+  border: solid black;
+  border-radius: 10rem;
+}
+
+.historique {
+  overflow-x: hidden;
+}
+.historique .imgBackground {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.historique .imgBackground img {
+  width: 100%;
+  position: absolute;
+  filter: blur(4px);
+}
+.historique .navbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: solid;
+  border-radius: 1rem;
+  height: 5rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.historique .navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  border: solid;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background: darkred;
+}
+.historique .navbar a:hover {
+  color: black;
+}
+.historique .navbar a:active {
+  color: yellow;
+}
+.historique .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  border: solid;
+  border-radius: 1rem;
+  position: fixed;
+  margin: 0.5rem;
+  height: 85%;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.historique .sidebar h2 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+  padding: 1rem;
+  background: darkgoldenrod;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  border: solid white;
+}
+.historique .historiqueComplet {
+  display: flex;
+  flex-direction: row;
+  border: solid black;
+  border-radius: 1rem;
+  width: 45rem;
+  position: relative;
+  margin: 0 auto;
+  top: 5rem;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+  flex-wrap: wrap;
+}
+.historique .historiqueComplet .imgEtInfoTrajet {
+  text-align: center;
+  border: solid white;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 228, 196, 0.5607843137);
+}
+.historique .historiqueComplet .imgEtInfoTrajet img {
+  width: 6rem;
+  border: solid black;
+  border-radius: 10rem;
+  background: white;
+}
+.historique .blockPDP {
+  border: solid;
+  padding: 2rem;
+  width: 12rem;
+  position: absolute;
+  right: 0rem;
+  margin: 0.5rem;
+  top: 6rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.6196078431);
+}
+.historique .blockPDP img {
   width: 12rem;
   border: solid black;
   border-radius: 10rem;

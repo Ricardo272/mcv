@@ -30,25 +30,6 @@ body {
         width: 12rem;
     }
 
-
-    /* Styles pour le formulaire pop-up */
-    .popup-form {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: cyan;
-        padding: 20px;
-        border: 1px solid #ccc;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-
-        .formTrajet {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
     .success-message {
         color: green;
         margin-bottom: 10px;
@@ -58,11 +39,25 @@ body {
 }
 
 .signin {
-    background-image: url("../image/background/background-bush-heart.jpg");
+    overflow: hidden;
+    margin: 0 auto;
+
+    .imgBackground {
+        width: fit-content;
+
+        img {
+            width: 100%;
+            position: absolute;
+            filter: blur(4px);
+            top: 0;
+            left: 0;
+
+        }
+    }
 
     h2 {
         position: relative;
-        top: 15rem;
+        top: 10rem;
         width: fit-content;
         margin: 0 auto;
         border-radius: 2rem;
@@ -77,7 +72,7 @@ body {
 
     .formulaireConnexion {
         position: relative;
-        top: 15rem;
+        top: 10rem;
         color: white;
         background-color: #68881d7d;
         display: flex;
@@ -125,7 +120,21 @@ body {
 }
 
 .signup {
-    background-image: url("../image/background/background-leaves.jpg");
+
+
+
+    .imgBackground {
+        width: fit-content;
+
+        img {
+            width: 100%;
+            position: absolute;
+            filter: blur(4px);
+            top: 0;
+            left: 0;
+
+        }
+    }
 
     h2 {
         border: solid black;
@@ -217,7 +226,8 @@ body {
             width: 100%;
             position: absolute;
             filter: blur(4px);
-
+            top: 0;
+            left: 0;
 
         }
     }
@@ -374,6 +384,8 @@ body {
             width: 100%;
             position: absolute;
             filter: blur(4px);
+            top: 0;
+            left: 0;
 
 
         }
@@ -572,10 +584,6 @@ body {
                 }
 
 
-                // border: solid black;
-                // border-radius: 1rem;
-                // margin: .5rem;
-
             }
         }
 
@@ -609,6 +617,389 @@ body {
                 margin: .5rem;
             }
         }
+
+        img {
+            width: 12rem;
+            border: solid black;
+            border-radius: 10rem;
+
+        }
+    }
+
+}
+
+.trajet {
+    overflow-x: hidden;
+
+    .imgBackground {
+        width: fit-content;
+
+        img {
+            width: 100%;
+            position: absolute;
+            filter: blur(4px);
+
+
+        }
+    }
+
+    .navbar {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: solid;
+        border-radius: 1rem;
+        height: 5rem;
+        align-items: center;
+        background-color: #0000009e;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            border: solid;
+            border-radius: 1rem;
+            padding: .5rem;
+            background: darkred;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        float: left;
+        border: solid;
+        border-radius: 1rem;
+        position: fixed;
+        margin: .5rem;
+        height: 85%;
+        background-color: rgba(0, 0, 0, 0.6196078431);
+
+        h2 {
+            position: relative;
+            width: -moz-fit-content;
+            width: fit-content;
+            border-radius: 2rem;
+            padding: 1rem;
+            background: darkgoldenrod;
+            color: white;
+            font-size: 1.5rem;
+            margin: .5rem;
+            border: solid white;
+        }
+
+
+    }
+
+
+
+    .divFormTrajet {
+        display: flex;
+        flex-direction: column;
+        border: solid black;
+        border-radius: 1rem;
+        width: 45rem;
+        height: 35rem;
+        position: relative;
+        margin: 0 auto;
+        top: 5rem;
+        background-color: #0000009e;
+
+        .formTrajet {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                border-radius: 1rem;
+                border: none;
+                width: 9rem;
+                padding: .4rem;
+            }
+
+            .date {
+                text-align: center;
+                border: solid black;
+                background-color: #ffe4c48f;
+                border-radius: 1rem;
+                padding: 1rem;
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .date:hover {
+                color: red;
+            }
+
+            .date:active {
+                color: yellow;
+            }
+
+            .distanceParcourue {
+                text-align: center;
+                border: solid black;
+                background-color: #ffe4c48f;
+                border-radius: 1rem;
+                padding: 1rem;
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .distanceParcourue:hover {
+                color: red;
+            }
+
+            .distanceParcourue:active {
+                color: yellow;
+            }
+
+            .duree {
+                text-align: center;
+                border: solid black;
+                background-color: #ffe4c48f;
+                border-radius: 1rem;
+                padding: 1rem;
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .duree:hover {
+                color: red;
+            }
+
+            .duree:active {
+                color: yellow;
+            }
+
+            .vehicule {
+                text-align: center;
+                border: solid black;
+                background-color: #ffe4c48f;
+                border-radius: 1rem;
+                padding: 1rem;
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+
+                #idVehicule {
+                    border-radius: 1rem;
+                }
+            }
+
+            .vehicule:hover {
+                color: red;
+            }
+
+            .vehicule:active {
+                color: yellow;
+            }
+
+            .imageLabelTrajet {
+                text-align: center;
+                border: solid black;
+                background-color: #ffe4c48f;
+                border-radius: 1rem;
+                padding: 1rem;
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+
+                #imageTrajet {
+                    color: red;
+                    border: solid black;
+                    border-radius: 1rem;
+                    margin: 0.5rem;
+                }
+
+                #file-upload-button {
+                    border-radius: 1rem;
+                }
+            }
+
+            .imageTrajet:hover {
+                color: red;
+            }
+
+            .imageTrajet:active {
+                color: yellow;
+            }
+
+            button {
+                text-align: center;
+                border: solid black;
+                background-color: #ffe4c48f;
+                border-radius: 1rem;
+                padding: 1rem;
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            button:hover {
+                color: red;
+            }
+
+            button:active {
+                color: yellow;
+            }
+        }
+    }
+
+    .blockPDP {
+        border: solid;
+        padding: 2rem;
+        width: 12rem;
+        position: absolute;
+        right: 0rem;
+        margin: .5rem;
+        top: 6rem;
+        border-radius: 1rem;
+        background-color: #0000009e;
+
+        img {
+            width: 12rem;
+            border: solid black;
+            border-radius: 10rem;
+
+        }
+    }
+}
+
+.historique {
+    overflow-x: hidden;
+
+    .imgBackground {
+        width: fit-content;
+
+        img {
+            width: 100%;
+            position: absolute;
+            filter: blur(4px);
+
+
+        }
+    }
+
+    .navbar {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: solid;
+        border-radius: 1rem;
+        height: 5rem;
+        align-items: center;
+        background-color: #0000009e;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            border: solid;
+            border-radius: 1rem;
+            padding: .5rem;
+            background: darkred;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        float: left;
+        border: solid;
+        border-radius: 1rem;
+        position: fixed;
+        margin: .5rem;
+        height: 85%;
+        background-color: rgba(0, 0, 0, 0.6196078431);
+
+        h2 {
+            position: relative;
+            width: -moz-fit-content;
+            width: fit-content;
+            border-radius: 2rem;
+            padding: 1rem;
+            background: darkgoldenrod;
+            color: white;
+            font-size: 1.5rem;
+            margin: .5rem;
+            border: solid white;
+        }
+
+
+    }
+
+    .historiqueComplet {
+        display: flex;
+        flex-direction: row;
+        border: solid black;
+        border-radius: 1rem;
+        width: 45rem;
+        position: relative;
+        margin: 0 auto;
+        top: 5rem;
+        background-color: rgba(0, 0, 0, 0.6196078431);
+        flex-wrap: wrap;
+
+        .imgEtInfoTrajet {
+            text-align: center;
+            border: solid white;
+            border-radius: 1rem;
+            margin: 1rem;
+            padding: 1rem;
+            background-color: #ffe4c48f;
+
+            img {
+                width: 6rem;
+                border: solid black;
+                border-radius: 10rem;
+                background: white;
+            }
+        }
+
+    }
+
+    .blockPDP {
+        border: solid;
+        padding: 2rem;
+        width: 12rem;
+        position: absolute;
+        right: 0rem;
+        margin: .5rem;
+        top: 6rem;
+        border-radius: 1rem;
+        background-color: #0000009e;
 
         img {
             width: 12rem;

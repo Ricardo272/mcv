@@ -7,11 +7,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
     <title>Historique des trajets</title>
 </head>
 
-<body>
+<body class="historique">
+
+    <div class="imgBackground">
+        <img src="../assets/image/background/background-leaves.jpg" alt="background">
+    </div>
+
+    <div class="navbar">
+
+        <a href="../controllers/controller-home.php">
+            <i class="bi bi-house-fill"></i> Home
+        </a>
+
+        <a href="../controllers/controller-profil.php">
+            <i class="bi bi-person-circle"></i> Profil
+        </a>
+
+        <a href="../controllers/controller-signout.php">
+            <i class="bi bi-door-closed-fill"></i> Déconnexion
+        </a>
+    </div>
+
+    <div class="sidebar">
+        <h2><i class="bi bi-house-fill"></i> Ajoutez un trajet</h2>
+
+        <h2>
+            <?= $dateDuJour; ?>
+        </h2>
+    </div>
+
     <a href='../controllers/controller-home.php'><button>Home</button></a>
     <div class="historiqueComplet">
 
@@ -29,10 +58,11 @@
                     <?php
 
 
-                    echo "<p class='date'>" . "Date : " . $trajet['Date_du_trajet'] . "</p>" . "<br>";
-                    echo "<p class='duree'>" . "Durée : " . $trajet['Duree_du_trajet'] . "</p>" . "<br>";
-                    echo "<p class='distance'>" . "Distance : " . $trajet['Distance_parcourue'] . "</p>" . "<br>";
-                    echo "<img class='imgTrajetDefaut' src='../assets/image/imageParDefaut/{$trajet["Image_trajet"]}' alt='Image de trajet par defaut'><br>";
+
+                    echo "<p class='date'>" . "<h2>Date</h2> " . $trajet['Date_du_trajet'] . "</p>";
+                    echo "<p class='duree'>" . " <h2>Durée</h2> " . $trajet['Duree_du_trajet'] . "</p>";
+                    echo "<p class='distance'>" . " <h2>Distance</h2> " . $trajet['Distance_parcourue'] . "</p>";
+                    echo "<img class='imgTrajetDefaut' src='../assets/image/imageParDefaut/{$trajet["Image_trajet"]}' alt='Image de trajet par defaut'>";
 
                     // Ajoutez un formulaire avec un bouton de suppression et l'ID du trajet comme champ caché
                     echo '<form method="post" action="controller-supprimer-trajet.php">';
@@ -57,6 +87,12 @@
     </div>
 
 
+    <div class="blockPDP">
+
+        <img src="../assets/image/image-upload/<?php echo $_SESSION["user"]["Photo_de_profil"] == "img-profil-defaut.png" ? "img-profil-defaut.png" : $_SESSION["user"]["ID_utilisateur"] . "_profile_photo.jpg"; ?>"
+            alt="Photo de profil par defaut">
+
+    </div>
 
 </body>
 
