@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/mediaQuery.css">
     <title>Formulaire trajet</title>
 </head>
 
@@ -17,28 +18,13 @@
         <img src="../assets/image/background/background-blast.jpg" alt="background">
     </div>
 
-    <div class="navbar">
 
-        <a href='../controllers/controller-home.php'>
-            <i class="bi bi-house-fill"></i> Home
-        </a>
-
-        <a href="../controllers/controller-profil.php">
-            <i class="bi bi-person-circle"></i> Profil
-        </a>
-
-        <a href="../controllers/controller-historique-des-trajets.php">
-            <i class="bi bi-clock-history"></i> Historique des trajets
-        </a>
-
-        <a href="../controllers/controller-signout.php">
-            <i class="bi bi-door-closed-fill"></i> Déconnexion
-        </a>
-
-    </div>
+    <?php
+    include '../templates/navBar/trajet.php'
+        ?>
 
     <div class="sidebar">
-        <h2><i class="bi bi-house-fill"></i> Ajoutez un trajet</h2>
+        <h2><i class="bi bi-signpost-split-fill"></i> Ajoutez un trajet</h2>
 
         <h2>
             <?= $dateDuJour; ?>
@@ -51,7 +37,13 @@
 
             <div class="date">
 
-                <label for="dateTrajet">Date du trajet</label>
+
+
+                <label class="dateTrajet" for="dateTrajet">
+                    <p>Date du trajet</p>
+                    <p>et</p>
+                    <p>Heure du trajet</p>
+                </label>
                 <input type="datetime-local" id="dateTrajet" name="dateTrajet" required>
 
             </div>

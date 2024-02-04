@@ -1,1011 +1,1325 @@
-// all
-* {
-    font-family: 'Salsa', cursive;
+ // all
+ * {
+     font-family: 'Salsa', cursive;
 
-    .error {
+     .error {
 
-        color: rgb(125, 5, 5);
-        font-size: 1.2rem;
-        text-align: center;
-
-    }
+         color: rgb(125, 5, 5);
+         font-size: 1.2rem;
+         text-align: center;
 
-    hr {
-        visibility: hidden;
-    }
-}
+     }
 
-//
+     hr {
+         visibility: hidden;
+     }
+ }
 
+ @media screen and (min-width:1300px) {
 
-body {
 
-    .felicitationConnexion {
-        display: flex;
-        flex-direction: column;
-    }
 
 
-    img {
-        width: 12rem;
-    }
 
-    .success-message {
-        color: green;
-        margin-bottom: 10px;
-    }
+     .signin {
+         overflow: hidden;
+         margin: 0 auto;
 
+         .imgBackground {
+             width: fit-content;
 
-}
+             img {
+                 width: 100%;
+                 position: absolute;
+                 filter: blur(4px);
+                 top: 0;
+                 left: 0;
 
-.signin {
-    overflow: hidden;
-    margin: 0 auto;
+             }
+         }
 
-    .imgBackground {
-        width: fit-content;
+         h2 {
+             position: relative;
+             top: 10rem;
+             width: fit-content;
+             margin: 0 auto;
+             border-radius: 2rem;
+             margin-bottom: 1rem;
+             padding: 1rem;
+             background-color: #68881d7d;
+             color: white;
+             font-size: 2.5rem;
+             border: solid black;
+
+         }
+
+         .formulaireConnexion {
+             position: relative;
+             top: 10rem;
+             color: white;
+             background-color: #68881d7d;
+             display: flex;
+             flex-direction: column;
+             margin: 0 auto;
+             width: 20rem;
+             border: solid black;
+             border-radius: 2rem;
+             padding: 1.5rem;
+
+             label {
+                 font-size: 2rem;
+                 margin: 0 auto;
+                 margin-bottom: .5rem;
+
+             }
+
+             input {
+                 font-size: 1.5rem;
+                 text-align: center;
+                 border-radius: 1rem;
+                 border: none;
+                 background-color: white;
+                 color: rgb(69, 67, 67);
+
+             }
+
+
+
+             .linkVersSignup {
+                 // text-decoration: none;
+                 text-align: center;
+                 font-size: 1.2rem;
+                 color: white;
+                 margin: .5rem .5rem 0rem .5rem;
+
+             }
+
+             .linkVersSignup:hover {
+                 color: rgb(106, 0, 0);
+             }
+         }
+
 
-        img {
-            width: 100%;
-            position: absolute;
-            filter: blur(4px);
-            top: 0;
-            left: 0;
-
-        }
-    }
-
-    h2 {
-        position: relative;
-        top: 10rem;
-        width: fit-content;
-        margin: 0 auto;
-        border-radius: 2rem;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        background-color: #68881d7d;
-        color: white;
-        font-size: 2.5rem;
-        border: solid black;
-
-    }
-
-    .formulaireConnexion {
-        position: relative;
-        top: 10rem;
-        color: white;
-        background-color: #68881d7d;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        width: 20rem;
-        border: solid black;
-        border-radius: 2rem;
-        padding: 1.5rem;
-
-        label {
-            font-size: 2rem;
-            margin: 0 auto;
-            margin-bottom: .5rem;
-
-        }
-
-        input {
-            font-size: 1.5rem;
-            text-align: center;
-            border-radius: 1rem;
-            border: none;
-            background-color: white;
-            color: rgb(69, 67, 67);
-
-        }
-
-
-
-        .linkVersSignup {
-            // text-decoration: none;
-            text-align: center;
-            font-size: 1.2rem;
-            color: white;
-            margin: .5rem .5rem 0rem .5rem;
-
-        }
-
-        .linkVersSignup:hover {
-            color: rgb(106, 0, 0);
-        }
-    }
-
-
-}
-
-.signup {
-
-
-
-    .imgBackground {
-        width: fit-content;
-
-        img {
-            width: 100%;
-            position: absolute;
-            filter: blur(4px);
-            top: 0;
-            left: 0;
-
-        }
-    }
-
-    h2 {
-        border: solid black;
-        position: relative;
-        top: 2rem;
-        width: fit-content;
-        margin: 0 auto;
-        border-radius: 2rem;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        background-color: #68881d7d;
-        color: white;
-        font-size: 2.5rem;
-    }
-
-    .formulaireInscription {
-        position: relative;
-        top: 2rem;
-        color: white;
-        background-color: #68881d7d;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        width: 30rem;
-        border: solid black;
-        border-radius: 2rem;
-        padding: 1.5rem;
-
-        select {
-            padding: 0 .5rem 0 .5rem;
-            border-radius: 1rem;
-            border: none;
-            font-size: 1.5rem;
-            text-align: center;
-            color: rgb(69, 67, 67);
-
-
-        }
-
-
-        label {
-            display: flex;
-            font-size: 2rem;
-            margin: 0 auto;
-            margin-bottom: .5rem;
-            width: fit-content;
-
-            a {
-                text-align: center;
-                font-size: 1.2rem;
-                color: white;
-                margin: .5rem .5rem 0rem .5rem;
-            }
-
-            a:hover {
-                color: rgb(106, 0, 0);
-            }
-
-            .cache {
-                width: 1.5rem;
-                cursor: pointer;
-            }
-
-        }
-
-        input {
-            font-size: 1.5rem;
-            text-align: center;
-            border-radius: 1rem;
-            border: none;
-            background-color: white;
-            color: rgb(69, 67, 67);
-
-        }
-
-        #enregister {
-            cursor: pointer;
-        }
-    }
-}
-
-.home {
-    overflow-x: hidden;
-
-    .imgBackground {
-        width: fit-content;
-
-        img {
-            width: 100%;
-            position: absolute;
-            filter: blur(4px);
-            top: 0;
-            left: 0;
-
-        }
-    }
-
-    .navbar {
-        position: relative;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        border: solid;
-        border-radius: 1rem;
-        height: 5rem;
-        align-items: center;
-        background-color: #0000009e;
-
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 2rem;
-            border: solid;
-            border-radius: 1rem;
-            padding: .5rem;
-            background: darkred;
-        }
-
-        a:hover {
-            color: black;
-        }
-
-        a:active {
-            color: yellow;
-        }
-
-    }
-
-    .sidebar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        float: left;
-        border: solid;
-        border-radius: 1rem;
-        position: fixed;
-        margin: .5rem;
-        height: 85%;
-        background-color: rgba(0, 0, 0, 0.6196078431);
-
-        h2 {
-            position: relative;
-            width: -moz-fit-content;
-            width: fit-content;
-            border-radius: 2rem;
-            padding: 1rem;
-            background: darkgoldenrod;
-            color: white;
-            font-size: 1.5rem;
-            margin: .5rem;
-            border: solid white;
-        }
-
-
-    }
-
-
-
-    .padHome {
-        display: flex;
-        flex-direction: column;
-        border: solid black;
-        border-radius: 1rem;
-        width: 45rem;
-        height: 35rem;
-        position: relative;
-        margin: 0 auto;
-        top: 5rem;
-        background-color: #0000009e;
-
-
-        h2 {
-            position: relative;
-            width: -moz-fit-content;
-            width: fit-content;
-            border-radius: 2rem;
-            padding: 1rem;
-            background: #228b22b0;
-            color: white;
-            font-size: 1.5rem;
-            margin: 1rem;
-            border: solid white;
-            align-self: center;
-        }
-
-        .menuHome {
-            width: auto;
-            margin: 2rem;
-            display: flex;
-            justify-content: space-between;
-
-            a {
-                color: white;
-                text-decoration: none;
-                font-size: 2rem;
-                border: solid;
-                border-radius: 1rem;
-                padding: .5rem;
-                background: darkred;
-                width: fit-content;
-                margin: 1rem;
-            }
-
-            a:hover {
-                color: black;
-            }
-
-            a:active {
-                color: yellow;
-            }
-
-        }
-
-
-    }
-
-    .blockPDP {
-        border: solid;
-        padding: 2rem;
-        width: 12rem;
-        position: absolute;
-        right: 0rem;
-        margin: .5rem;
-        top: 6rem;
-        border-radius: 1rem;
-        background-color: #0000009e;
-
-        img {
-            width: 12rem;
-            border: solid black;
-            border-radius: 10rem;
-
-        }
-    }
-
-
-}
-
-.profil {
-    overflow-x: hidden;
-
-    .imgBackground {
-        width: fit-content;
-
-        img {
-            width: 100%;
-            position: absolute;
-            filter: blur(4px);
-            top: 0;
-            left: 0;
-
-
-        }
-    }
-
-    .navbar {
-        position: relative;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        border: solid;
-        border-radius: 1rem;
-        height: 5rem;
-        align-items: center;
-        background-color: #0000009e;
-
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 2rem;
-            border: solid;
-            border-radius: 1rem;
-            padding: .5rem;
-            background: darkred;
-        }
-
-        a:hover {
-            color: black;
-        }
-
-        a:active {
-            color: yellow;
-        }
-
-    }
-
-    .sidebar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        float: left;
-        border: solid;
-        border-radius: 1rem;
-        position: fixed;
-        margin: .5rem;
-        height: 85%;
-        background-color: rgba(0, 0, 0, 0.6196078431);
-
-        h2 {
-            position: relative;
-            width: -moz-fit-content;
-            width: fit-content;
-            border-radius: 2rem;
-            padding: 1rem;
-            background: darkgoldenrod;
-            color: white;
-            font-size: 1.5rem;
-            margin: .5rem;
-            border: solid white;
-        }
-
-
-    }
-
-    .informationPerso {
-        display: flex;
-        flex-direction: column;
-        border: solid black;
-        border-radius: 1rem;
-        width: 50%;
-        position: relative;
-        margin: 0 auto;
-        top: 5rem;
-        background-color: #0000009e;
-        padding: 1.5rem;
-
-        h2 {
-            position: relative;
-            width: -moz-fit-content;
-            width: fit-content;
-            border-radius: 2rem;
-            padding: 1rem;
-            background: #228b22b0;
-            color: white;
-            font-size: 1.5rem;
-            margin: 1rem;
-            border: solid white;
-            align-self: center;
-        }
-
-        .infoActuel {
-            display: flex;
-            flex-direction: column;
-            font-size: 1.2rem;
-            border: solid white;
-            border-radius: 1rem;
-            background-color: rgba(254, 227, 195, 0.5215686275);
-            justify-content: space-evenly;
-            margin: 1rem;
-            text-align: center;
-
-            label {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-
-                h3 {
-                    margin: 1rem;
-                }
-
-                p {
-                    margin: 1rem;
-                }
-            }
-        }
-
-        .block {
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-        }
-
-        .profileForm {
-            display: flex;
-            flex-direction: column;
-            font-size: 1.2rem;
-            width: -moz-fit-content;
-            width: fit-content;
-            border: solid white;
-            border-radius: 1rem;
-            background-color: rgba(254, 227, 195, 0.5215686275);
-            justify-content: space-evenly;
-            height: 15rem;
-            margin: 1rem;
-
-            .nouveau {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin: .5rem;
-
-                label {
-                    overflow: overlay;
-                    width: 10rem;
-                    text-align: center;
-
-                }
-
-                input {
-                    border-radius: 1rem;
-                    border: none;
-                    width: 9rem;
-                    padding: .4rem;
-                }
-            }
-        }
-
-        .modifInfo {
-            width: fit-content;
-            margin: 0 auto;
-            margin-bottom: .5rem;
-            font-size: 1.2rem;
-            border: solid white;
-            border-radius: 1rem;
-            background-color: #246f1e85;
-            cursor: pointer;
-        }
-
-        .modifInfo:hover {
-            color: black;
-        }
-
-        .modifInfo:active {
-            color: yellow;
-        }
-
-        .labelDescription {
-            font-size: 1.5rem;
-            margin: .5rem;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            color: white;
-
-
-
-
-            .formBio {
-                .nouvelleBio {
-                    width: 75%;
-                    height: 10rem;
-                    border: solid;
-                    border-radius: 1rem;
-                    margin: .5rem;
-                }
-
-
-            }
-        }
-
-
-    }
-
-    .blockPDP {
-        border: solid;
-        padding: 2rem;
-        width: 12rem;
-        position: absolute;
-        right: 0rem;
-        margin: .5rem;
-        top: 6rem;
-        border-radius: 1rem;
-        background-color: #0000009e;
-
-        form {
-            overflow: hidden;
-
-            #modifPhoto {
-                color: red;
-                border: solid black;
-                border-radius: 1rem;
-                margin: .5rem;
-            }
-
-            button {
-                border: solid black;
-                border-radius: 1rem;
-                margin: .5rem;
-            }
-        }
-
-        img {
-            width: 12rem;
-            border: solid black;
-            border-radius: 10rem;
-
-        }
-    }
-
-}
-
-.trajet {
-    overflow-x: hidden;
-
-    .imgBackground {
-        width: fit-content;
-
-        img {
-            width: 100%;
-            position: absolute;
-            filter: blur(4px);
-
-
-        }
-    }
-
-    .navbar {
-        position: relative;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        border: solid;
-        border-radius: 1rem;
-        height: 5rem;
-        align-items: center;
-        background-color: #0000009e;
-
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 2rem;
-            border: solid;
-            border-radius: 1rem;
-            padding: .5rem;
-            background: darkred;
-        }
-
-        a:hover {
-            color: black;
-        }
-
-        a:active {
-            color: yellow;
-        }
-
-    }
-
-    .sidebar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        float: left;
-        border: solid;
-        border-radius: 1rem;
-        position: fixed;
-        margin: .5rem;
-        height: 85%;
-        background-color: rgba(0, 0, 0, 0.6196078431);
-
-        h2 {
-            position: relative;
-            width: -moz-fit-content;
-            width: fit-content;
-            border-radius: 2rem;
-            padding: 1rem;
-            background: darkgoldenrod;
-            color: white;
-            font-size: 1.5rem;
-            margin: .5rem;
-            border: solid white;
-        }
-
-
-    }
-
-
-
-    .divFormTrajet {
-        display: flex;
-        flex-direction: column;
-        border: solid black;
-        border-radius: 1rem;
-        width: 45rem;
-        height: 35rem;
-        position: relative;
-        margin: 0 auto;
-        top: 5rem;
-        background-color: #0000009e;
-
-        .formTrajet {
-            display: flex;
-            flex-direction: column;
-
-            input {
-                border-radius: 1rem;
-                border: none;
-                width: 9rem;
-                padding: .4rem;
-            }
-
-            .date {
-                text-align: center;
-                border: solid black;
-                background-color: #ffe4c48f;
-                border-radius: 1rem;
-                padding: 1rem;
-                width: fit-content;
-                margin: 0 auto;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-            }
-
-            .date:hover {
-                color: red;
-            }
-
-            .date:active {
-                color: yellow;
-            }
-
-            .distanceParcourue {
-                text-align: center;
-                border: solid black;
-                background-color: #ffe4c48f;
-                border-radius: 1rem;
-                padding: 1rem;
-                width: fit-content;
-                margin: 0 auto;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-            }
-
-            .distanceParcourue:hover {
-                color: red;
-            }
-
-            .distanceParcourue:active {
-                color: yellow;
-            }
-
-            .duree {
-                text-align: center;
-                border: solid black;
-                background-color: #ffe4c48f;
-                border-radius: 1rem;
-                padding: 1rem;
-                width: fit-content;
-                margin: 0 auto;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-            }
-
-            .duree:hover {
-                color: red;
-            }
-
-            .duree:active {
-                color: yellow;
-            }
-
-            .vehicule {
-                text-align: center;
-                border: solid black;
-                background-color: #ffe4c48f;
-                border-radius: 1rem;
-                padding: 1rem;
-                width: fit-content;
-                margin: 0 auto;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-
-                #idVehicule {
-                    border-radius: 1rem;
-                }
-            }
-
-            .vehicule:hover {
-                color: red;
-            }
-
-            .vehicule:active {
-                color: yellow;
-            }
-
-            .imageLabelTrajet {
-                text-align: center;
-                border: solid black;
-                background-color: #ffe4c48f;
-                border-radius: 1rem;
-                padding: 1rem;
-                width: fit-content;
-                margin: 0 auto;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-
-                #imageTrajet {
-                    color: red;
-                    border: solid black;
-                    border-radius: 1rem;
-                    margin: 0.5rem;
-                }
-
-                #file-upload-button {
-                    border-radius: 1rem;
-                }
-            }
-
-            .imageTrajet:hover {
-                color: red;
-            }
-
-            .imageTrajet:active {
-                color: yellow;
-            }
-
-            button {
-                text-align: center;
-                border: solid black;
-                background-color: #ffe4c48f;
-                border-radius: 1rem;
-                padding: 1rem;
-                width: fit-content;
-                margin: 0 auto;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-            }
-
-            button:hover {
-                color: red;
-            }
-
-            button:active {
-                color: yellow;
-            }
-        }
-    }
-
-    .blockPDP {
-        border: solid;
-        padding: 2rem;
-        width: 12rem;
-        position: absolute;
-        right: 0rem;
-        margin: .5rem;
-        top: 6rem;
-        border-radius: 1rem;
-        background-color: #0000009e;
-
-        img {
-            width: 12rem;
-            border: solid black;
-            border-radius: 10rem;
-
-        }
-    }
-}
-
-.historique {
-    overflow-x: hidden;
-
-    .imgBackground {
-        width: fit-content;
-
-        img {
-            width: 100%;
-            position: absolute;
-            filter: blur(4px);
-
-
-        }
-    }
-
-    .navbar {
-        position: relative;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        border: solid;
-        border-radius: 1rem;
-        height: 5rem;
-        align-items: center;
-        background-color: #0000009e;
-
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 2rem;
-            border: solid;
-            border-radius: 1rem;
-            padding: .5rem;
-            background: darkred;
-        }
-
-        a:hover {
-            color: black;
-        }
-
-        a:active {
-            color: yellow;
-        }
-
-    }
-
-    .sidebar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        float: left;
-        border: solid;
-        border-radius: 1rem;
-        position: fixed;
-        margin: .5rem;
-        height: 85%;
-        background-color: rgba(0, 0, 0, 0.6196078431);
-
-        h2 {
-            position: relative;
-            width: -moz-fit-content;
-            width: fit-content;
-            border-radius: 2rem;
-            padding: 1rem;
-            background: darkgoldenrod;
-            color: white;
-            font-size: 1.5rem;
-            margin: .5rem;
-            border: solid white;
-        }
-
-
-    }
-
-    .historiqueComplet {
-        display: flex;
-        flex-direction: row;
-        border: solid black;
-        border-radius: 1rem;
-        width: 45rem;
-        position: relative;
-        margin: 0 auto;
-        top: 5rem;
-        background-color: rgba(0, 0, 0, 0.6196078431);
-        flex-wrap: wrap;
-
-        .imgEtInfoTrajet {
-            text-align: center;
-            border: solid white;
-            border-radius: 1rem;
-            margin: 1rem;
-            padding: 1rem;
-            background-color: #ffe4c48f;
-
-            img {
-                width: 6rem;
-                border: solid black;
-                border-radius: 10rem;
-                background: white;
-            }
-        }
-
-    }
-
-    .blockPDP {
-        border: solid;
-        padding: 2rem;
-        width: 12rem;
-        position: absolute;
-        right: 0rem;
-        margin: .5rem;
-        top: 6rem;
-        border-radius: 1rem;
-        background-color: #0000009e;
-
-        img {
-            width: 12rem;
-            border: solid black;
-            border-radius: 10rem;
-
-        }
-    }
-}
+     }
+
+     .signup {
+
+
+
+         .imgBackground {
+             width: fit-content;
+
+             img {
+                 width: 100%;
+                 position: fixed;
+                 filter: blur(4px);
+                 top: 0;
+                 left: 0;
+
+             }
+         }
+
+         h2 {
+             border: solid black;
+             position: relative;
+             top: 2rem;
+             width: fit-content;
+             margin: 0 auto;
+             border-radius: 2rem;
+             margin-bottom: 1rem;
+             padding: 1rem;
+             background-color: #68881d7d;
+             color: white;
+             font-size: 2.5rem;
+         }
+
+         .formulaireInscription {
+             position: relative;
+             top: 2rem;
+             color: white;
+             background-color: #68881d7d;
+             display: flex;
+             flex-direction: column;
+             margin: 0 auto;
+             width: 30rem;
+             border: solid black;
+             border-radius: 2rem;
+             padding: 1.5rem;
+
+             select {
+                 padding: 0 .5rem 0 .5rem;
+                 border-radius: 1rem;
+                 border: none;
+                 font-size: 1.5rem;
+                 text-align: center;
+                 color: rgb(69, 67, 67);
+
+
+             }
+
+
+             label {
+                 display: flex;
+                 font-size: 2rem;
+                 margin: 0 auto;
+                 margin-bottom: .5rem;
+                 width: fit-content;
+
+                 a {
+                     text-align: center;
+                     font-size: 1.2rem;
+                     color: white;
+                     margin: .5rem .5rem 0rem .5rem;
+                 }
+
+                 a:hover {
+                     color: rgb(106, 0, 0);
+                 }
+
+                 .cache {
+                     width: 1.5rem;
+                     cursor: pointer;
+                 }
+
+             }
+
+             input {
+                 font-size: 1.5rem;
+                 text-align: center;
+                 border-radius: 1rem;
+                 border: none;
+                 background-color: white;
+                 color: rgb(69, 67, 67);
+
+             }
+
+             #enregister {
+                 cursor: pointer;
+             }
+         }
+     }
+
+     .home {
+         overflow: hidden;
+
+         .imgBackground {
+             width: fit-content;
+
+             img {
+                 width: 100%;
+                 position: fixed;
+                 filter: blur(4px);
+
+
+             }
+         }
+
+         .navbar {
+             position: relative;
+             width: 100%;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-around;
+             border: solid;
+             border-radius: 1rem;
+             height: 5rem;
+             align-items: center;
+             background-color: #0000009e;
+
+             a {
+                 color: white;
+                 text-decoration: none;
+                 font-size: 2rem;
+                 border: solid;
+                 border-radius: 1rem;
+                 padding: .5rem;
+                 background: darkred;
+             }
+
+             a:hover {
+                 color: black;
+             }
+
+             a:active {
+                 color: yellow;
+             }
+
+         }
+
+         .sidebar {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             float: left;
+             border: solid;
+             border-radius: 1rem;
+             position: fixed;
+             margin: .5rem;
+             height: 85%;
+             background-color: rgba(0, 0, 0, 0.6196078431);
+
+             h2 {
+                 position: relative;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border-radius: 2rem;
+                 padding: 1rem;
+                 background: darkgoldenrod;
+                 color: white;
+                 font-size: 1.5rem;
+                 margin: .5rem;
+                 border: solid white;
+             }
+
+
+         }
+
+
+
+         .padHome {
+             display: flex;
+             flex-direction: column;
+             border: solid black;
+             border-radius: 1rem;
+             width: 45rem;
+             height: 35rem;
+             position: relative;
+             margin: 0 auto;
+             top: 4rem;
+             background-color: #0000009e;
+
+
+             h2 {
+                 position: relative;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border-radius: 2rem;
+                 padding: 1rem;
+                 background: #228b22b0;
+                 color: white;
+                 font-size: 1.5rem;
+                 margin: 1rem;
+                 border: solid white;
+                 align-self: center;
+             }
+
+             .menuHome {
+                 width: auto;
+                 margin: 2rem;
+                 display: flex;
+                 justify-content: space-between;
+
+                 a {
+                     color: white;
+                     text-decoration: none;
+                     font-size: 2rem;
+                     border: solid;
+                     border-radius: 1rem;
+                     padding: .5rem;
+                     background: darkred;
+                     width: fit-content;
+                     margin: 1rem;
+                 }
+
+                 a:hover {
+                     color: black;
+                 }
+
+                 a:active {
+                     color: yellow;
+                 }
+
+             }
+
+
+         }
+
+         .blockPDP {
+             border: solid;
+             padding: 2rem;
+             width: 12rem;
+             right: 0rem;
+             margin: .5rem;
+             top: 6rem;
+             border-radius: 1rem;
+             background-color: #0000009e;
+             position: fixed;
+
+             img {
+                 width: 12rem;
+                 border: solid black;
+                 border-radius: 10rem;
+
+             }
+         }
+
+
+     }
+
+     .profil {
+         overflow-x: hidden;
+
+         .imgBackground {
+             width: fit-content;
+
+             img {
+                 width: 100%;
+                 position: fixed;
+                 filter: blur(4px);
+                 top: 0;
+                 left: 0;
+
+
+             }
+         }
+
+         .navbar {
+             position: relative;
+             width: 100%;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-around;
+             border: solid;
+             border-radius: 1rem;
+             height: 5rem;
+             align-items: center;
+             background-color: #0000009e;
+
+             a {
+                 color: white;
+                 text-decoration: none;
+                 font-size: 2rem;
+                 border: solid;
+                 border-radius: 1rem;
+                 padding: .5rem;
+                 background: darkred;
+             }
+
+             a:hover {
+                 color: black;
+             }
+
+             a:active {
+                 color: yellow;
+             }
+
+         }
+
+         .sidebar {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             float: left;
+             border: solid;
+             border-radius: 1rem;
+             position: fixed;
+             margin: .5rem;
+             height: 85%;
+             background-color: rgba(0, 0, 0, 0.6196078431);
+
+             h2 {
+                 position: relative;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border-radius: 2rem;
+                 padding: 1rem;
+                 background: darkgoldenrod;
+                 color: white;
+                 font-size: 1.5rem;
+                 margin: .5rem;
+                 border: solid white;
+             }
+
+
+         }
+
+         .informationPerso {
+             display: flex;
+             flex-direction: column;
+             border: solid black;
+             border-radius: 1rem;
+             width: 50%;
+             position: relative;
+             margin: 0 auto;
+             top: 4rem;
+             background-color: #0000009e;
+             padding: 1.5rem;
+
+             h2 {
+                 position: relative;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border-radius: 2rem;
+                 padding: 1rem;
+                 background: #228b22b0;
+                 color: white;
+                 font-size: 1.5rem;
+                 margin: 1rem;
+                 border: solid white;
+                 align-self: center;
+             }
+
+             .infoActuel {
+                 display: flex;
+                 flex-direction: column;
+                 font-size: 1.2rem;
+                 border: solid white;
+                 border-radius: 1rem;
+                 background-color: rgba(254, 227, 195, 0.5215686275);
+                 justify-content: space-evenly;
+                 margin: 1rem;
+                 text-align: center;
+
+                 label {
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+
+                     h3 {
+                         margin: 1rem;
+                     }
+
+                     p {
+                         margin: 1rem;
+                     }
+                 }
+             }
+
+             .block {
+                 margin: 0 auto;
+                 display: flex;
+                 align-items: center;
+             }
+
+             .profileForm {
+                 display: flex;
+                 flex-direction: column;
+                 font-size: 1.2rem;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border: solid white;
+                 border-radius: 1rem;
+                 background-color: rgba(254, 227, 195, 0.5215686275);
+                 justify-content: space-evenly;
+                 height: 15rem;
+                 margin: 1rem;
+
+                 .nouveau {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     margin: .5rem;
+
+                     label {
+                         overflow: overlay;
+                         width: 10rem;
+                         text-align: center;
+
+                     }
+
+                     input {
+                         border-radius: 1rem;
+                         border: none;
+                         width: 9rem;
+                         padding: .4rem;
+                     }
+                 }
+             }
+
+             .modifInfo {
+                 width: fit-content;
+                 margin: 0 auto;
+                 margin-bottom: .5rem;
+                 font-size: 1.2rem;
+                 border: solid white;
+                 border-radius: 1rem;
+                 background-color: #246f1e85;
+                 cursor: pointer;
+             }
+
+             .modifInfo:hover {
+                 color: black;
+             }
+
+             .modifInfo:active {
+                 color: yellow;
+             }
+
+             .labelDescription {
+                 font-size: 1.5rem;
+                 margin: .5rem;
+                 display: flex;
+                 align-items: center;
+                 flex-direction: column;
+                 color: white;
+
+
+
+
+                 .formBio {
+                     .nouvelleBio {
+                         width: 75%;
+                         height: 10rem;
+                         border: solid;
+                         border-radius: 1rem;
+                         margin: .5rem;
+                     }
+
+
+                 }
+             }
+
+
+         }
+
+         .blockPDP {
+             border: solid;
+             padding: 2rem;
+             width: 12rem;
+             right: 0rem;
+             margin: .5rem;
+             top: 6rem;
+             border-radius: 1rem;
+             background-color: #0000009e;
+             position: fixed;
+
+             form {
+                 overflow: hidden;
+
+                 #modifPhoto {
+                     color: red;
+                     border: solid black;
+                     border-radius: 1rem;
+                     margin: .5rem;
+                 }
+
+                 button {
+                     border: solid black;
+                     border-radius: 1rem;
+                     margin: .5rem;
+                 }
+             }
+
+             img {
+                 width: 12rem;
+                 border: solid black;
+                 border-radius: 10rem;
+
+             }
+         }
+
+     }
+
+     .trajet {
+         overflow-x: hidden;
+
+         .imgBackground {
+             width: fit-content;
+
+             img {
+                 width: 100%;
+                 position: absolute;
+                 filter: blur(4px);
+                 top: 0;
+                 left: 0;
+
+
+             }
+         }
+
+         .navbar {
+             position: relative;
+             width: 100%;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-around;
+             border: solid;
+             border-radius: 1rem;
+             height: 5rem;
+             align-items: center;
+             background-color: #0000009e;
+
+             a {
+                 color: white;
+                 text-decoration: none;
+                 font-size: 2rem;
+                 border: solid;
+                 border-radius: 1rem;
+                 padding: .5rem;
+                 background: darkred;
+             }
+
+             a:hover {
+                 color: black;
+             }
+
+             a:active {
+                 color: yellow;
+             }
+
+         }
+
+         .sidebar {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             float: left;
+             border: solid;
+             border-radius: 1rem;
+             position: fixed;
+             margin: .5rem;
+             height: 85%;
+             background-color: rgba(0, 0, 0, 0.6196078431);
+
+             h2 {
+                 position: relative;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border-radius: 2rem;
+                 padding: 1rem;
+                 background: darkgoldenrod;
+                 color: white;
+                 font-size: 1.5rem;
+                 margin: .5rem;
+                 border: solid white;
+             }
+
+
+         }
+
+
+
+         .divFormTrajet {
+             display: flex;
+             flex-direction: column;
+             border: solid black;
+             border-radius: 1rem;
+             width: 45rem;
+             position: relative;
+             margin: 0 auto;
+             top: 4rem;
+             background-color: #0000009e;
+
+             .formTrajet {
+                 display: flex;
+                 flex-wrap: wrap;
+                 margin: 1rem;
+                 padding: 1rem;
+
+                 input {
+                     border-radius: 1rem;
+                     border: none;
+                     width: 9rem;
+                     padding: .4rem;
+                 }
+
+                 .date {
+                     align-self: center;
+                     border: solid black;
+                     background-color: rgba(255, 228, 196, 0.5607843137);
+                     border-radius: 1rem;
+                     padding: 1rem;
+                     margin: 0 auto;
+                     margin-top: 1rem;
+                     margin-bottom: 1rem;
+
+                     .dateTrajet {
+                         text-align: center;
+                         font-size: 1.2rem;
+
+                     }
+                 }
+
+                 .date:hover {
+                     color: red;
+                 }
+
+                 .date:active {
+                     color: yellow;
+                 }
+
+                 .distanceParcourue {
+                     align-self: center;
+                     border: solid black;
+                     background-color: rgba(255, 228, 196, 0.5607843137);
+                     border-radius: 1rem;
+                     padding: 1rem;
+                     margin: 0 auto;
+                     margin-top: 1rem;
+                     margin-bottom: 1rem;
+
+                     label {
+                         font-size: 1.2rem;
+                     }
+                 }
+
+                 .distanceParcourue:hover {
+                     color: red;
+                 }
+
+                 .distanceParcourue:active {
+                     color: yellow;
+                 }
+
+                 .duree {
+                     align-self: center;
+                     border: solid black;
+                     background-color: rgba(255, 228, 196, 0.5607843137);
+                     border-radius: 1rem;
+                     padding: 1rem;
+                     margin: 0 auto;
+                     margin-top: 1rem;
+                     margin-bottom: 1rem;
+                 }
+
+                 .duree:hover {
+                     color: red;
+                 }
+
+                 .duree:active {
+                     color: yellow;
+                 }
+
+                 .vehicule {
+                     align-self: center;
+                     border: solid black;
+                     background-color: rgba(255, 228, 196, 0.5607843137);
+                     border-radius: 1rem;
+                     padding: 1rem;
+                     margin: 0 auto;
+                     margin-top: 1rem;
+                     margin-bottom: 1rem;
+
+                     #idVehicule {
+                         border-radius: 1rem;
+                     }
+                 }
+
+                 .vehicule:hover {
+                     color: red;
+                 }
+
+                 .vehicule:active {
+                     color: yellow;
+                 }
+
+                 .imageLabelTrajet {
+                     text-align: center;
+                     border: solid black;
+                     background-color: #ffe4c48f;
+                     border-radius: 1rem;
+                     padding: 1rem;
+                     width: fit-content;
+                     margin: 0 auto;
+                     margin-top: 1rem;
+                     margin-bottom: 1rem;
+
+                     #imageTrajet {
+                         border-radius: 1rem;
+                         margin: 0.5rem;
+                     }
+
+
+                 }
+
+                 .imageTrajet:hover {
+                     color: red;
+                 }
+
+                 .imageTrajet:active {
+                     color: yellow;
+                 }
+
+                 button {
+                     border: solid black;
+                     background-color: rgba(255, 228, 196, 0.5607843137);
+                     border-radius: 1rem;
+                     margin: 0 auto;
+                     font-size: 1.5rem;
+                     align-self: center;
+                     padding: 1rem;
+                     text-transform: uppercase;
+                 }
+
+                 button:hover {
+                     color: red;
+                 }
+
+                 button:active {
+                     color: yellow;
+                 }
+             }
+         }
+
+         .blockPDP {
+             border: solid;
+             padding: 2rem;
+             width: 12rem;
+             right: 0rem;
+             margin: .5rem;
+             top: 6rem;
+             border-radius: 1rem;
+             background-color: #0000009e;
+             position: fixed;
+
+             img {
+                 width: 12rem;
+                 border: solid black;
+                 border-radius: 10rem;
+
+             }
+         }
+     }
+
+     .historique {
+         overflow-x: hidden;
+
+         .imgBackground {
+             width: fit-content;
+
+             img {
+                 width: 100%;
+                 position: absolute;
+                 filter: blur(4px);
+                 top: 0;
+                 left: 0;
+
+
+             }
+         }
+
+         .navbar {
+             position: relative;
+             width: 100%;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-around;
+             border: solid;
+             border-radius: 1rem;
+             height: 5rem;
+             align-items: center;
+             background-color: #0000009e;
+
+             a {
+                 color: white;
+                 text-decoration: none;
+                 font-size: 2rem;
+                 border: solid;
+                 border-radius: 1rem;
+                 padding: .5rem;
+                 background: darkred;
+             }
+
+             a:hover {
+                 color: black;
+             }
+
+             a:active {
+                 color: yellow;
+             }
+
+         }
+
+         .sidebar {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             float: left;
+             border: solid;
+             border-radius: 1rem;
+             position: fixed;
+             margin: .5rem;
+             height: 85%;
+             background-color: rgba(0, 0, 0, 0.6196078431);
+
+             h2 {
+                 position: relative;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border-radius: 2rem;
+                 padding: 1rem;
+                 background: darkgoldenrod;
+                 color: white;
+                 font-size: 1.5rem;
+                 margin: .5rem;
+                 border: solid white;
+             }
+
+
+         }
+
+         .historiqueComplet {
+             display: flex;
+             flex-direction: row;
+             border: solid black;
+             border-radius: 1rem;
+             width: 45rem;
+             position: relative;
+             margin: 0 auto;
+             top: 4rem;
+             background-color: rgba(0, 0, 0, 0.6196078431);
+             flex-wrap: wrap;
+
+             .imgEtInfoTrajet {
+                 text-align: center;
+                 border: solid white;
+                 border-radius: 1rem;
+                 margin: 1rem;
+                 padding: 1rem;
+                 background-color: #ffe4c48f;
+
+                 img {
+                     width: 6rem;
+                     border: solid black;
+                     border-radius: 10rem;
+                     background: white;
+                 }
+             }
+
+         }
+
+         .blockPDP {
+             border: solid;
+             padding: 2rem;
+             width: 12rem;
+             right: 0rem;
+             margin: .5rem;
+             top: 6rem;
+             border-radius: 1rem;
+             background-color: #0000009e;
+             position: fixed;
+
+             img {
+                 width: 12rem;
+                 border: solid black;
+                 border-radius: 10rem;
+
+             }
+         }
+     }
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width:320px) {
+     .home {
+         width: 100%;
+     }
+ }
+
+ @media screen and (min-width:321) and (max-width:425px) {
+     body {
+         width: 100%;
+     }
+
+ }
+
+ @media screen and (min-width:426) and (max-width:768px) {
+     body {
+         width: 100%;
+     }
+ }
+
+ @media screen and (min-width:769px) and (max-width:1299px) {
+     *body {
+         top: 0;
+         bottom: 0;
+         right: 0;
+         left: 0;
+
+
+         .imgBackground {
+             width: fit-content;
+
+             img {
+                 width: 100%;
+                 position: fixed;
+                 filter: blur(4px);
+
+
+             }
+         }
+
+         .navbar {
+             position: fixed;
+             bottom: 0;
+             width: 100%;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-around;
+             align-items: center;
+             margin: .5rem;
+
+             a {
+                 color: white;
+                 text-decoration: none;
+                 font-size: 2rem;
+                 border: solid;
+                 border-radius: 1rem;
+                 padding: .5rem;
+                 background: darkred;
+             }
+
+             a:hover {
+                 color: black;
+             }
+
+             a:active {
+                 color: yellow;
+             }
+
+         }
+
+         .sidebar {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             float: left;
+             border: solid;
+             border-radius: 1rem;
+             position: fixed;
+             margin: 0.5rem;
+             height: 80%;
+             background-color: rgba(0, 0, 0, 0.6196078431);
+             width: min-content;
+
+             h2 {
+                 position: relative;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border-radius: 2rem;
+                 padding: 1rem;
+                 background: darkred;
+                 color: white;
+                 font-size: 1.5rem;
+                 margin: .5rem;
+                 border: solid white;
+             }
+         }
+
+         .padHome {
+             display: flex;
+             flex-direction: column;
+             border: solid black;
+             border-radius: 1rem;
+             width: 35rem;
+             height: -moz-fit-content;
+             position: fixed;
+             margin: 0 auto;
+             top: 9rem;
+             right: 1rem;
+             background-color: rgba(0, 0, 0, 0.6196078431);
+             align-items: center;
+
+             h2 {
+                 position: fixed;
+                 top: 2rem;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border-radius: 2rem;
+                 padding: 1rem;
+                 background: darkred;
+                 color: white;
+                 font-size: 1.5rem;
+                 margin: .5rem;
+                 border: solid white;
+             }
+
+             .menuHome {
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 margin: 0 auto;
+                 display: flex;
+                 font-size: 1.5rem;
+                 justify-content: flex-end;
+                 align-items: center;
+
+                 a {
+                     margin: 1rem;
+                     color: white;
+                     text-decoration: none;
+                     border: solid;
+                     border-radius: 1rem;
+                     background: darkred;
+                     width: fit-content;
+                 }
+
+                 a:hover {
+                     color: black;
+                 }
+
+                 a:active {
+                     color: yellow;
+                 }
+             }
+         }
+
+         .blockPDP {
+             border: solid;
+             padding: 1rem;
+             width: 5rem;
+             left: 2.2rem;
+             top: 16rem;
+             border-radius: 1rem;
+             background-color: rgba(0, 0, 0, 0.6196078431);
+             position: fixed;
+
+             img {
+                 width: 5rem;
+                 border: solid black;
+                 border-radius: 10rem;
+
+             }
+         }
+
+         .informationPerso {
+             display: flex;
+             flex-direction: column;
+             border: solid black;
+             border-radius: 1rem;
+             position: fixed;
+             margin: 0 auto;
+             background-color: rgba(0, 0, 0, 0.6196078431);
+             width: 70%;
+             right: 1rem;
+
+             h2 {
+                 position: relative;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border-radius: 2rem;
+                 padding: .5rem;
+                 background: #228b22b0;
+                 color: white;
+                 font-size: 1.2rem;
+                 margin: .5rem;
+                 border: solid white;
+                 align-self: center;
+             }
+
+             .infoActuel {
+                 display: flex;
+                 flex-direction: column;
+                 font-size: 1rem;
+                 border: solid white;
+                 border-radius: 1rem;
+                 background-color: rgba(254, 227, 195, 0.5215686275);
+                 text-align: center;
+
+                 label {
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+
+                     h3 {
+                         margin: 1rem;
+                     }
+
+                     p {
+                         margin: 1rem;
+                     }
+                 }
+             }
+
+             .block {
+                 margin: 0 auto;
+                 display: flex;
+                 flex-wrap: wrap;
+                 align-items: center;
+                 flex-direction: column;
+             }
+
+             .profileForm {
+                 display: flex;
+                 flex-direction: column;
+                 font-size: 1rem;
+                 width: -moz-fit-content;
+                 width: fit-content;
+                 border: solid white;
+                 border-radius: 1rem;
+                 background-color: rgba(254, 227, 195, 0.5215686275);
+                 justify-content: space-evenly;
+                 margin: 1rem;
+
+                 .nouveau {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     margin: .5rem;
+
+                     label {
+                         overflow: overlay;
+                         width: 10rem;
+                         text-align: center;
+
+                     }
+
+                     input {
+                         border-radius: 1rem;
+                         border: none;
+                         width: 9rem;
+                         padding: .4rem;
+                     }
+                 }
+             }
+
+             .modifInfo {
+                 width: fit-content;
+                 margin: 0 auto;
+                 margin-bottom: .5rem;
+                 font-size: 1.2rem;
+                 border: solid white;
+                 border-radius: 1rem;
+                 background-color: #246f1e85;
+                 cursor: pointer;
+             }
+
+             .modifInfo:hover {
+                 color: black;
+             }
+
+             .modifInfo:active {
+                 color: yellow;
+             }
+
+             .labelDescription {
+                 font-size: 1.5rem;
+                 margin: .5rem;
+                 display: flex;
+                 align-items: center;
+                 flex-direction: column;
+                 color: white;
+
+
+
+
+                 .formBio {
+                     .nouvelleBio {
+                         width: 75%;
+                         height: 10rem;
+                         border: solid;
+                         border-radius: 1rem;
+                         margin: .5rem;
+                     }
+
+
+                 }
+             }
+
+         }
+     }
+ }

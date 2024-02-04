@@ -10,827 +10,1069 @@
   visibility: hidden;
 }
 
-body .felicitationConnexion {
-  display: flex;
-  flex-direction: column;
-}
-body img {
-  width: 12rem;
-}
-body .success-message {
-  color: green;
-  margin-bottom: 10px;
-}
-
-.signin {
-  overflow: hidden;
-  margin: 0 auto;
-}
-.signin .imgBackground {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.signin .imgBackground img {
-  width: 100%;
-  position: absolute;
-  filter: blur(4px);
-  top: 0;
-  left: 0;
-}
-.signin h2 {
-  position: relative;
-  top: 10rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  border-radius: 2rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: rgba(104, 136, 29, 0.4901960784);
-  color: white;
-  font-size: 2.5rem;
-  border: solid black;
-}
-.signin .formulaireConnexion {
-  position: relative;
-  top: 10rem;
-  color: white;
-  background-color: rgba(104, 136, 29, 0.4901960784);
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 20rem;
-  border: solid black;
-  border-radius: 2rem;
-  padding: 1.5rem;
-}
-.signin .formulaireConnexion label {
-  font-size: 2rem;
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
-}
-.signin .formulaireConnexion input {
-  font-size: 1.5rem;
-  text-align: center;
-  border-radius: 1rem;
-  border: none;
-  background-color: white;
-  color: rgb(69, 67, 67);
-}
-.signin .formulaireConnexion .linkVersSignup {
-  text-align: center;
-  font-size: 1.2rem;
-  color: white;
-  margin: 0.5rem 0.5rem 0rem 0.5rem;
-}
-.signin .formulaireConnexion .linkVersSignup:hover {
-  color: rgb(106, 0, 0);
-}
-
-.signup .imgBackground {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.signup .imgBackground img {
-  width: 100%;
-  position: absolute;
-  filter: blur(4px);
-  top: 0;
-  left: 0;
-}
-.signup h2 {
-  border: solid black;
-  position: relative;
-  top: 2rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  border-radius: 2rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: rgba(104, 136, 29, 0.4901960784);
-  color: white;
-  font-size: 2.5rem;
-}
-.signup .formulaireInscription {
-  position: relative;
-  top: 2rem;
-  color: white;
-  background-color: rgba(104, 136, 29, 0.4901960784);
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 30rem;
-  border: solid black;
-  border-radius: 2rem;
-  padding: 1.5rem;
-}
-.signup .formulaireInscription select {
-  padding: 0 0.5rem 0 0.5rem;
-  border-radius: 1rem;
-  border: none;
-  font-size: 1.5rem;
-  text-align: center;
-  color: rgb(69, 67, 67);
-}
-.signup .formulaireInscription label {
-  display: flex;
-  font-size: 2rem;
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.signup .formulaireInscription label a {
-  text-align: center;
-  font-size: 1.2rem;
-  color: white;
-  margin: 0.5rem 0.5rem 0rem 0.5rem;
-}
-.signup .formulaireInscription label a:hover {
-  color: rgb(106, 0, 0);
-}
-.signup .formulaireInscription label .cache {
-  width: 1.5rem;
-  cursor: pointer;
-}
-.signup .formulaireInscription input {
-  font-size: 1.5rem;
-  text-align: center;
-  border-radius: 1rem;
-  border: none;
-  background-color: white;
-  color: rgb(69, 67, 67);
-}
-.signup .formulaireInscription #enregister {
-  cursor: pointer;
-}
-
-.home {
-  overflow-x: hidden;
-}
-.home .imgBackground {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.home .imgBackground img {
-  width: 100%;
-  position: absolute;
-  filter: blur(4px);
-  top: 0;
-  left: 0;
-}
-.home .navbar {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: solid;
-  border-radius: 1rem;
-  height: 5rem;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.home .navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: darkred;
-}
-.home .navbar a:hover {
-  color: black;
-}
-.home .navbar a:active {
-  color: yellow;
-}
-.home .sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  float: left;
-  border: solid;
-  border-radius: 1rem;
-  position: fixed;
-  margin: 0.5rem;
-  height: 85%;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.home .sidebar h2 {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 2rem;
-  padding: 1rem;
-  background: darkgoldenrod;
-  color: white;
-  font-size: 1.5rem;
-  margin: 0.5rem;
-  border: solid white;
-}
-.home .padHome {
-  display: flex;
-  flex-direction: column;
-  border: solid black;
-  border-radius: 1rem;
-  width: 45rem;
-  height: 35rem;
-  position: relative;
-  margin: 0 auto;
-  top: 5rem;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.home .padHome h2 {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 2rem;
-  padding: 1rem;
-  background: rgba(34, 139, 34, 0.6901960784);
-  color: white;
-  font-size: 1.5rem;
-  margin: 1rem;
-  border: solid white;
-  align-self: center;
-}
-.home .padHome .menuHome {
-  width: auto;
-  margin: 2rem;
-  display: flex;
-  justify-content: space-between;
-}
-.home .padHome .menuHome a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: darkred;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 1rem;
-}
-.home .padHome .menuHome a:hover {
-  color: black;
-}
-.home .padHome .menuHome a:active {
-  color: yellow;
-}
-.home .blockPDP {
-  border: solid;
-  padding: 2rem;
-  width: 12rem;
-  position: absolute;
-  right: 0rem;
-  margin: 0.5rem;
-  top: 6rem;
-  border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.home .blockPDP img {
-  width: 12rem;
-  border: solid black;
-  border-radius: 10rem;
-}
-
-.profil {
-  overflow-x: hidden;
-}
-.profil .imgBackground {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.profil .imgBackground img {
-  width: 100%;
-  position: absolute;
-  filter: blur(4px);
-  top: 0;
-  left: 0;
-}
-.profil .navbar {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: solid;
-  border-radius: 1rem;
-  height: 5rem;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.profil .navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: darkred;
-}
-.profil .navbar a:hover {
-  color: black;
-}
-.profil .navbar a:active {
-  color: yellow;
-}
-.profil .sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  float: left;
-  border: solid;
-  border-radius: 1rem;
-  position: fixed;
-  margin: 0.5rem;
-  height: 85%;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.profil .sidebar h2 {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 2rem;
-  padding: 1rem;
-  background: darkgoldenrod;
-  color: white;
-  font-size: 1.5rem;
-  margin: 0.5rem;
-  border: solid white;
-}
-.profil .informationPerso {
-  display: flex;
-  flex-direction: column;
-  border: solid black;
-  border-radius: 1rem;
-  width: 50%;
-  position: relative;
-  margin: 0 auto;
-  top: 5rem;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-  padding: 1.5rem;
-}
-.profil .informationPerso h2 {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 2rem;
-  padding: 1rem;
-  background: rgba(34, 139, 34, 0.6901960784);
-  color: white;
-  font-size: 1.5rem;
-  margin: 1rem;
-  border: solid white;
-  align-self: center;
-}
-.profil .informationPerso .infoActuel {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  border: solid white;
-  border-radius: 1rem;
-  background-color: rgba(254, 227, 195, 0.5215686275);
-  justify-content: space-evenly;
-  margin: 1rem;
-  text-align: center;
-}
-.profil .informationPerso .infoActuel label {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.profil .informationPerso .infoActuel label h3 {
-  margin: 1rem;
-}
-.profil .informationPerso .infoActuel label p {
-  margin: 1rem;
-}
-.profil .informationPerso .block {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-}
-.profil .informationPerso .profileForm {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: solid white;
-  border-radius: 1rem;
-  background-color: rgba(254, 227, 195, 0.5215686275);
-  justify-content: space-evenly;
-  height: 15rem;
-  margin: 1rem;
-}
-.profil .informationPerso .profileForm .nouveau {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0.5rem;
-}
-.profil .informationPerso .profileForm .nouveau label {
-  overflow: overlay;
-  width: 10rem;
-  text-align: center;
-}
-.profil .informationPerso .profileForm .nouveau input {
-  border-radius: 1rem;
-  border: none;
-  width: 9rem;
-  padding: 0.4rem;
-}
-.profil .informationPerso .modifInfo {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  border: solid white;
-  border-radius: 1rem;
-  background-color: rgba(36, 111, 30, 0.5215686275);
-  cursor: pointer;
-}
-.profil .informationPerso .modifInfo:hover {
-  color: black;
-}
-.profil .informationPerso .modifInfo:active {
-  color: yellow;
-}
-.profil .informationPerso .labelDescription {
-  font-size: 1.5rem;
-  margin: 0.5rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-}
-.profil .informationPerso .labelDescription .formBio .nouvelleBio {
-  width: 75%;
-  height: 10rem;
-  border: solid;
-  border-radius: 1rem;
-  margin: 0.5rem;
-}
-.profil .blockPDP {
-  border: solid;
-  padding: 2rem;
-  width: 12rem;
-  position: absolute;
-  right: 0rem;
-  margin: 0.5rem;
-  top: 6rem;
-  border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.profil .blockPDP form {
-  overflow: hidden;
-}
-.profil .blockPDP form #modifPhoto {
-  color: red;
-  border: solid black;
-  border-radius: 1rem;
-  margin: 0.5rem;
-}
-.profil .blockPDP form button {
-  border: solid black;
-  border-radius: 1rem;
-  margin: 0.5rem;
-}
-.profil .blockPDP img {
-  width: 12rem;
-  border: solid black;
-  border-radius: 10rem;
-}
-
-.trajet {
-  overflow-x: hidden;
-}
-.trajet .imgBackground {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.trajet .imgBackground img {
-  width: 100%;
-  position: absolute;
-  filter: blur(4px);
-}
-.trajet .navbar {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: solid;
-  border-radius: 1rem;
-  height: 5rem;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.trajet .navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: darkred;
-}
-.trajet .navbar a:hover {
-  color: black;
-}
-.trajet .navbar a:active {
-  color: yellow;
-}
-.trajet .sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  float: left;
-  border: solid;
-  border-radius: 1rem;
-  position: fixed;
-  margin: 0.5rem;
-  height: 85%;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.trajet .sidebar h2 {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 2rem;
-  padding: 1rem;
-  background: darkgoldenrod;
-  color: white;
-  font-size: 1.5rem;
-  margin: 0.5rem;
-  border: solid white;
-}
-.trajet .divFormTrajet {
-  display: flex;
-  flex-direction: column;
-  border: solid black;
-  border-radius: 1rem;
-  width: 45rem;
-  height: 35rem;
-  position: relative;
-  margin: 0 auto;
-  top: 5rem;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.trajet .divFormTrajet .formTrajet {
-  display: flex;
-  flex-direction: column;
-}
-.trajet .divFormTrajet .formTrajet input {
-  border-radius: 1rem;
-  border: none;
-  width: 9rem;
-  padding: 0.4rem;
-}
-.trajet .divFormTrajet .formTrajet .date {
-  text-align: center;
-  border: solid black;
-  background-color: rgba(255, 228, 196, 0.5607843137);
-  border-radius: 1rem;
-  padding: 1rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.trajet .divFormTrajet .formTrajet .date:hover {
-  color: red;
-}
-.trajet .divFormTrajet .formTrajet .date:active {
-  color: yellow;
-}
-.trajet .divFormTrajet .formTrajet .distanceParcourue {
-  text-align: center;
-  border: solid black;
-  background-color: rgba(255, 228, 196, 0.5607843137);
-  border-radius: 1rem;
-  padding: 1rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.trajet .divFormTrajet .formTrajet .distanceParcourue:hover {
-  color: red;
-}
-.trajet .divFormTrajet .formTrajet .distanceParcourue:active {
-  color: yellow;
-}
-.trajet .divFormTrajet .formTrajet .duree {
-  text-align: center;
-  border: solid black;
-  background-color: rgba(255, 228, 196, 0.5607843137);
-  border-radius: 1rem;
-  padding: 1rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.trajet .divFormTrajet .formTrajet .duree:hover {
-  color: red;
-}
-.trajet .divFormTrajet .formTrajet .duree:active {
-  color: yellow;
-}
-.trajet .divFormTrajet .formTrajet .vehicule {
-  text-align: center;
-  border: solid black;
-  background-color: rgba(255, 228, 196, 0.5607843137);
-  border-radius: 1rem;
-  padding: 1rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.trajet .divFormTrajet .formTrajet .vehicule #idVehicule {
-  border-radius: 1rem;
-}
-.trajet .divFormTrajet .formTrajet .vehicule:hover {
-  color: red;
-}
-.trajet .divFormTrajet .formTrajet .vehicule:active {
-  color: yellow;
-}
-.trajet .divFormTrajet .formTrajet .imageLabelTrajet {
-  text-align: center;
-  border: solid black;
-  background-color: rgba(255, 228, 196, 0.5607843137);
-  border-radius: 1rem;
-  padding: 1rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.trajet .divFormTrajet .formTrajet .imageLabelTrajet #imageTrajet {
-  color: red;
-  border: solid black;
-  border-radius: 1rem;
-  margin: 0.5rem;
-}
-.trajet .divFormTrajet .formTrajet .imageLabelTrajet #file-upload-button {
-  border-radius: 1rem;
-}
-.trajet .divFormTrajet .formTrajet .imageTrajet:hover {
-  color: red;
-}
-.trajet .divFormTrajet .formTrajet .imageTrajet:active {
-  color: yellow;
-}
-.trajet .divFormTrajet .formTrajet button {
-  text-align: center;
-  border: solid black;
-  background-color: rgba(255, 228, 196, 0.5607843137);
-  border-radius: 1rem;
-  padding: 1rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.trajet .divFormTrajet .formTrajet button:hover {
-  color: red;
-}
-.trajet .divFormTrajet .formTrajet button:active {
-  color: yellow;
-}
-.trajet .blockPDP {
-  border: solid;
-  padding: 2rem;
-  width: 12rem;
-  position: absolute;
-  right: 0rem;
-  margin: 0.5rem;
-  top: 6rem;
-  border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.trajet .blockPDP img {
-  width: 12rem;
-  border: solid black;
-  border-radius: 10rem;
-}
-
-.historique {
-  overflow-x: hidden;
-}
-.historique .imgBackground {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.historique .imgBackground img {
-  width: 100%;
-  position: absolute;
-  filter: blur(4px);
-}
-.historique .navbar {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: solid;
-  border-radius: 1rem;
-  height: 5rem;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.historique .navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: darkred;
-}
-.historique .navbar a:hover {
-  color: black;
-}
-.historique .navbar a:active {
-  color: yellow;
-}
-.historique .sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  float: left;
-  border: solid;
-  border-radius: 1rem;
-  position: fixed;
-  margin: 0.5rem;
-  height: 85%;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.historique .sidebar h2 {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 2rem;
-  padding: 1rem;
-  background: darkgoldenrod;
-  color: white;
-  font-size: 1.5rem;
-  margin: 0.5rem;
-  border: solid white;
-}
-.historique .historiqueComplet {
-  display: flex;
-  flex-direction: row;
-  border: solid black;
-  border-radius: 1rem;
-  width: 45rem;
-  position: relative;
-  margin: 0 auto;
-  top: 5rem;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-  flex-wrap: wrap;
-}
-.historique .historiqueComplet .imgEtInfoTrajet {
-  text-align: center;
-  border: solid white;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-  background-color: rgba(255, 228, 196, 0.5607843137);
-}
-.historique .historiqueComplet .imgEtInfoTrajet img {
-  width: 6rem;
-  border: solid black;
-  border-radius: 10rem;
-  background: white;
-}
-.historique .blockPDP {
-  border: solid;
-  padding: 2rem;
-  width: 12rem;
-  position: absolute;
-  right: 0rem;
-  margin: 0.5rem;
-  top: 6rem;
-  border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.6196078431);
-}
-.historique .blockPDP img {
-  width: 12rem;
-  border: solid black;
-  border-radius: 10rem;
+@media screen and (min-width: 1300px) {
+  .signin {
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .signin .imgBackground {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .signin .imgBackground img {
+    width: 100%;
+    position: absolute;
+    filter: blur(4px);
+    top: 0;
+    left: 0;
+  }
+  .signin h2 {
+    position: relative;
+    top: 10rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(104, 136, 29, 0.4901960784);
+    color: white;
+    font-size: 2.5rem;
+    border: solid black;
+  }
+  .signin .formulaireConnexion {
+    position: relative;
+    top: 10rem;
+    color: white;
+    background-color: rgba(104, 136, 29, 0.4901960784);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 20rem;
+    border: solid black;
+    border-radius: 2rem;
+    padding: 1.5rem;
+  }
+  .signin .formulaireConnexion label {
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+  }
+  .signin .formulaireConnexion input {
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: none;
+    background-color: white;
+    color: rgb(69, 67, 67);
+  }
+  .signin .formulaireConnexion .linkVersSignup {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
+  }
+  .signin .formulaireConnexion .linkVersSignup:hover {
+    color: rgb(106, 0, 0);
+  }
+  .signup .imgBackground {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .signup .imgBackground img {
+    width: 100%;
+    position: fixed;
+    filter: blur(4px);
+    top: 0;
+    left: 0;
+  }
+  .signup h2 {
+    border: solid black;
+    position: relative;
+    top: 2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(104, 136, 29, 0.4901960784);
+    color: white;
+    font-size: 2.5rem;
+  }
+  .signup .formulaireInscription {
+    position: relative;
+    top: 2rem;
+    color: white;
+    background-color: rgba(104, 136, 29, 0.4901960784);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 30rem;
+    border: solid black;
+    border-radius: 2rem;
+    padding: 1.5rem;
+  }
+  .signup .formulaireInscription select {
+    padding: 0 0.5rem 0 0.5rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(69, 67, 67);
+  }
+  .signup .formulaireInscription label {
+    display: flex;
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .signup .formulaireInscription label a {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
+  }
+  .signup .formulaireInscription label a:hover {
+    color: rgb(106, 0, 0);
+  }
+  .signup .formulaireInscription label .cache {
+    width: 1.5rem;
+    cursor: pointer;
+  }
+  .signup .formulaireInscription input {
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: none;
+    background-color: white;
+    color: rgb(69, 67, 67);
+  }
+  .signup .formulaireInscription #enregister {
+    cursor: pointer;
+  }
+  .home {
+    overflow: hidden;
+  }
+  .home .imgBackground {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .home .imgBackground img {
+    width: 100%;
+    position: fixed;
+    filter: blur(4px);
+  }
+  .home .navbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid;
+    border-radius: 1rem;
+    height: 5rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .home .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    border: solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: darkred;
+  }
+  .home .navbar a:hover {
+    color: black;
+  }
+  .home .navbar a:active {
+    color: yellow;
+  }
+  .home .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    border: solid;
+    border-radius: 1rem;
+    position: fixed;
+    margin: 0.5rem;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .home .sidebar h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: darkgoldenrod;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border: solid white;
+  }
+  .home .padHome {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    border-radius: 1rem;
+    width: 45rem;
+    height: 35rem;
+    position: relative;
+    margin: 0 auto;
+    top: 4rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .home .padHome h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: rgba(34, 139, 34, 0.6901960784);
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem;
+    border: solid white;
+    align-self: center;
+  }
+  .home .padHome .menuHome {
+    width: auto;
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .home .padHome .menuHome a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    border: solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: darkred;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 1rem;
+  }
+  .home .padHome .menuHome a:hover {
+    color: black;
+  }
+  .home .padHome .menuHome a:active {
+    color: yellow;
+  }
+  .home .blockPDP {
+    border: solid;
+    padding: 2rem;
+    width: 12rem;
+    right: 0rem;
+    margin: 0.5rem;
+    top: 6rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    position: fixed;
+  }
+  .home .blockPDP img {
+    width: 12rem;
+    border: solid black;
+    border-radius: 10rem;
+  }
+  .profil {
+    overflow-x: hidden;
+  }
+  .profil .imgBackground {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .profil .imgBackground img {
+    width: 100%;
+    position: fixed;
+    filter: blur(4px);
+    top: 0;
+    left: 0;
+  }
+  .profil .navbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid;
+    border-radius: 1rem;
+    height: 5rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .profil .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    border: solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: darkred;
+  }
+  .profil .navbar a:hover {
+    color: black;
+  }
+  .profil .navbar a:active {
+    color: yellow;
+  }
+  .profil .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    border: solid;
+    border-radius: 1rem;
+    position: fixed;
+    margin: 0.5rem;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .profil .sidebar h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: darkgoldenrod;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border: solid white;
+  }
+  .profil .informationPerso {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    border-radius: 1rem;
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+    top: 4rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    padding: 1.5rem;
+  }
+  .profil .informationPerso h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: rgba(34, 139, 34, 0.6901960784);
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem;
+    border: solid white;
+    align-self: center;
+  }
+  .profil .informationPerso .infoActuel {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    border: solid white;
+    border-radius: 1rem;
+    background-color: rgba(254, 227, 195, 0.5215686275);
+    justify-content: space-evenly;
+    margin: 1rem;
+    text-align: center;
+  }
+  .profil .informationPerso .infoActuel label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .profil .informationPerso .infoActuel label h3 {
+    margin: 1rem;
+  }
+  .profil .informationPerso .infoActuel label p {
+    margin: 1rem;
+  }
+  .profil .informationPerso .block {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  .profil .informationPerso .profileForm {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: solid white;
+    border-radius: 1rem;
+    background-color: rgba(254, 227, 195, 0.5215686275);
+    justify-content: space-evenly;
+    height: 15rem;
+    margin: 1rem;
+  }
+  .profil .informationPerso .profileForm .nouveau {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  .profil .informationPerso .profileForm .nouveau label {
+    overflow: overlay;
+    width: 10rem;
+    text-align: center;
+  }
+  .profil .informationPerso .profileForm .nouveau input {
+    border-radius: 1rem;
+    border: none;
+    width: 9rem;
+    padding: 0.4rem;
+  }
+  .profil .informationPerso .modifInfo {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border: solid white;
+    border-radius: 1rem;
+    background-color: rgba(36, 111, 30, 0.5215686275);
+    cursor: pointer;
+  }
+  .profil .informationPerso .modifInfo:hover {
+    color: black;
+  }
+  .profil .informationPerso .modifInfo:active {
+    color: yellow;
+  }
+  .profil .informationPerso .labelDescription {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+  .profil .informationPerso .labelDescription .formBio .nouvelleBio {
+    width: 75%;
+    height: 10rem;
+    border: solid;
+    border-radius: 1rem;
+    margin: 0.5rem;
+  }
+  .profil .blockPDP {
+    border: solid;
+    padding: 2rem;
+    width: 12rem;
+    right: 0rem;
+    margin: 0.5rem;
+    top: 6rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    position: fixed;
+  }
+  .profil .blockPDP form {
+    overflow: hidden;
+  }
+  .profil .blockPDP form #modifPhoto {
+    color: red;
+    border: solid black;
+    border-radius: 1rem;
+    margin: 0.5rem;
+  }
+  .profil .blockPDP form button {
+    border: solid black;
+    border-radius: 1rem;
+    margin: 0.5rem;
+  }
+  .profil .blockPDP img {
+    width: 12rem;
+    border: solid black;
+    border-radius: 10rem;
+  }
+  .trajet {
+    overflow-x: hidden;
+  }
+  .trajet .imgBackground {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .trajet .imgBackground img {
+    width: 100%;
+    position: absolute;
+    filter: blur(4px);
+    top: 0;
+    left: 0;
+  }
+  .trajet .navbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid;
+    border-radius: 1rem;
+    height: 5rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .trajet .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    border: solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: darkred;
+  }
+  .trajet .navbar a:hover {
+    color: black;
+  }
+  .trajet .navbar a:active {
+    color: yellow;
+  }
+  .trajet .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    border: solid;
+    border-radius: 1rem;
+    position: fixed;
+    margin: 0.5rem;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .trajet .sidebar h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: darkgoldenrod;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border: solid white;
+  }
+  .trajet .divFormTrajet {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    border-radius: 1rem;
+    width: 45rem;
+    position: relative;
+    margin: 0 auto;
+    top: 4rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .trajet .divFormTrajet .formTrajet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .trajet .divFormTrajet .formTrajet input {
+    border-radius: 1rem;
+    border: none;
+    width: 9rem;
+    padding: 0.4rem;
+  }
+  .trajet .divFormTrajet .formTrajet .date {
+    align-self: center;
+    border: solid black;
+    background-color: rgba(255, 228, 196, 0.5607843137);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .trajet .divFormTrajet .formTrajet .date .dateTrajet {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .trajet .divFormTrajet .formTrajet .date:hover {
+    color: red;
+  }
+  .trajet .divFormTrajet .formTrajet .date:active {
+    color: yellow;
+  }
+  .trajet .divFormTrajet .formTrajet .distanceParcourue {
+    align-self: center;
+    border: solid black;
+    background-color: rgba(255, 228, 196, 0.5607843137);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .trajet .divFormTrajet .formTrajet .distanceParcourue label {
+    font-size: 1.2rem;
+  }
+  .trajet .divFormTrajet .formTrajet .distanceParcourue:hover {
+    color: red;
+  }
+  .trajet .divFormTrajet .formTrajet .distanceParcourue:active {
+    color: yellow;
+  }
+  .trajet .divFormTrajet .formTrajet .duree {
+    align-self: center;
+    border: solid black;
+    background-color: rgba(255, 228, 196, 0.5607843137);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .trajet .divFormTrajet .formTrajet .duree:hover {
+    color: red;
+  }
+  .trajet .divFormTrajet .formTrajet .duree:active {
+    color: yellow;
+  }
+  .trajet .divFormTrajet .formTrajet .vehicule {
+    align-self: center;
+    border: solid black;
+    background-color: rgba(255, 228, 196, 0.5607843137);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .trajet .divFormTrajet .formTrajet .vehicule #idVehicule {
+    border-radius: 1rem;
+  }
+  .trajet .divFormTrajet .formTrajet .vehicule:hover {
+    color: red;
+  }
+  .trajet .divFormTrajet .formTrajet .vehicule:active {
+    color: yellow;
+  }
+  .trajet .divFormTrajet .formTrajet .imageLabelTrajet {
+    text-align: center;
+    border: solid black;
+    background-color: rgba(255, 228, 196, 0.5607843137);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .trajet .divFormTrajet .formTrajet .imageLabelTrajet #imageTrajet {
+    border-radius: 1rem;
+    margin: 0.5rem;
+  }
+  .trajet .divFormTrajet .formTrajet .imageTrajet:hover {
+    color: red;
+  }
+  .trajet .divFormTrajet .formTrajet .imageTrajet:active {
+    color: yellow;
+  }
+  .trajet .divFormTrajet .formTrajet button {
+    border: solid black;
+    background-color: rgba(255, 228, 196, 0.5607843137);
+    border-radius: 1rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    align-self: center;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+  .trajet .divFormTrajet .formTrajet button:hover {
+    color: red;
+  }
+  .trajet .divFormTrajet .formTrajet button:active {
+    color: yellow;
+  }
+  .trajet .blockPDP {
+    border: solid;
+    padding: 2rem;
+    width: 12rem;
+    right: 0rem;
+    margin: 0.5rem;
+    top: 6rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    position: fixed;
+  }
+  .trajet .blockPDP img {
+    width: 12rem;
+    border: solid black;
+    border-radius: 10rem;
+  }
+  .historique {
+    overflow-x: hidden;
+  }
+  .historique .imgBackground {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .historique .imgBackground img {
+    width: 100%;
+    position: absolute;
+    filter: blur(4px);
+    top: 0;
+    left: 0;
+  }
+  .historique .navbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid;
+    border-radius: 1rem;
+    height: 5rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .historique .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    border: solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: darkred;
+  }
+  .historique .navbar a:hover {
+    color: black;
+  }
+  .historique .navbar a:active {
+    color: yellow;
+  }
+  .historique .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    border: solid;
+    border-radius: 1rem;
+    position: fixed;
+    margin: 0.5rem;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+  }
+  .historique .sidebar h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: darkgoldenrod;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border: solid white;
+  }
+  .historique .historiqueComplet {
+    display: flex;
+    flex-direction: row;
+    border: solid black;
+    border-radius: 1rem;
+    width: 45rem;
+    position: relative;
+    margin: 0 auto;
+    top: 4rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    flex-wrap: wrap;
+  }
+  .historique .historiqueComplet .imgEtInfoTrajet {
+    text-align: center;
+    border: solid white;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 228, 196, 0.5607843137);
+  }
+  .historique .historiqueComplet .imgEtInfoTrajet img {
+    width: 6rem;
+    border: solid black;
+    border-radius: 10rem;
+    background: white;
+  }
+  .historique .blockPDP {
+    border: solid;
+    padding: 2rem;
+    width: 12rem;
+    right: 0rem;
+    margin: 0.5rem;
+    top: 6rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    position: fixed;
+  }
+  .historique .blockPDP img {
+    width: 12rem;
+    border: solid black;
+    border-radius: 10rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .home {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 321) and (max-width: 425px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 426) and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1299px) {
+  * body {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  * body .imgBackground {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  * body .imgBackground img {
+    width: 100%;
+    position: fixed;
+    filter: blur(4px);
+  }
+  * body .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  * body .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    border: solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: darkred;
+  }
+  * body .navbar a:hover {
+    color: black;
+  }
+  * body .navbar a:active {
+    color: yellow;
+  }
+  * body .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    border: solid;
+    border-radius: 1rem;
+    position: fixed;
+    margin: 0.5rem;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    width: -moz-min-content;
+    width: min-content;
+  }
+  * body .sidebar h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: darkred;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border: solid white;
+  }
+  * body .padHome {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    border-radius: 1rem;
+    width: 35rem;
+    height: -moz-fit-content;
+    position: fixed;
+    margin: 0 auto;
+    top: 9rem;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    align-items: center;
+  }
+  * body .padHome h2 {
+    position: fixed;
+    top: 2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: darkred;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border: solid white;
+  }
+  * body .padHome .menuHome {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  * body .padHome .menuHome a {
+    margin: 1rem;
+    color: white;
+    text-decoration: none;
+    border: solid;
+    border-radius: 1rem;
+    background: darkred;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  * body .padHome .menuHome a:hover {
+    color: black;
+  }
+  * body .padHome .menuHome a:active {
+    color: yellow;
+  }
+  * body .blockPDP {
+    border: solid;
+    padding: 1rem;
+    width: 5rem;
+    left: 2.2rem;
+    top: 16rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    position: fixed;
+  }
+  * body .blockPDP img {
+    width: 5rem;
+    border: solid black;
+    border-radius: 10rem;
+  }
+  * body .informationPerso {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    border-radius: 1rem;
+    position: fixed;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    width: 70%;
+    right: 1rem;
+  }
+  * body .informationPerso h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: rgba(34, 139, 34, 0.6901960784);
+    color: white;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    border: solid white;
+    align-self: center;
+  }
+  * body .informationPerso .infoActuel {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    border: solid white;
+    border-radius: 1rem;
+    background-color: rgba(254, 227, 195, 0.5215686275);
+    text-align: center;
+  }
+  * body .informationPerso .infoActuel label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  * body .informationPerso .infoActuel label h3 {
+    margin: 1rem;
+  }
+  * body .informationPerso .infoActuel label p {
+    margin: 1rem;
+  }
+  * body .informationPerso .block {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  * body .informationPerso .profileForm {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: solid white;
+    border-radius: 1rem;
+    background-color: rgba(254, 227, 195, 0.5215686275);
+    justify-content: space-evenly;
+    margin: 1rem;
+  }
+  * body .informationPerso .profileForm .nouveau {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  * body .informationPerso .profileForm .nouveau label {
+    overflow: overlay;
+    width: 10rem;
+    text-align: center;
+  }
+  * body .informationPerso .profileForm .nouveau input {
+    border-radius: 1rem;
+    border: none;
+    width: 9rem;
+    padding: 0.4rem;
+  }
+  * body .informationPerso .modifInfo {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border: solid white;
+    border-radius: 1rem;
+    background-color: rgba(36, 111, 30, 0.5215686275);
+    cursor: pointer;
+  }
+  * body .informationPerso .modifInfo:hover {
+    color: black;
+  }
+  * body .informationPerso .modifInfo:active {
+    color: yellow;
+  }
+  * body .informationPerso .labelDescription {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+  * body .informationPerso .labelDescription .formBio .nouvelleBio {
+    width: 75%;
+    height: 10rem;
+    border: solid;
+    border-radius: 1rem;
+    margin: 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

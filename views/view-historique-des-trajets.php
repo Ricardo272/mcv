@@ -15,26 +15,16 @@
 <body class="historique">
 
     <div class="imgBackground">
-        <img src="../assets/image/background/background-leaves.jpg" alt="background">
+        <img src="../assets/image/background/background-automne.jpg" alt="background">
     </div>
 
-    <div class="navbar">
+    <?php
+    include '../templates/navBar/historique.php'
+        ?>
 
-        <a href="../controllers/controller-home.php">
-            <i class="bi bi-house-fill"></i> Home
-        </a>
-
-        <a href="../controllers/controller-profil.php">
-            <i class="bi bi-person-circle"></i> Profil
-        </a>
-
-        <a href="../controllers/controller-signout.php">
-            <i class="bi bi-door-closed-fill"></i> Déconnexion
-        </a>
-    </div>
 
     <div class="sidebar">
-        <h2><i class="bi bi-house-fill"></i> Ajoutez un trajet</h2>
+        <h2><i class="bi bi-clock-history"></i></i> Historique des trajets</h2>
 
         <h2>
             <?= $dateDuJour; ?>

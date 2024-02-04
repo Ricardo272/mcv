@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
+
+
     <title>Home</title>
 </head>
 
@@ -17,20 +19,9 @@
         <img src="../assets/image/background/background-leaves.jpg" alt="background">
     </div>
 
-    <div class="navbar">
-
-        <a href="../controllers/controller-profil.php">
-            <i class="bi bi-person-circle"></i> Profil
-        </a>
-
-        <a href="../controllers/controller-historique-des-trajets.php">
-            <i class="bi bi-clock-history"></i> Historique des trajets
-        </a>
-
-        <a href="../controllers/controller-signout.php">
-            <i class="bi bi-door-closed-fill"></i> Déconnexion
-        </a>
-    </div>
+    <?php
+    include '../templates/navBar/home.php'
+        ?>
 
     <?php
 
