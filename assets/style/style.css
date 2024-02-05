@@ -75,6 +75,28 @@
   .signin .formulaireConnexion .linkVersSignup:hover {
     color: rgb(106, 0, 0);
   }
+  .signin .formulaireConnexion .social {
+    margin-top: 30px;
+    display: flex;
+  }
+  .signin .formulaireConnexion .social div {
+    background: red;
+    width: 150px;
+    border-radius: 3px;
+    padding: 5px 10px 10px 5px;
+    background-color: rgba(255, 255, 255, 0.27);
+    color: rgb(69, 67, 67);
+    text-align: center;
+  }
+  .signin .formulaireConnexion .social div:hover {
+    background-color: rgba(255, 255, 255, 0.47);
+  }
+  .signin .formulaireConnexion .social .fb {
+    margin-left: 25px;
+  }
+  .signin .formulaireConnexion .social i {
+    margin-right: 4px;
+  }
   .signup .imgBackground {
     width: -moz-fit-content;
     width: fit-content;
@@ -870,8 +892,6 @@
     margin: 0.5rem;
     height: 80%;
     background-color: rgba(0, 0, 0, 0.6196078431);
-    width: -moz-min-content;
-    width: min-content;
   }
   * body .sidebar h2 {
     position: relative;
@@ -895,7 +915,7 @@
     position: relative;
     margin: 0 auto;
     top: 11rem;
-    right: -4rem;
+    right: -9rem;
     background-color: rgba(0, 0, 0, 0.6196078431);
   }
   * body .padHome h2 {
@@ -910,7 +930,7 @@
     font-size: 1.5rem;
     margin: 0.5rem;
     border: solid white;
-    left: 19rem;
+    left: 28rem;
   }
   * body .padHome .menuHome {
     display: flex;
@@ -1089,5 +1109,154 @@
     border: solid;
     border-radius: 1rem;
     margin: 0.5rem;
+  }
+}
+@media only screen and (max-width: 320px) and (max-height: 600px) {
+  .home {
+    overflow: hidden;
+  }
+  .home .imgBackground img {
+    position: absolute;
+    margin: -2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    filter: blur(4px);
+  }
+  .home .navbar {
+    position: fixed;
+    bottom: 0;
+    margin: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .home .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    border: solid;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    background: darkred;
+  }
+  .home .navbar a:hover {
+    color: black;
+  }
+  .home .navbar a:active {
+    color: yellow;
+  }
+  .home .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+  }
+  .home .sidebar h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: darkred;
+    color: white;
+    font-size: 3.5rem;
+    margin: 1.5rem;
+    border: solid white;
+  }
+  .home .padHome {
+    border: solid;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 27rem;
+    left: 22rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 228, 196, 0.368627451);
+    border: none;
+  }
+  .home .padHome h2 {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .home .padHome .menuHome {
+    display: flex;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .home .padHome .menuHome a {
+    color: white;
+    text-decoration: none;
+    border: solid;
+    border-radius: 1rem;
+    background: darkred;
+    width: 27rem;
+    text-align: center;
+    padding: 3rem;
+    margin: 2rem;
+    font-size: 5rem;
+  }
+  .home .padHome .menuHome a:hover {
+    color: black;
+  }
+  .home .padHome .menuHome a:active {
+    color: yellow;
+  }
+  .home .blockPDP {
+    border: solid;
+    padding: 1rem;
+    right: 3.2rem;
+    top: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 228, 196, 0.368627451);
+    position: fixed;
+    border: none;
+  }
+  .home .blockPDP form button {
+    border-radius: 1rem;
+    border: solid white;
+    background: rgba(255, 228, 196, 0.3411764706);
+    margin-top: 1rem;
+  }
+  .home .blockPDP form input {
+    width: -webkit-fill-available;
+  }
+  .home .blockPDP img {
+    width: 16rem;
+    border: solid black;
+    border-radius: 10rem;
+  }
+  .profil {
+    overflow: hidden;
+  }
+  .profil .imgBackground img {
+    position: absolute;
+    margin: -2rem;
+    filter: blur(4px);
+    height: 500%;
+  }
+  .profil .navbar {
+    position: fixed;
+    bottom: 0;
+    margin: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .profil .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    border: solid;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    background: darkred;
+  }
+  .profil .navbar a:hover {
+    color: black;
+  }
+  .profil .navbar a:active {
+    color: yellow;
   }
 }/*# sourceMappingURL=style.css.map */

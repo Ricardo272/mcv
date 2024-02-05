@@ -16,7 +16,7 @@
 
 <body class="home">
     <div class="imgBackground">
-        <img src="../assets/image/background/background-leaves.jpg" alt="background">
+        <img src="../assets/image/background/background-minan.jpg" alt="background">
     </div>
 
     <?php
@@ -41,8 +41,9 @@
     <div class="padHome">
 
         <h2>
-            <i class="bi bi-lightning-charge-fill"></i> Bienvenue
-            <?= $_SESSION["user"]["Pseudo"]; ?> <i class="bi bi-lightning-charge-fill"></i>
+            <i class="bi bi-lightning-charge-fill"></i> Bienvenue <i class="bi bi-lightning-charge-fill"></i> <br>
+            <i class="bi bi-lightning-charge-fill"></i>
+            <?= $_SESSION["user"]["Pseudo"]; ?><i class="bi bi-lightning-charge-fill"></i>
         </h2>
         <div class="menuHome">
 
@@ -55,8 +56,7 @@
                 <i class="bi bi-signpost-split-fill"></i>
                 A suivre..
             </a>
-        </div>
-        <div class="menuHome">
+
 
             <a href="#">
                 <i class="bi bi-signpost-split-fill"></i>

@@ -21,7 +21,7 @@
     <h2>Connexion</h2>
     <form class="formulaireConnexion" action="controller-signin.php" method="POST" novalidate>
 
-        <label for="pseudo">Identifiant :</label>
+        <label for="pseudo">Identifiant </label>
         <input type="text" id="pseudo" name="pseudo"
             value="<?= isset($_POST['pseudo']) ? htmlspecialchars($_POST['pseudo']) : '' ?>">
         <span class="error">
@@ -30,7 +30,7 @@
             } ?>
         </span>
         <hr>
-        <label for="password">Mot de passe :</label>
+        <label for="password">Mot de passe </label>
         <input type="password" id="password" name="password"
             value="<?= isset($_POST['passsword']) ? htmlspecialchars($_POST['password']) : '' ?>">
         <span class="error">
@@ -40,6 +40,11 @@
         </span>
         <hr>
         <input name="connexion" id="connexion" type="submit" value="Connexion">
+
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i> Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+        </div>
 
         <a class="linkVersSignup" href="../controllers/controller-signup.php">
             Toujours pas de compte ?
