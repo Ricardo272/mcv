@@ -1177,6 +1177,20 @@
              border-radius: 1rem;
              background-color: rgba(0, 0, 0, 0.6196078431);
              position: fixed;
+             overflow: hidden;
+
+             form {
+                 button {
+                     border-radius: 1rem;
+                     border: solid white;
+                     background: #ffe4c457;
+                     margin-top: 1rem;
+                 }
+
+                 input {
+                     width: -webkit-fill-available;
+                 }
+             }
 
              img {
                  width: 5rem;
@@ -1191,11 +1205,15 @@
              flex-direction: column;
              border: solid black;
              border-radius: 1rem;
-             position: fixed;
+             position: relative;
              margin: 0 auto;
              background-color: rgba(0, 0, 0, 0.6196078431);
              width: 70%;
-             right: 1rem;
+             right: -6rem;
+             height: 25rem;
+             overflow: scroll;
+             top: 2rem;
+
 
              h2 {
                  position: relative;
@@ -1304,10 +1322,30 @@
                  flex-direction: column;
                  color: white;
 
+                 .description {
+                     h2 {
+                         position: relative;
+                         width: -moz-fit-content;
+                         width: fit-content;
+                         border-radius: 2rem;
+                         padding: 0.5rem;
+                         background: rgba(34, 139, 34, 0.6901960784);
+                         color: white;
+                         font-size: 1.2rem;
+                         margin: 0 auto;
+                         border: solid white;
+                     }
+                 }
 
 
 
                  .formBio {
+                     .modifDescription {
+                         border: solid white;
+                         border-radius: 1rem;
+                         background-color: bisque;
+                     }
+
                      .nouvelleBio {
                          width: 75%;
                          height: 10rem;

@@ -957,6 +957,16 @@
     border-radius: 1rem;
     background-color: rgba(0, 0, 0, 0.6196078431);
     position: fixed;
+    overflow: hidden;
+  }
+  * body .blockPDP form button {
+    border-radius: 1rem;
+    border: solid white;
+    background: rgba(255, 228, 196, 0.3411764706);
+    margin-top: 1rem;
+  }
+  * body .blockPDP form input {
+    width: -webkit-fill-available;
   }
   * body .blockPDP img {
     width: 5rem;
@@ -968,11 +978,14 @@
     flex-direction: column;
     border: solid black;
     border-radius: 1rem;
-    position: fixed;
+    position: relative;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.6196078431);
     width: 70%;
-    right: 1rem;
+    right: -6rem;
+    height: 25rem;
+    overflow: scroll;
+    top: 2rem;
   }
   * body .informationPerso h2 {
     position: relative;
@@ -1067,6 +1080,23 @@
     align-items: center;
     flex-direction: column;
     color: white;
+  }
+  * body .informationPerso .labelDescription .description h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: rgba(34, 139, 34, 0.6901960784);
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    border: solid white;
+  }
+  * body .informationPerso .labelDescription .formBio .modifDescription {
+    border: solid white;
+    border-radius: 1rem;
+    background-color: bisque;
   }
   * body .informationPerso .labelDescription .formBio .nouvelleBio {
     width: 75%;
