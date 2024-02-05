@@ -1252,11 +1252,180 @@
     padding: 1rem;
     margin: 0.5rem;
     background: darkred;
+    display: inline-block;
   }
   .profil .navbar a:hover {
     color: black;
   }
   .profil .navbar a:active {
     color: yellow;
+  }
+  .profil .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+  }
+  .profil .sidebar h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: darkred;
+    color: white;
+    font-size: 3.5rem;
+    margin: 1.5rem;
+    border: solid white;
+  }
+  .profil .blockPDP {
+    width: 30rem;
+    padding: 2rem;
+    right: 3.2rem;
+    top: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 228, 196, 0.368627451);
+    position: fixed;
+    border: none;
+  }
+  .profil .blockPDP img {
+    width: 30rem;
+    border: solid black;
+    border-radius: 100%;
+  }
+  .profil .blockPDP form {
+    overflow: hidden;
+  }
+  .profil .blockPDP form #modifPhoto {
+    border: solid black;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    font-size: 2.5rem;
+  }
+  .profil .blockPDP form button {
+    border: solid black;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    font-size: 2.5rem;
+  }
+  .profil .informationPerso {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    border-radius: 1rem;
+    width: 40rem;
+    position: relative;
+    margin: 0 auto;
+    top: 45rem;
+    background-color: rgba(0, 0, 0, 0.6196078431);
+    padding: 1.5rem;
+    left: 20rem;
+  }
+  .profil .informationPerso h2 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: rgba(34, 139, 34, 0.6901960784);
+    color: white;
+    font-size: 2.5rem;
+    margin: 1rem;
+    border: solid white;
+    align-self: center;
+  }
+  .profil .informationPerso .infoActuel {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    border: solid white;
+    border-radius: 1rem;
+    background-color: rgba(254, 227, 195, 0.5215686275);
+    justify-content: space-evenly;
+    margin: 1rem;
+    text-align: center;
+  }
+  .profil .informationPerso .infoActuel label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .profil .informationPerso .infoActuel label h3 {
+    margin: 1rem;
+    font-size: 2.5rem;
+  }
+  .profil .informationPerso .infoActuel label p {
+    margin: 1rem;
+    font-size: 2.5rem;
+  }
+  .profil .informationPerso .block {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .profil .informationPerso .profileForm {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: solid white;
+    border-radius: 1rem;
+    background-color: rgba(254, 227, 195, 0.5215686275);
+    justify-content: space-evenly;
+    height: 15rem;
+    margin: 1rem;
+  }
+  .profil .informationPerso .profileForm .nouveau {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  .profil .informationPerso .profileForm .nouveau label {
+    overflow: overlay;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .profil .informationPerso .profileForm .nouveau input {
+    border-radius: 1rem;
+    border: none;
+    width: 9rem;
+    padding: 0.4rem;
+  }
+  .profil .informationPerso .modifInfo {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border: solid white;
+    border-radius: 1rem;
+    background-color: rgba(36, 111, 30, 0.5215686275);
+    cursor: pointer;
+  }
+  .profil .informationPerso .modifInfo:hover {
+    color: black;
+  }
+  .profil .informationPerso .modifInfo:active {
+    color: yellow;
+  }
+  .profil .informationPerso .labelDescription {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+  .profil .informationPerso .labelDescription .formBio .nouvelleBio {
+    width: 75%;
+    height: 10rem;
+    border: solid;
+    border-radius: 1rem;
+    margin: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
