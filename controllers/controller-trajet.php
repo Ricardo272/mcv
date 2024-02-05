@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['message'] = "Le trajet a été enregistré avec succès.";
 
     // Redirection après traitement
-    header("Location: ../controllers/controller-home.php");
+    header("Location: ../controllers/controller-historique-des-trajets.php");
     exit();
 }
 
