@@ -44,7 +44,7 @@ class Utilisateur
             $query->bindValue(":Nom", htmlspecialchars($nom), PDO::PARAM_STR);
             $query->bindValue(":Prenom", htmlspecialchars($prenom), PDO::PARAM_STR);
             $query->bindValue(":Date_de_naissance", $dob, PDO::PARAM_STR);
-            $query->bindValue(":Email", $email, PDO::PARAM_STR);
+            $query->bindValue(":Email", htmlspecialchars($email), PDO::PARAM_STR);
             $query->bindValue(":Mot_de_passe_utilisateur", password_hash($mdpUtilisateur, PASSWORD_DEFAULT), PDO::PARAM_STR);
             $query->bindValue(":Utilisateur_valide", $validateUser, PDO::PARAM_STR);
             $query->bindValue(":ID_Entreprise", $idEntreprise, PDO::PARAM_STR);
