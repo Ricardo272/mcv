@@ -236,7 +236,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         </form>
     </div>
-
+    <button class="desactiverCompte">Desactiver</button>
 
 </body>
 
