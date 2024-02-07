@@ -229,14 +229,13 @@ class Utilisateur
     public static function DesactiverCompte(
         int $id_utilisateur
     ) {
-        try {
-            $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
+        $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
 
-            $sql = "DELETE FROM `utilisateur` WHERE `ID_utilisateur` = :id_utilisateur";
-            $query = $db->prepare($sql);
+        $sql = "DELETE FROM `utilisateur` WHERE `ID_utilisateur` = :id_utilisateur";
+        $query = $db->prepare($sql);
 
-            $query->bindValue(':id_utilisateur', $id_utilisateur, PDO::PARAM_INT);
-        }
+        $query->bindValue(':id_utilisateur', $id_utilisateur, PDO::PARAM_INT);
+
         return $query->execute();
     }
 }
