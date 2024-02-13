@@ -1,5 +1,5 @@
 <?php
-
+var_dump($_POST);
 // Démarrer la session
 session_start();
 
@@ -17,8 +17,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pseudo = $_POST['pseudo'];
     $mdpUtilisateur = $_POST['password'];
 
+
+    if (isset($_POST["connexion"])) {
+        $recaptcha_secret = "6LcGAHEpAAAAAFIeq7qIn5O8duE2JotPz39mmnsy";
+        $captcha_response = $_POST["g-recaptcha-response"];
+        $responseData = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$captcha_response");
+        ;
+        $dataRow = json_decode($responseData, true);
+
+        if (!$dataRow["success"] == true) {
+            $errors["captcha"] = "reCaptcha obligatoire";
+        }
+    }
+
+
     // Continuer avec la vérification du mot de passe si aucune erreur avec le pseudo
-    if (empty($errors["pseudo"])) {
+    if (empty($errors)) {
         try {
             // Création d'un objet $db selon la classe PDO
             $db = new PDO("mysql:host=localhost;dbname=" . DBNAME, DBUSERNAME, DBPASSWORD);
@@ -70,6 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $errors['pseudo'] = "Le nom est invalide.";
                 }
             }
+
 
             // Fermeture de la requête préparée
             $query->closeCursor();

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/style/style.css">
     <link rel="stylesheet" href="../assets/style/mediaQuery.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <title>Sign In</title>
 </head>
@@ -20,6 +21,8 @@
     </div>
     <h2>Connexion</h2>
     <form class="formulaireConnexion" action="controller-signin.php" method="POST" novalidate>
+
+
 
         <label for="pseudo">Identifiant </label>
         <input type="text" id="pseudo" name="pseudo"
@@ -38,6 +41,18 @@
                 echo $errors['password'];
             } ?>
         </span>
+        <hr>
+        <div class="g-recaptcha" data-sitekey="6LcGAHEpAAAAALFq-6PWdnsym_kVi29xKhLe_9HA"></div>
+        <?php
+        if (isset($errors["captcha"])) {
+            ?>
+            <span class="error">
+                <?= $errors["captcha"]; ?>
+            </span>
+            <?php
+        }
+        ?>
+
         <hr>
         <input name="connexion" id="connexion" type="submit" value="Connexion">
 
