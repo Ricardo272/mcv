@@ -49,14 +49,21 @@
 
             <label for="company">Entreprise </label>
             <select id="company" name="company" required>
+
                 <option value="" disabled selected>Veuillez sélectionner une entreprise</option>
-                <option value="2" <?php if (!empty($company) && $company == "SportStore") {
-                    echo "selected";
-                } ?>> SportStore
-                </option>
-                <option value="1" <?php if (!empty($company) && $company == "Nati-V") {
-                    echo "selected";
-                } ?>>Nati-V</option>
+
+                <?php
+                foreach (Entreprise::allEntreprise() as $value) { ?>
+                    <option value="<?= $value["ID_entreprise"] ?>">
+                        <?= $value["Nom_de_l_entreprise"] ?>
+                    </option>
+
+                <?php }
+                ?>
+
+
+
+
             </select>
             <span class="error">
                 <?php if (isset($errors['company'])) {

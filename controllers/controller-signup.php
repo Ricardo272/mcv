@@ -3,6 +3,7 @@
 require_once "../config.php";
 // Models
 require_once "../models/Utilisateur.php";
+require_once "../models/Entreprise.php";
 
 $showform = true;
 
