@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST);
+
 // Démarrer la session
 session_start();
 
@@ -19,10 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if (isset($_POST["connexion"])) {
-        $recaptcha_secret = "6LcGAHEpAAAAAFIeq7qIn5O8duE2JotPz39mmnsy";
+        $recaptcha_secret = CAPTCHA;
         $captcha_response = $_POST["g-recaptcha-response"];
         $responseData = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$captcha_response");
-        ;
+
         $dataRow = json_decode($responseData, true);
 
         if (!$dataRow["success"] == true) {
