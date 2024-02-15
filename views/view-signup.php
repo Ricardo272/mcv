@@ -53,7 +53,7 @@
                 <option value="" disabled selected>Veuillez sélectionner une entreprise</option>
 
                 <?php
-                foreach (Entreprise::allEntreprise() as $value) { ?>
+                foreach (json_decode(Entreprise::allEntreprise(), true) as $value) { ?>
                     <option value="<?= $value["ID_entreprise"] ?>">
                         <?= $value["Nom_de_l_entreprise"] ?>
                     </option>
@@ -61,10 +61,8 @@
                 <?php }
                 ?>
 
-
-
-
             </select>
+
             <span class="error">
                 <?php if (isset($errors['company'])) {
                     echo $errors['company'];

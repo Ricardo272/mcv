@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * 
+ * Methode permettant de récupérer toutes les entreprises 
+ * 
+ */
 class entreprise
 {
     public static function allEntreprise()
@@ -18,7 +22,10 @@ class entreprise
 
             $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-            return $result;
+            // Convertir en JSON
+            $json_result = json_encode($result);
+
+            return $json_result;
 
         } catch (PDOException $e) {
             echo 'Erreur : ' . $e->getMessage();
