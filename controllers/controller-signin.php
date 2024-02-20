@@ -50,40 +50,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Récupération du résultat de la requête
             $resultat = $query->fetch(PDO::FETCH_ASSOC);
 
-            // Vérification du mot de passe à l'aide de password_verify
-            if ($resultat) {
-                // Récupération du mot de passe haché depuis la base de données
-                $mot_de_passe_bdd = $resultat['Mot_de_passe_utilisateur'];
+
+            if ($resultat["Utilisateur_valide"] == 1) {
 
                 // Vérification du mot de passe à l'aide de password_verify
-                if (password_verify($mdpUtilisateur, $mot_de_passe_bdd)) {
+                if ($resultat) {
+                    // Récupération du mot de passe haché depuis la base de données
+                    $mot_de_passe_bdd = $resultat['Mot_de_passe_utilisateur'];
 
-                    $_SESSION["user"] = $resultat;
-                    unset($_SESSION["user"]["Mot_de_passe_utilisateur"]);
+                    // Vérification du mot de passe à l'aide de password_verify
+                    if (password_verify($mdpUtilisateur, $mot_de_passe_bdd)) {
 
-                    // Rediriger vers la page d'accueil
-                    header("Location: ../controllers/controller-home.php");
-                    exit();
+                        $_SESSION["user"] = $resultat;
+                        unset($_SESSION["user"]["Mot_de_passe_utilisateur"]);
 
-                } else {
-                    // Mot de passe incorrect
-                    if (empty($_POST["password"])) {
-                        $errors['password'] = "Champs obligatoire.";
+                        // Rediriger vers la page d'accueil
+                        header("Location: ../controllers/controller-home.php");
+                        exit();
 
-                    } else if ($_POST["password"]) {
-                        $errors['password'] = "Mot de passe incorrect.";
+                    } else {
+                        // Mot de passe incorrect
+                        if (empty($_POST["password"])) {
+                            $errors['password'] = "Champs obligatoire.";
+
+                        } else if ($_POST["password"]) {
+                            $errors['password'] = "Mot de passe incorrect.";
+                        }
+
                     }
+                } else {
+                    // Aucun utilisateur trouvé avec ce pseudo
+                    if (empty($_POST["pseudo"])) {
+                        $errors['pseudo'] = "Champs obligatoire.";
 
+                    } else if ($_POST["pseudo"]) {
+                        $errors['pseudo'] = "Le nom est invalide.";
+                    }
                 }
             } else {
-                // Aucun utilisateur trouvé avec ce pseudo
-                if (empty($_POST["pseudo"])) {
-                    $errors['pseudo'] = "Champs obligatoire.";
-
-                } else if ($_POST["pseudo"]) {
-                    $errors['pseudo'] = "Le nom est invalide.";
-                }
+                $errors["ban"] = "votre compte a été banni";
             }
+
+
 
 
             // Fermeture de la requête préparée

@@ -23,7 +23,11 @@
     <form class="formulaireConnexion" action="controller-signin.php" method="POST" novalidate>
 
 
-
+        <h3>
+            <?=
+                $errors["ban"] ?? "";
+            ?>
+        </h3>
         <label for="pseudo">Identifiant </label>
         <input type="text" id="pseudo" name="pseudo"
             value="<?= isset($_POST['pseudo']) ? htmlspecialchars($_POST['pseudo']) : '' ?>">
